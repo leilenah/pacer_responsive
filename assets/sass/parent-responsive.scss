@@ -1,0 +1,9 @@
+/* Parent Responsive Styles */
+
+@import 'breakpoint.scss';
+
+#menu{
+    @include breakpoint($bp-mobile){
+        background-color: red;
+    }
+}

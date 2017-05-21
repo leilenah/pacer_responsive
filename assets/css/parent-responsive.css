@@ -1,0 +1,5 @@
+/* Parent Responsive Styles */
+/* Custom Breakpoint Mixin */
+@media screen and (max-width: 599px) {
+  #menu {
+    background-color: red; } }
