@@ -1,5 +1,35 @@
-/* Parent Responsive Styles */
 /* Custom Breakpoint Mixin */
-@media screen and (max-width: 599px) {
-  #menu {
-    background-color: red; } }
+@media screen and (max-width: 750px) {
+  body {
+    margin: 0;
+    padding-top: 0;
+    background-color: #fff; }
+  #parent-menu .menu-icon-logo-wrapper {
+    padding: 20px 20px 0; }
+    #parent-menu .menu-icon-logo-wrapper .menu-button {
+      width: 40px;
+      height: 44px;
+      background: #fff url(../images/parent/menu-icon.png) no-repeat center;
+      border: none; }
+    #parent-menu .menu-icon-logo-wrapper .pacer-logo {
+      display: inline-block;
+      float: right;
+      height: 48px;
+      width: 200px;
+      background: #fff url(../images/parent/parent-logo.png) no-repeat center; }
+  #parent-menu #nav {
+    border: none; }
+    #parent-menu #nav .primary-category {
+      width: 100%;
+      background-color: #fff;
+      font: bold 0.8333333333 Helvetica;
+      text-transform: uppercase; }
+      #parent-menu #nav .primary-category a {
+        width: 100%;
+        color: #007FA9; }
+      #parent-menu #nav .primary-category ul {
+        position: relative;
+        left: 0;
+        padding-left: 0; }
+        #parent-menu #nav .primary-category ul .secondary-category a {
+          color: red; } }

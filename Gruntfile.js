@@ -150,10 +150,6 @@ module.exports = function(grunt) {
             }
         },
         watch: {
-            potomo: {
-                files: ['languages/*.po'],
-                tasks: ['potomo']
-            },
             sass: {
                 files: ['assets/sass/**/*.scss'],
                 tasks: ['sass', 'autoprefixer', 'cssmin']

@@ -1,9 +1,67 @@
-/* Parent Responsive Styles */
-
 @import 'breakpoint.scss';
 
-#menu{
-    @include breakpoint($bp-mobile){
-        background-color: red;
+// Colors
+$parent-main: #007FA9;
+$parent-secondary: #007FA9;
+$parent-white: #fff;
+$parent-gray: #CDCDCD;
+$parent-dark-gray: #333333;
+$parent-red: #D34040;
+
+// Fonts
+$parent-primary-font: Helvetica;
+$parent-primary-font-size: 10px;
+
+@mixin parent-responsive-styles{
+    body{
+        margin: 0;
+        padding-top: 0;
+        background-color: $parent-white;
     }
+
+    #parent-menu{
+        .menu-icon-logo-wrapper{
+            padding: 20px 20px 0;
+            .menu-button{
+                width: 40px;
+                height: 44px;
+                background: $parent-white url(../images/parent/menu-icon.png) no-repeat center;
+                border: none;
+            }
+            .pacer-logo{
+                display: inline-block;
+                float: right;
+                height: 48px;
+                width: 200px;
+                background: $parent-white url(../images/parent/parent-logo.png) no-repeat center;
+            }
+        }
+        #nav{
+            border: none;
+            .primary-category{
+                width: 100%;
+                background-color: $parent-white;
+                font: bold $parent-primary-font-size/12px $parent-primary-font;
+                text-transform: uppercase;
+                a{
+                    width: 100%;
+                    color: $parent-main;
+                }
+                ul{
+                    position: relative;
+                    left: 0;
+                    padding-left: 0;
+                    .secondary-category{
+                        a{
+                            color: red; // temp
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint($bp-mobile-landscape){
+    @include parent-responsive-styles();
 }

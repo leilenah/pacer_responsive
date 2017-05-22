@@ -18,13 +18,13 @@ body {
 }
 body, #pacerwrapper {
 	background-color:#ccc;
-	
-	/*background-image: url(/bullying/images/grey-bully-background-v2.jpg); 
+
+	/*background-image: url(/bullying/images/grey-bully-background-v2.jpg);
 	background-repeat:no-repeat;
 	background-attachment:fixed;
 	background-position:top center;
 	background-size:cover;*/
-	}			
+	}
 
 img {
 	border:none;
@@ -33,13 +33,13 @@ img {
 ul, ol, dl {
 	padding: 0;
 	margin: 0;
-	
+
 }
 
 h1, h2, h3, h4, h5, h6, p, pre {
-	margin-top: 0;	 
+	margin-top: 0;
 	padding-right: 15px;
-	padding-left: 15px; 
+	padding-left: 15px;
 }
 h1, h2, h3, h4, h5, h6 {
 	color:#F15C32;
@@ -47,7 +47,7 @@ h1, h2, h3, h4, h5, h6 {
 h1, h2 {text-shadow: 1px 1px 1px #000;}
 h1{
 	font-size:2.1em;
-	letter-spacing:.03em;	
+	letter-spacing:.03em;
 }
 h2{
 	font-size:1.5em;
@@ -55,14 +55,14 @@ h2{
 }
 h3{
 	font-size:1.2em;
-	
+
 }
 pre{
 	font-size:1em;
 	font-family:Arial, Helvetica, sans-serif;
 	word-wrap:break-word;
 	white-space:pre-wrap;
-	
+
 }
 .sidebar2 h4{text-align:center;}
 a img {
@@ -72,7 +72,7 @@ a img {
 a{font-weight:bold;}
 a:link{color: #772828;}
 a:visited{color: #CE0000;}
-a:hover, a:active, a:focus { 
+a:hover, a:active, a:focus {
 	color:#3e5593;
 	text-decoration: underline;
 }
@@ -108,7 +108,7 @@ a:hover, a:active, a:focus {
 }
 .header #header-right img{
 	vertical-align:middle;
-	margin:5px;	
+	margin:5px;
 }
 .header #header-right a{
 	color:#fff;
@@ -181,7 +181,7 @@ a#donatebutton:hover{
 
 #pacerwrapper{
 	width:100%;
-	background-color:#ccc;	
+	background-color:#ccc;
 }
 #pacer {
 	background:url('/bullying/images/nav_up.jpg');
@@ -191,7 +191,7 @@ a#donatebutton:hover{
 	padding:2px 5px 5px 5px;
 	margin-top:5px;
 	text-align:center;
-	
+
 	-webkit-border-top-left-radius: 8px;
 	-webkit-border-top-right-radius: 8px;
 	-moz-border-radius-topleft: 8px;
@@ -204,7 +204,7 @@ a#donatebutton:hover{
 	text-decoration:none;
 }
 #pacer a:hover{
-	color:#FC0;	
+	color:#FC0;
 }
 #cse-search-box {
 	display:inline;
@@ -234,7 +234,7 @@ background:#fff;
 padding-top:5px;
 height:55px;
 z-index:10;
-position:relative;	
+position:relative;
 }
 #topnav {
 	width:1024px;
@@ -260,7 +260,7 @@ position:relative;
 	height:45px;
 	width:130px;
 	padding-left:10px;
-	padding-right:5px; 
+	padding-right:5px;
 	color:#fff;
     }
 #topnav li.longNavItem {
@@ -273,10 +273,10 @@ position:relative;
 #topnav li {
     float:left;
     padding:0;
-	background:url('/bullying/images/nav_up.jpg') repeat-y right top; 
+	background:url('/bullying/images/nav_up.jpg') repeat-y right top;
     }
 #topnav li.hassubnav{
-	background:#3e5593 url('/bullying/images/nav_up_arrow.jpg') repeat-y right; 	
+	background:#3e5593 url('/bullying/images/nav_up_arrow.jpg') repeat-y right;
 }
 #topnav ul {
     position:absolute;
@@ -299,14 +299,14 @@ position:relative;
     width:200px;
     color:#F00;
     }
-	
+
 #topnav li ul ul {
     margin:-21px 0 0 150px;
     }
 #topnav li li:hover {
 	/*Sub Level Hover Background*/
 	background:green;
-	background:#9797af url('/bullying/images/nav_over.jpg') repeat-y right; 
+	background:#9797af url('/bullying/images/nav_over.jpg') repeat-y right;
     }
 #topnav li ul li:hover a, #topnav li ul li li:hover a, #topnav li ul li li li:hover a, #topnav li ul li li li:hover a {
 	/*Sub Level Hover Text*/
@@ -328,11 +328,11 @@ position:relative;
     }
 #topnav li:hover, #topnav li.sfhover {
 	/*Top Level Hover Background*/
-	background:#9797af url('/bullying/images/nav_over.jpg') repeat-y right; 
+	background:#9797af url('/bullying/images/nav_over.jpg') repeat-y right;
     }
 #topnav li.hassubnav:hover{
 	/*Top Level Hover Background w/ hassubnav*/
-	background:#9797af url('/bullying/images/nav_over_arrow.jpg') repeat-y right; 		
+	background:#9797af url('/bullying/images/nav_over_arrow.jpg') repeat-y right;
 }
 
 #topnav li.twoCol li a {
@@ -352,15 +352,15 @@ position:relative;
 	background-size:contain;
 }
 @media screen and (max-width: 1145px) {
-	
+
 	#topnav li:hover ul.MediumScreenOpenLeft {
 		margin-left:-55px;
 	}
-	
+
 	#topnav li.twoCol:hover ul.MediumScreenOpenLeft {
 		margin-left:-254px;
 	}
-	
+
 	#topnav ul.MediumScreenOpenLeft li {
 		float:right;
 	}
@@ -392,7 +392,7 @@ position:relative;
 	float: left;
 	width: 200px;
 	margin-left:5px;
-	background: #FFF;	
+	background: #FFF;
 }
 .twocolright .sidebar2 {
 	float: right;
@@ -408,7 +408,7 @@ position:relative;
 	padding-top:25px;
 	padding-bottom:25px;
 	margin-bottom:10px;
-	background:url(/bullying/images/small-blue-grad.png) top repeat-x, url(/bullying/images/small-blue-grad-bottom.png) bottom repeat-x;	
+	background:url(/bullying/images/small-blue-grad.png) top repeat-x, url(/bullying/images/small-blue-grad-bottom.png) bottom repeat-x;
 }
 .content {
 	width:100%;
@@ -435,14 +435,14 @@ position:relative;
 .sidebar1 ul.nav li:last-child {
 	border-bottom: none;
 }
-.sidebar1 ul.nav a,.sidebar1 ul.nav a:visited { 
+.sidebar1 ul.nav a,.sidebar1 ul.nav a:visited {
 	padding: 5px 5px 5px 10px;
-	display: block; 
+	display: block;
 	text-decoration: none;
 	background: #3e5593 url('/bullying/images/nav_up.jpg') repeat-y right;
 	color:#FFF;
 }
-.sidebar1 ul.nav a:hover, ul.nav a:active, ul.nav a:focus { 
+.sidebar1 ul.nav a:hover, ul.nav a:active, ul.nav a:focus {
 	background: #9797af url('/bullying/images/nav_over.jpg') repeat-y right;
 	color: #000;
 }
@@ -572,7 +572,7 @@ position:relative;
 #tagBtn:hover, #tagBtn:active{
 	background-color:rgba(255,85,0,0.25);
 	background-image:none;
-}	
+}
 .footer-col {
 	padding:20px;
 	float:left;
@@ -622,8 +622,8 @@ position:relative;
 .footer #copywrite #yna{
 	clear:left;
 	position:absolute;
-	bottom:5px; 
-	right:10px; 	
+	bottom:5px;
+	right:10px;
 }
 
 
@@ -752,11 +752,11 @@ li.ppticonlist {
 }
 li.trophyiconlist {
 	list-style-image:url(/images/trophyicon_small.jpg);
-	list-style-type:none;	
+	list-style-type:none;
 }
 li.trophyiconlist li{
 	list-style-image:none;
-	list-style-type:inherit;	
+	list-style-type:inherit;
 }
 
 .fa-external-link {
@@ -766,7 +766,7 @@ li.trophyiconlist li{
 	float: right;
 	min-height: 37px;
 	min-width: 240px;
-	margin-bottom: 25px;	
+	margin-bottom: 25px;
 	padding-right: 10px;
     clear:none !important;
 }
