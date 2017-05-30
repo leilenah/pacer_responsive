@@ -1,16 +1,24 @@
 @import 'breakpoint.scss';
 
-// Colors
-$parent-main: #007FA9;
-$parent-secondary: #007FA9;
+//-- Colors
+$parent-blue: #007FA9;
 $parent-white: #fff;
 $parent-gray: #CDCDCD;
 $parent-dark-gray: #333333;
 $parent-red: #D34040;
 
-// Fonts
+//-- Fonts
 $parent-primary-font: Helvetica;
 $parent-primary-font-size: 10px;
+
+//-- Elements
+$category-height: 50px;
+$button-size: $category-height + 2px;
+
+//-- Desktop styles
+.menu-button, .social-elements{
+    display: none;
+}
 
 @mixin parent-responsive-styles{
     body{
@@ -19,41 +27,142 @@ $parent-primary-font-size: 10px;
         background-color: $parent-white;
     }
 
-    #parent-menu{
-        .menu-icon-logo-wrapper{
-            padding: 20px 20px 0;
-            .menu-button{
-                width: 40px;
-                height: 44px;
-                background: $parent-white url(../images/parent/menu-icon.png) no-repeat center;
-                border: none;
-            }
-            .pacer-logo{
-                display: inline-block;
-                float: right;
-                height: 48px;
-                width: 200px;
-                background: $parent-white url(../images/parent/parent-logo.png) no-repeat center;
-            }
+    #header{
+        background-color: $parent-white;
+        #parent-header-table{
+            display: none;
         }
-        #nav{
-            border: none;
-            .primary-category{
-                width: 100%;
-                background-color: $parent-white;
-                font: bold $parent-primary-font-size/12px $parent-primary-font;
-                text-transform: uppercase;
-                a{
-                    width: 100%;
-                    color: $parent-main;
+
+        #parent-menu{
+            .menu-icon-logo-wrapper{
+                padding: 20px 20px 0;
+                .menu-button{
+                    display: inline-block;
+                    width: 40px;
+                    height: 44px;
+                    background: $parent-white url(../images/parent/menu-icon.png) no-repeat center;
+                    border: none;
                 }
-                ul{
-                    position: relative;
-                    left: 0;
-                    padding-left: 0;
-                    .secondary-category{
-                        a{
-                            color: red; // temp
+                .pacer-logo{
+                    display: inline-block;
+                    float: right;
+                    height: 48px;
+                    width: 200px;
+                    background: $parent-white url(../images/parent/parent-logo.png) no-repeat center;
+                }
+            }
+            #nav{
+                border: none;
+                min-width: 0;
+                .primary-category{
+                    $primary-border: 1px solid $parent-blue;
+                    width: 100%;
+                    background-color: $parent-white;
+                    // show more button
+                    button{
+                        display: inline-block;
+                        position: absolute;
+                        right: 0;
+                        height: $button-size;
+                        width: $button-size;
+                        padding: 0;
+                        margin: 0 -2px 0 0;
+                        outline: none;
+                        &.show-more{
+                            border: $primary-border;
+                            background-color: $parent-white;
+                            color: $parent-blue;
+                            font-size: 22px;
+                            font-weight: bold;
+                        }
+                        &.show-less{
+                            border: 1px solid $parent-white;
+                            background-color: $parent-red;
+                            color: $parent-white;
+                            font-size: 28px;
+                            font-weight: normal;
+                        }
+                    }
+                    // all links
+                    a{
+                        width: 100%;
+                        height: $category-height;
+                        line-height: $category-height;
+                        padding: 0;
+                        font-family: $parent-primary-font;
+                        font-size: $parent-primary-font-size;
+                        font-weight: bold;
+                        text-transform: uppercase;
+                        span{
+                            margin-left: 20px;
+                        }
+                    }
+                    // primary-category links
+                    > a{
+                        color: $parent-blue;
+                        border: $primary-border;
+                        border-bottom: none;
+                    }
+                    // donate button
+                    #parent-header-donate img{
+                        display: none;
+                    }
+
+                    ul{
+                        display: none; // displayed with js
+                        width: 100%;
+                        position: relative;
+                        left: 0;
+                        padding-left: 0;
+                        .secondary-category{
+                            width: 100%;
+                            background-color: $parent-blue;
+                            // secondary-category links
+                            > a{
+                                color: $parent-white;
+                                background-color: $parent-blue;
+                            }
+                        }
+                    }
+                    &:last-of-type{
+                        border-bottom: $primary-border;
+                    }
+                }
+
+                // social icons
+                .social-list{
+                    width: 100%;
+                    border: 1px solid $parent-blue;
+                    .social-elements{
+                        background-color: $parent-white;
+                        display: flex;
+                        flex-wrap: nowrap;
+                        .socialButton{
+                            width: 40px;
+                            height: 40px;
+                            padding: 0;
+                            display: inline-block;
+                            background-color: $parent-white;
+                            margin: 30px auto;
+                            color: $parent-blue;
+                            text-align: center;
+                            background-size: 40px;
+                            background-repeat: no-repeat;
+                            &.facebook{
+                                background-image: url(../../assets/images/parent/facebook-icon.png);
+                            }
+                            &.youtube{
+                                background-image: url(../../assets/images/parent/youtube-icon.png);
+                            }
+                            &.twitter{
+                                background-image: url(../../assets/images/parent/twitter-icon.png);
+                            }
+                            &.instagram{
+                                background-image: url(../../assets/images/parent/instagram-icon.png);
+                            }
+                            &.pinterest{
+                                background-image: url(../../assets/images/parent/pinterest-icon.png);
+                            }
                         }
                     }
                 }

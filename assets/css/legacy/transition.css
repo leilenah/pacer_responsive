@@ -24,13 +24,13 @@ img {
 ul, ol, dl {
 	padding: 0;
 	margin: 0;
-	
+
 }
 
 h1, h2, h3, h4, h5, h6, p, pre {
-	margin-top: 0;	 
+	margin-top: 0;
 	padding-right: 15px;
-	padding-left: 15px; 
+	padding-left: 15px;
 }
 h1 {
 	color:#22B600;
@@ -41,7 +41,7 @@ h2, h3, h4, h5, h6 {
 h1 {
 	font-size:2.1em;
 	letter-spacing:.03em;
-	text-shadow: 1px 1px 1px #666;	
+	text-shadow: 1px 1px 1px #666;
 }
 h2{
 	font-size:1.5em;
@@ -49,14 +49,14 @@ h2{
 }
 h3{
 	font-size:1.2em;
-	
+
 }
 pre{
 	font-size:1em;
 	font-family:Arial, Helvetica, sans-serif;
 	word-wrap:break-word;
 	white-space:pre-wrap;
-	
+
 }
 .gsc-input {
 	max-width:180px;
@@ -66,8 +66,8 @@ pre{
 }
 .sidebar2 h4{text-align:center;}
 .sidebar2 img{
-	margin-left: -5px; 
-	margin: 10px auto; 
+	margin-left: -5px;
+	margin: 10px auto;
 	display: block;
 }
 a img {
@@ -77,7 +77,7 @@ a img {
 a{font-weight:bold;}
 a:link{color: #373566;}
 a:visited{color: #897700;}
-a:hover, a:active, a:focus { 
+a:hover, a:active, a:focus {
 	color:#798EC6;
 	text-decoration: underline;
 }
@@ -115,7 +115,7 @@ a:hover, a:active, a:focus {
 }
 .header #header-right img{
 	vertical-align:middle;
-	margin:5px;	
+	margin:5px;
 }
 .header #header-right a{
 	color:#fff;
@@ -195,11 +195,11 @@ a#newsletterbutton:hover{
 #pacerwrapper{
 	width:100%;
 	min-height:28px;
-	background-color:#ccc;	
+	background-color:#ccc;
 	position:absolute;
 	left:0px;
 	top:-30px;
-	
+
 }
 .toptab {
 	float:left;
@@ -216,14 +216,14 @@ a#newsletterbutton:hover{
 	-moz-border-radius-topright: 8px;
 	border-top-left-radius: 8px;
 	border-top-right-radius: 8px;
-	
+
 }
 .toptab a{
 	color:#FFF;
 	text-decoration:none;
 }
 .toptab a:hover{
-	color:#FC0;	
+	color:#FC0;
 }
 
 /* ---------------------------------------------------
@@ -244,7 +244,7 @@ background:#fff;
 padding-top:5px;
 height:55px;
 z-index:100;
-position:relative;	
+position:relative;
 }
 #topnav {
 	width:1024px;
@@ -270,16 +270,16 @@ position:relative;
 	height:45px;
 	width:129px;
 	padding-left:10px;
-	padding-right:5px; 
+	padding-right:5px;
 	color:#fff;
     }
 #topnav li {
     float:left;
     padding:0;
-	background:url('/transition/images/nav_up.jpg') repeat-y right top; 
+	background:url('/transition/images/nav_up.jpg') repeat-y right top;
     }
 #topnav li.hassub{
-	background:#3e5593 url('/transition/images/nav_up_arrow.jpg') repeat-y right; 	
+	background:#3e5593 url('/transition/images/nav_up_arrow.jpg') repeat-y right;
 }
 #topnav ul {
     position:absolute;
@@ -306,14 +306,14 @@ position:relative;
     width:200px;
     color:#F00;
     }
-	
+
 #topnav li ul ul {
     margin:-21px 0 0 150px;
     }
 #topnav li li:hover {
 	/*Sub Level Hover Background*/
 	background:green;
-	background:#9797af url('/transition/images/nav_over.jpg') repeat-y right; 
+	background:#9797af url('/transition/images/nav_over.jpg') repeat-y right;
     }
 #topnav li ul li:hover a, #topnav li ul li li:hover a, #topnav li ul li li li:hover a, #topnav li ul li li li:hover a {
 	/*Sub Level Hover Text*/
@@ -335,11 +335,11 @@ position:relative;
     }
 #topnav li:hover, #topnav li.sfhover {
 	/*Top Level Hover Background*/
-	background:#9797af url('/transition/images/nav_over.jpg') repeat-y right; 
+	background:#9797af url('/transition/images/nav_over.jpg') repeat-y right;
     }
 #topnav li.hassub:hover{
 	/*Top Level Hover Background w/ hassub*/
-	background:#9797af url('/transition/images/nav_over_arrow.jpg') repeat-y right; 		
+	background:#9797af url('/transition/images/nav_over_arrow.jpg') repeat-y right;
 }
 
 
@@ -373,7 +373,7 @@ position:relative;
 	width: 200px;
 	margin-left:5px;
 	padding-top:20px;
-	background: #FFF;	
+	background: #FFF;
 }
 .twocolright .sidebar2 {
 	float: right;
@@ -389,7 +389,7 @@ position:relative;
 	padding-top:25px;
 	padding-bottom:25px;
 	margin-bottom:10px;
-	background:url(/transition/images/small-blue-grad.png) top repeat-x, url(/transition/images/small-blue-grad-bottom.png) bottom repeat-x;	
+	background:url(/transition/images/small-blue-grad.png) top repeat-x, url(/transition/images/small-blue-grad-bottom.png) bottom repeat-x;
 }
 .twocol .content {
 	width: 844px;
@@ -414,14 +414,14 @@ position:relative;
 .sidebar1 ul.nav li:last-child {
 	border-bottom: none;
 }
-.sidebar1 ul.nav a,.sidebar1 ul.nav a:visited { 
+.sidebar1 ul.nav a,.sidebar1 ul.nav a:visited {
 	padding: 5px 5px 5px 10px;
-	display: block; 
+	display: block;
 	text-decoration: none;
 	background: #3e5593 url('/transition/images/nav_up.jpg') repeat-y right;
 	color:#FFF;
 }
-.sidebar1 ul.nav a:hover, ul.nav a:active, ul.nav a:focus { 
+.sidebar1 ul.nav a:hover, ul.nav a:active, ul.nav a:focus {
 	background: #9797af url('/transition/images/nav_over.jpg') repeat-y right;
 	background-size:cover;
 	color: #000;
@@ -477,12 +477,12 @@ position:relative;
 	color: #fff;
 	cursor: default;
 	font-size: 1.1em;
-	text-align: center;	
+	text-align: center;
 }
 /*
 ###################################################################################################
 --Floating SubNav Code --
-For IE7 you have to give the parent element a higher z-index than the absolutley positioned child 
+For IE7 you have to give the parent element a higher z-index than the absolutley positioned child
 (in this case the UL that contains the subnav to get it to correctly stack the items.
 ###################################################################################################
 */
@@ -541,10 +541,10 @@ For IE7 you have to give the parent element a higher z-index than the absolutley
 	background-image:none;
 }
 .sidebar1 ul li.hassub li a{
-	background-image:none;	
+	background-image:none;
 }
 
-/* ####################################################### 
+/* #######################################################
 END Floating SubNav Code
 ##########################################################*/
 
@@ -634,7 +634,7 @@ END Floating SubNav Code
 }
 .footer a.leftborder {
 	border-left:solid 1px #fff;
-	padding-left:5px;	
+	padding-left:5px;
 }
 .footer #footer-bottomright{
 	position:absolute;
@@ -766,7 +766,7 @@ ul.space  li {
 	padding:5px;
 }
 .resources h2, .resources h3 {
-	
+
 }
 .fa-external-link {
 	font-size:.6em;
