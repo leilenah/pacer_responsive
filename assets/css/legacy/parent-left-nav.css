@@ -12,17 +12,17 @@ body {
 }
 #returnTab {
 	width:9em;
-	font-size:.9em; 
-	text-align:center; 
+	font-size:.9em;
+	text-align:center;
 	background-color:#F9F9F9;
 border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
-	border-top:1px solid #00769d; 
-	border-left:1px solid #00769d; 
-	border-right:1px solid #00769d; 
-	position:absolute; 
-	top:-21px; 
-	right:-1px; 
+	border-top:1px solid #00769d;
+	border-left:1px solid #00769d;
+	border-right:1px solid #00769d;
+	position:absolute;
+	top:-21px;
+	right:-1px;
 	padding-bottom:3px;
 }
 #header #returnTab a {
@@ -217,7 +217,7 @@ ul#nav {
 	width: 8em;
 	color:#FFF;
 	text-decoration: none;
-	margin: 0;		
+	margin: 0;
 	padding:.5em .5em 0 .5em;
 	height: 3em;
 }
@@ -459,7 +459,7 @@ td.footerlinks {
 	margin: 5px;
 }
 
-#footer1 a, #footer1 a:visited { 
+#footer1 a, #footer1 a:visited {
 	color: #fff;
 	text-decoration: none;
 }
@@ -654,7 +654,7 @@ td.footerlinks {
 	font-size: 75%;
 }
 #leftbar ul ul li a {
-	background-color: #006A8C;	
+	background-color: #006A8C;
 }
 #leftbar ul li a:hover {
 	background-color: #ccc;
@@ -686,7 +686,7 @@ ul.treemenu li {
 /*
 ###################################################################################################
 --Floating SubNav Code --
-For IE7 you have to give the parent element a higher z-index than the absolutley positioned child 
+For IE7 you have to give the parent element a higher z-index than the absolutley positioned child
 (in this case the UL that contains the subnav to get it to correctly stack the items.
 ###################################################################################################
 */
@@ -707,7 +707,7 @@ For IE7 you have to give the parent element a higher z-index than the absolutley
 #leftbar ul li.hasSubNav a{
 	background-image:url(/images/greaterthan-white.gif);
 	background-position:right center;
-	background-repeat:no-repeat;	
+	background-repeat:no-repeat;
 }
 #leftbar ul li.hasSubNav a.page{
 	background-image:url(/images/greaterthan-white-down.gif);
@@ -716,10 +716,10 @@ For IE7 you have to give the parent element a higher z-index than the absolutley
 	background-image:none;
 }
 #leftbar ul li.hasSubNav li a{
-	background-image:none;	
+	background-image:none;
 }
 
-/* ####################################################### 
+/* #######################################################
 END Floating SubNav Code
 ##########################################################*/
 
@@ -908,7 +908,7 @@ ul#issuebriefs {
 	font-family: 'Pacer-Icons';
 }
 .external-link {
-	
+
 }
 a.external-link:after {
 	content: " \65 ";
@@ -969,12 +969,12 @@ a.external-link {
 .fltrt{
 	float:right;
 	margin-right:5px;
-	margin-left:10px;	
+	margin-left:10px;
 }
 .fltlt{
 	float:left;
 	margin-left:5px;
-	margin-right:10px;	
+	margin-right:10px;
 }
 #pagecontent .alertBox, #pagecontentright .alertBox {
 	font-size:.9em;
@@ -1085,7 +1085,7 @@ a .fa-file-pdf-o, a .fa-external-link {
 #contactBox {
 	padding:.2em;
 	margin-left:8px;
-	font-size:12px; 
+	font-size:12px;
 	text-align:center;
 	margin-top:30px;
 	border:1px solid #FF9933;
@@ -1167,7 +1167,7 @@ a .fa-file-pdf-o, a .fa-external-link {
   background: linear-gradient(to bottom, #FF5A2C 0%, #B2211C 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
 
   border-radius: 3px;
-  box-shadow: 2px 2px 4px #666;  
+  box-shadow: 2px 2px 4px #666;
   border-width: 0;
   box-sizing: border-box;
   color: #fff;
@@ -1191,12 +1191,12 @@ a .fa-file-pdf-o, a .fa-external-link {
 }
 
 #pagecontent .btn-blue {
-	background:#0099cc; 
+	background:#0099cc;
 	background: linear-gradient(to bottom, #0099cc 0%, #004E68 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
 	color: #fff;
 }
 #pagecontent .btn-blue:hover{
-  background:#0099cc; 
+  background:#0099cc;
   background: linear-gradient(to bottom, #4EADCC 0%, #0099cc 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
 }
 #pagecontent .btn-cta.btn-blue:before {
