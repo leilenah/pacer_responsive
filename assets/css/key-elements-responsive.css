@@ -1,39 +1,119 @@
 /* Custom Breakpoint Mixin */
 /* Custom Breakpoint Mixin */
+.menu-button, .social-elements {
+  display: none; }
+
 @media screen and (max-width: 750px) {
   body {
     margin: 0;
     padding-top: 0;
     background-color: #fff; }
-  #parent-menu .menu-icon-logo-wrapper {
-    padding: 20px 20px 0; }
-    #parent-menu .menu-icon-logo-wrapper .menu-button {
-      width: 40px;
-      height: 44px;
-      background: #fff url(../images/parent/menu-icon.png) no-repeat center;
-      border: none; }
-    #parent-menu .menu-icon-logo-wrapper .pacer-logo {
-      display: inline-block;
-      float: right;
-      height: 48px;
-      width: 200px;
-      background: #fff url(../images/parent/parent-logo.png) no-repeat center; }
-  #parent-menu #nav {
-    border: none; }
-    #parent-menu #nav .primary-category {
-      width: 100%;
-      background-color: #fff;
-      font: bold 0.8333333333 Helvetica;
-      text-transform: uppercase; }
-      #parent-menu #nav .primary-category a {
+  #header {
+    background-color: #fff; }
+    #header #parent-header-table {
+      display: none; }
+    #header #parent-menu .menu-icon-logo-wrapper {
+      padding: 20px 20px 0; }
+      #header #parent-menu .menu-icon-logo-wrapper .menu-button {
+        display: inline-block;
+        width: 40px;
+        height: 44px;
+        background: #fff url(../images/parent/menu-icon.png) no-repeat center;
+        border: none; }
+      #header #parent-menu .menu-icon-logo-wrapper .pacer-logo {
+        display: inline-block;
+        float: right;
+        height: 48px;
+        width: 200px;
+        background: #fff url(../images/parent/parent-logo.png) no-repeat center; }
+    #header #parent-menu #nav {
+      border: none;
+      min-width: 0; }
+      #header #parent-menu #nav .primary-category {
         width: 100%;
-        color: #007FA9; }
-      #parent-menu #nav .primary-category ul {
-        position: relative;
-        left: 0;
-        padding-left: 0; }
-        #parent-menu #nav .primary-category ul .secondary-category a {
-          color: red; } }
+        background-color: #fff; }
+        #header #parent-menu #nav .primary-category button {
+          display: inline-block;
+          position: absolute;
+          right: 0;
+          height: 52px;
+          width: 52px;
+          padding: 0;
+          margin: 0 -2px 0 0;
+          outline: none; }
+          #header #parent-menu #nav .primary-category button.show-more {
+            border: 1px solid #007FA9;
+            background-color: #fff;
+            color: #007FA9;
+            font-size: 22px;
+            font-weight: bold; }
+          #header #parent-menu #nav .primary-category button.show-less {
+            border: 1px solid #fff;
+            background-color: #D34040;
+            color: #fff;
+            font-size: 28px;
+            font-weight: normal; }
+        #header #parent-menu #nav .primary-category a {
+          width: 100%;
+          height: 50px;
+          line-height: 50px;
+          padding: 0;
+          font-family: Helvetica;
+          font-size: 10px;
+          font-weight: bold;
+          text-transform: uppercase; }
+          #header #parent-menu #nav .primary-category a span {
+            margin-left: 20px; }
+        #header #parent-menu #nav .primary-category > a {
+          color: #007FA9;
+          border: 1px solid #007FA9;
+          border-bottom: none; }
+        #header #parent-menu #nav .primary-category #parent-header-donate img {
+          display: none; }
+        #header #parent-menu #nav .primary-category ul {
+          display: none;
+          width: 100%;
+          position: relative;
+          left: 0;
+          padding-left: 0; }
+          #header #parent-menu #nav .primary-category ul .secondary-category {
+            width: 100%;
+            background-color: #007FA9; }
+            #header #parent-menu #nav .primary-category ul .secondary-category > a {
+              color: #fff;
+              background-color: #007FA9; }
+        #header #parent-menu #nav .primary-category:last-of-type {
+          border-bottom: 1px solid #007FA9; }
+      #header #parent-menu #nav .social-list {
+        width: 100%;
+        border: 1px solid #007FA9; }
+        #header #parent-menu #nav .social-list .social-elements {
+          background-color: #fff;
+          display: -ms-flexbox;
+          display: flex;
+          -ms-flex-wrap: nowrap;
+              flex-wrap: nowrap; }
+          #header #parent-menu #nav .social-list .social-elements .socialButton {
+            width: 40px;
+            height: 40px;
+            padding: 0;
+            display: inline-block;
+            background-color: #fff;
+            margin: 30px auto;
+            color: #007FA9;
+            text-align: center;
+            background-size: 40px;
+            background-repeat: no-repeat; }
+            #header #parent-menu #nav .social-list .social-elements .socialButton.facebook {
+              background-image: url(../../assets/images/parent/facebook-icon.png); }
+            #header #parent-menu #nav .social-list .social-elements .socialButton.youtube {
+              background-image: url(../../assets/images/parent/youtube-icon.png); }
+            #header #parent-menu #nav .social-list .social-elements .socialButton.twitter {
+              background-image: url(../../assets/images/parent/twitter-icon.png); }
+            #header #parent-menu #nav .social-list .social-elements .socialButton.instagram {
+              background-image: url(../../assets/images/parent/instagram-icon.png); }
+            #header #parent-menu #nav .social-list .social-elements .socialButton.pinterest {
+              background-image: url(../../assets/images/parent/pinterest-icon.png); } }
 
 h3 {
   background-color: #eee;
@@ -71,32 +151,109 @@ h3.active, h3:hover {
     margin: 0;
     padding-top: 0;
     background-color: #fff; }
-  #parent-menu .menu-icon-logo-wrapper {
-    padding: 20px 20px 0; }
-    #parent-menu .menu-icon-logo-wrapper .menu-button {
-      width: 40px;
-      height: 44px;
-      background: #fff url(../images/parent/menu-icon.png) no-repeat center;
-      border: none; }
-    #parent-menu .menu-icon-logo-wrapper .pacer-logo {
-      display: inline-block;
-      float: right;
-      height: 48px;
-      width: 200px;
-      background: #fff url(../images/parent/parent-logo.png) no-repeat center; }
-  #parent-menu #nav {
-    border: none; }
-    #parent-menu #nav .primary-category {
-      width: 100%;
-      background-color: #fff;
-      font: bold 0.8333333333 Helvetica;
-      text-transform: uppercase; }
-      #parent-menu #nav .primary-category a {
+  #header {
+    background-color: #fff; }
+    #header #parent-header-table {
+      display: none; }
+    #header #parent-menu .menu-icon-logo-wrapper {
+      padding: 20px 20px 0; }
+      #header #parent-menu .menu-icon-logo-wrapper .menu-button {
+        display: inline-block;
+        width: 40px;
+        height: 44px;
+        background: #fff url(../images/parent/menu-icon.png) no-repeat center;
+        border: none; }
+      #header #parent-menu .menu-icon-logo-wrapper .pacer-logo {
+        display: inline-block;
+        float: right;
+        height: 48px;
+        width: 200px;
+        background: #fff url(../images/parent/parent-logo.png) no-repeat center; }
+    #header #parent-menu #nav {
+      border: none;
+      min-width: 0; }
+      #header #parent-menu #nav .primary-category {
         width: 100%;
-        color: #007FA9; }
-      #parent-menu #nav .primary-category ul {
-        position: relative;
-        left: 0;
-        padding-left: 0; }
-        #parent-menu #nav .primary-category ul .secondary-category a {
-          color: red; } }
+        background-color: #fff; }
+        #header #parent-menu #nav .primary-category button {
+          display: inline-block;
+          position: absolute;
+          right: 0;
+          height: 52px;
+          width: 52px;
+          padding: 0;
+          margin: 0 -2px 0 0;
+          outline: none; }
+          #header #parent-menu #nav .primary-category button.show-more {
+            border: 1px solid #007FA9;
+            background-color: #fff;
+            color: #007FA9;
+            font-size: 22px;
+            font-weight: bold; }
+          #header #parent-menu #nav .primary-category button.show-less {
+            border: 1px solid #fff;
+            background-color: #D34040;
+            color: #fff;
+            font-size: 28px;
+            font-weight: normal; }
+        #header #parent-menu #nav .primary-category a {
+          width: 100%;
+          height: 50px;
+          line-height: 50px;
+          padding: 0;
+          font-family: Helvetica;
+          font-size: 10px;
+          font-weight: bold;
+          text-transform: uppercase; }
+          #header #parent-menu #nav .primary-category a span {
+            margin-left: 20px; }
+        #header #parent-menu #nav .primary-category > a {
+          color: #007FA9;
+          border: 1px solid #007FA9;
+          border-bottom: none; }
+        #header #parent-menu #nav .primary-category #parent-header-donate img {
+          display: none; }
+        #header #parent-menu #nav .primary-category ul {
+          display: none;
+          width: 100%;
+          position: relative;
+          left: 0;
+          padding-left: 0; }
+          #header #parent-menu #nav .primary-category ul .secondary-category {
+            width: 100%;
+            background-color: #007FA9; }
+            #header #parent-menu #nav .primary-category ul .secondary-category > a {
+              color: #fff;
+              background-color: #007FA9; }
+        #header #parent-menu #nav .primary-category:last-of-type {
+          border-bottom: 1px solid #007FA9; }
+      #header #parent-menu #nav .social-list {
+        width: 100%;
+        border: 1px solid #007FA9; }
+        #header #parent-menu #nav .social-list .social-elements {
+          background-color: #fff;
+          display: -ms-flexbox;
+          display: flex;
+          -ms-flex-wrap: nowrap;
+              flex-wrap: nowrap; }
+          #header #parent-menu #nav .social-list .social-elements .socialButton {
+            width: 40px;
+            height: 40px;
+            padding: 0;
+            display: inline-block;
+            background-color: #fff;
+            margin: 30px auto;
+            color: #007FA9;
+            text-align: center;
+            background-size: 40px;
+            background-repeat: no-repeat; }
+            #header #parent-menu #nav .social-list .social-elements .socialButton.facebook {
+              background-image: url(../../assets/images/parent/facebook-icon.png); }
+            #header #parent-menu #nav .social-list .social-elements .socialButton.youtube {
+              background-image: url(../../assets/images/parent/youtube-icon.png); }
+            #header #parent-menu #nav .social-list .social-elements .socialButton.twitter {
+              background-image: url(../../assets/images/parent/twitter-icon.png); }
+            #header #parent-menu #nav .social-list .social-elements .socialButton.instagram {
+              background-image: url(../../assets/images/parent/instagram-icon.png); }
+            #header #parent-menu #nav .social-list .social-elements .socialButton.pinterest {
+              background-image: url(../../assets/images/parent/pinterest-icon.png); } }

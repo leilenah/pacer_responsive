@@ -4,7 +4,47 @@
 <!-- Legacy stylesheet link here -->
 <link rel="stylesheet" type="text/css" href="../assets/css/legacy/pacer-expanding-box.css">
 <link rel="stylesheet" type="text/css" href="../assets/css/legacy/leftnavnoright.css">
-<!-- <link rel="stylesheet" type="text/css" href="../assets/css/legacy/bullying.css"> -->
+<link rel="stylesheet" type="text/css" href="../assets/css/legacy/colorbox.css">
+<link rel="stylesheet" type="text/css" href="../assets/css/legacy/jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="../assets/css/legacy/home.css">
+
+<!-- HEAD Javascript -->
+<!-- Colorbox -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript" src="../assets/js/legacy/jquery-ui.js"></script>
+<script type="text/javascript" src="../assets/js/legacy/jquery-colorbox.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        var $pageTabs = $('#tabs').tabs();
+
+        //Change Any Links that contain the v= version into the embed version that colorbox expects
+        //Note: You lose all extra query string items in the current version of this function
+        $(".videoPopUp").each(function(){
+            if (/\?v=/i.test(this.href)) {
+                var vars = [], hash;
+                var q = this.href.split('?')[1];
+                if(q != undefined){
+                    q = q.split('&');
+                    for(var i = 0; i < q.length; i++){
+                        hash = q[i].split('=');
+                        vars.push(hash[1]);
+                        vars[hash[0]] = hash[1];
+                    }
+                }
+                this.href = 'http://www.youtube.com/embed/' + vars['v'] + '?rel=0&amp;wmode=transparent&amp;autoplay=1';
+            }
+        });
+        //Initialize Colorbox
+        $(".videoPopUp").colorbox({iframe:true, innerWidth:960, innerHeight:585});
+    });
+</script>
+<script type="text/javascript">
+   $(document).ready(function(){
+     $(".group1").colorbox({rel:'group1'});
+     $(".group2").colorbox({rel:'group2'});
+     $(".group3").colorbox({rel:'group3'});
+  });
+</script>
 
 
 
@@ -14,10 +54,189 @@
 
 
 
-<!-- HTML elements here -->
+
+
+
+
+<!-- COLORBOX -->
+<h1>__________ COLORBOX START __________</h1>
+
+
+<div id="maincontent">
+    <div id="pagecontent">
+        <div id="help-your-child-series">
+        <div class="tabbedPanel">
+
+        <div id="tabs" class="ui-tabs ui-widget ui-widget-content ui-corner-all">
+          <ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all" role="tablist">
+            <li class="ui-state-default ui-corner-top ui-tabs-active ui-state-active" role="tab" tabindex="0" aria-controls="tabs-English" aria-labelledby="ui-id-1" aria-selected="true" aria-expanded="true"><a href="#tabs-English" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-1">English Version</a></li>
+            <li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="tabs-Spanish" aria-labelledby="ui-id-2" aria-selected="false" aria-expanded="false"><a href="#tabs-Spanish" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-2">Spanish Version</a></li>
+            <li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="tabs-Hmong" aria-labelledby="ui-id-3" aria-selected="false" aria-expanded="false"><a href="#tabs-Hmong" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-3">Hmong Version</a></li>
+          </ul>
+
+
+
+          <div id="tabs-English" aria-labelledby="ui-id-1" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-hidden="false">
+
+
+
+        <table cellspacing="10">
+
+
+        <tbody><tr><td colspan="2" align="center"><h3>Help Your Child Succeed at School: What Parents Need to Know</h3></td>
+        <td rowspan="6" align="center" class="videoImg"><img src="http://www.pacer.org/cultural-diversity/images/helping-your-child-succeed-series-thumb.jpg" alt="" width="229" height="294"></td>
+        </tr>
+        <tr>
+          <td colspan="2">
+          <p>The goal of this series is to help you, the parent of a child, help your child succeed at school and improve his or her reading skills.</p>
+            <p><strong>Videos in this Series</strong></p>
+          </td></tr>
+
+        <tr>
+        <td>
+        <p><a class="videoPopUp cboxElement" href="http://www.youtube.com/embed/qlPun_FgJjo?rel=0&amp;amp;wmode=transparent&amp;amp;autoplay=1" target="_blank"><span class="fa fa-youtube-play fa-2x"></span> Video 1: You Can Help Your Child Succeed</a></p></td>
+        <td class="videoDuration">16:00 min</td>
+        </tr>
+        <tr>
+        <td>
+        <p><a class="videoPopUp cboxElement" href="http://www.youtube.com/embed/rixyum0nLJQ?rel=0&amp;amp;wmode=transparent&amp;amp;autoplay=1" target="_blank"><span class="fa fa-youtube-play fa-2x"></span> Video 2: Let's Read</a></p>
+        </td>
+        <td class="videoDuration">11:18 min</td>
+        </tr>
+        <tr>
+        <td>
+        <p><a class="videoPopUp cboxElement" href="http://www.youtube.com/embed/i4y2MzacGIA?rel=0&amp;amp;wmode=transparent&amp;amp;autoplay=1" target="_blank"><span class="fa fa-youtube-play fa-2x"></span> Video 3: Teacher's Top Three Tips</a></p>
+        </td>
+        <td class="videoDuration">9:15 min</td>
+        </tr>
+        <tr>
+        <td>
+        <p><a class="videoPopUp cboxElement" href="http://www.youtube.com/embed/qKemxA2pCCQ?rel=0&amp;amp;wmode=transparent&amp;amp;autoplay=1" target="_blank"><span class="fa fa-youtube-play fa-2x"></span> Video 4: Learning Challenges</a></p>
+        </td>
+        <td class="videoDuration">8:47 min</td>
+        </tr>
+
+        </tbody></table>
+        </div><!-- close tab-English -->
+
+
+
+          <div id="tabs-Spanish" aria-labelledby="ui-id-2" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-hidden="true" style="display: none;">
+
+
+
+        <table cellspacing="10">
+
+
+        <tbody><tr><td colspan="2" align="center"><h3>Ayude a su Hijo a Tener Éxito en la Escuela: Lo que los Padres Necesitan Saber</h3></td>
+        <td rowspan="4" align="center" class="videoImg"><img src="/cultural-diversity/images/helping-your-child-succeed-series-spanish-thumb.jpg" alt="" width="229" height="294"></td>
+        </tr>
+        <tr>
+          <td colspan="2">
+          <p>La meta de esta serie de videos es ayudar a usted, el padre de su hijo, a ayudar a su hijo a tener éxito en sus estudios y mejorar sus destrezas de lectura.</p>
+            <p><strong>Videos en esta Serie</strong></p>
+          </td></tr>
+
+        <tr>
+        <td>
+        <p><a class="videoPopUp cboxElement" href="http://www.youtube.com/embed/NE0ohpdF6Y4?rel=0&amp;amp;wmode=transparent&amp;amp;autoplay=1" target="_blank"><span class="fa fa-youtube-play fa-2x"></span> Video 1: La Importancia de Participación de la Familia en la Educación</a></p></td>
+        <td class="videoDuration">17:20 min</td>
+        </tr>
+        <tr>
+        <td>
+        <p><a class="videoPopUp cboxElement" href="http://www.youtube.com/embed/8_XOwSTtmCQ?rel=0&amp;amp;wmode=transparent&amp;amp;autoplay=1" target="_blank"><span class="fa fa-youtube-play fa-2x"></span> Video 2: Mejorando las Destrezas de Lectura de su Hijo</a></p>
+        </td>
+        <td class="videoDuration">21:33 min</td>
+        </tr>
+        </tbody></table>
+        </div><!-- close tab-Spanish -->
+
+
+
+          <div id="tabs-Hmong" aria-labelledby="ui-id-3" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-hidden="true" style="display: none;">
+
+
+
+        <table cellspacing="10">
+
+
+        <tbody><tr><td colspan="2" align="center"><h3>Pab kom koj tus me nyuam kawm tau ntawv: Qhov cov niam txiv yuav tau paub</h3></td>
+        <td rowspan="6" align="center" class="videoImg"><img src="/cultural-diversity/images/helping-your-child-succeed-series-hmong-thumb.jpg" alt="" width="229" height="294"></td>
+        </tr>
+        <tr>
+          <td colspan="2">
+          <p>Lub hom phiaj ntawm cov kev qhia no yog pab koj, tus me nyuam niam thiab txiv, los pab kom koj tus me nyuam kawm tau ntawv thiab txhawb koj nws txawj nyeem ntawv mus ntxiv</p>
+            <p><strong>Cov video qhia sib txhuas zus</strong></p>
+          </td></tr>
+
+        <tr>
+        <td>
+        <p><a class="videoPopUp cboxElement" href="http://www.youtube.com/embed/zsXSkleeV_c?rel=0&amp;amp;wmode=transparent&amp;amp;autoplay=1" target="_blank"><span class="fa fa-youtube-play fa-2x"></span> Daim ib: Koj muaj cuab kav pab kom koj tus me nyuam kawm tau ntawv</a></p></td>
+        <td class="videoDuration">21:55 min</td>
+        </tr>
+        <tr>
+        <td>
+        <p><a class="videoPopUp cboxElement" href="http://www.youtube.com/embed/8_XOwSTtmCQ?rel=0&amp;amp;wmode=transparent&amp;amp;autoplay=1" target="_blank"><span class="fa fa-youtube-play fa-2x"></span> Daim ob: Nyeem ntawv seb</a></p>
+        </td>
+        <td class="videoDuration">21:33 min</td>
+        </tr>
+        <tr>
+        <td>
+        <p><a class="videoPopUp cboxElement" href="http://www.youtube.com/embed/QmVnycAnjYo?rel=0&amp;amp;wmode=transparent&amp;amp;autoplay=1" target="_blank"><span class="fa fa-youtube-play fa-2x"></span> Daim peb: Tus kws qhia ntawv thawj peb qho tswv yim</a></p>
+        </td>
+        <td class="videoDuration">18:44 min</td>
+        </tr>
+        <tr>
+        <td>
+        <p><a class="videoPopUp cboxElement" href="http://www.youtube.com/embed/yJbPSffxKhg?rel=0&amp;amp;wmode=transparent&amp;amp;autoplay=1" target="_blank"><span class="fa fa-youtube-play fa-2x"></span> Daim 4: Kawm tsis tshua tau ntawv</a></p>
+        </td>
+        <td class="videoDuration">22:19 min</td>
+        </tr>
+
+        </tbody></table>
+        </div><!-- close tab-Hmong -->
+        </div><!-- close tabs  -->
+        </div><!-- close tab pannel -->
+
+
+
+        </div>
+    </div>
+</div>
+
+<div id="cboxOverlay" style="display: none;"></div>
+<div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><button type="button" id="cboxPrevious"></button><button type="button" id="cboxNext"></button><button id="cboxSlideshow"></button><div id="cboxLoadingOverlay" style="float: left;"></div><div id="cboxLoadingGraphic" style="float: left;"></div></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none; max-width: none;"></div></div>
+
+<h1>__________ COLORBOX END __________</h1>
+
+
+
+
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+
+
+
+
+
 
 
 <!-- HOMEPAGE ACCORDION -->
+<h1>__________ ACCORDIAN START __________</h1>
 <!-- http://www.pacer.org/parent/surrogate/faq.asp for reference -->
 <h2>Frequently Asked Questions</h2>
 
@@ -36,14 +255,25 @@
 	<div class="ExpandItem">
 	  <p>To be an effective surrogate parent, it is helpful to acquire some information about the child's disability. The child's teacher, many state and national organizations, and the local library may have helpful information. PACER Center has a resource list of disability organizations, see our <a href="/parent/links.asp">Recommended Organizations by Category</a> listing.</p>
 	</div>
+<h1>__________ ACCORDIAN END __________</h1>
 
 
 
 
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 
 
 <!-- LIGHTBOX -->
+<h1>__________ LIGHTBOX START __________</h1>
 <!-- http://www.pacer.org/cultural-diversity/resources-for-parents.asp for reference -->
 <div id="recordkeepingfolders">
   <p style="font-weight:bold; font-size:1.15em;">School Record Keeping Folders</p>
@@ -57,14 +287,26 @@
   </div>
   <p>To advocate effectively for your child (speak up on his or her behalf), and make good decisions about your child’s education, you need to have important information from the school. School records, such as test scores, report cards, or behavior reports, all contain information for making educational decisions. Keeping track of school paperwork is an important part of parent involvement.</p>
 </div>
+<h1>__________ LIGHTBOX END __________</h1>
 
 
 
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 
 
 
 <!-- TABBED CONTENT -->
+<h1>__________ TABBED CONTENT START __________</h1>
 <!-- http://www.pacer.org/bullying/resources/students-with-disabilities/ for reference -->
 <div class="tabbedPanel">
 <div id="tabs">
@@ -100,20 +342,38 @@
       <li>other conduct that may be physically threatening, harmful, or humiliating </li>
 	  </ul>
 </div>
+<h1>__________ TABBED CONTENT END __________</h1>
+
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 
 
 
 
 
+<!-- FOOTER JavaScript -->
+<!-- Key elementsw -->
+<script type="text/javascript" src="../assets/js/key-elements.min.js"></script>
+<!-- Colorbox -->
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
+  ga('create', 'UA-2136885-1', 'auto');
+  ga('send', 'pageview');
 
-
-
-
-
-
-
-<!-- JavaScript -->
-<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script type="text/javascript" src="../../assets/js/key-elements.min.js"></script>
+</script>
+<script>/* <![CDATA[ */(function(d,s,a,i,j,r,l,m,t){try{l=d.getElementsByTagName('a');t=d.createElement('textarea');for(i=0;l.length-i;i++){try{a=l[i].href;s=a.indexOf('/cdn-cgi/l/email-protection');m=a.length;if(a&&s>-1&&m>28){j=28+s;s='';if(j<m){r='0x'+a.substr(j,2)|0;for(j+=2;j<m&&a.charAt(j)!='X';j+=2)s+='%'+('0'+('0x'+a.substr(j,2)^r).toString(16)).slice(-2);j++;s=decodeURIComponent(s)+a.substr(j,m-j)}t.innerHTML=s.replace(/</g,'&lt;').replace(/\>/g,'&gt;');l[i].href='mailto:'+t.value}}catch(e){}}}catch(e){}})(document);/* ]]> */</script>
