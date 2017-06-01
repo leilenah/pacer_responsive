@@ -115,36 +115,45 @@
             #header #parent-menu #nav .social-list .social-elements .socialButton.pinterest {
               background-image: url(../../assets/images/parent/pinterest-icon.png); } }
 
-h3 {
-  background-color: #eee;
-  color: #444;
-  cursor: pointer;
-  padding: 18px;
+#pagecontent {
+  margin: 0; }
+
+#colorbox {
+  top: 0; }
+
+div #colorbox {
+  top: 0px;
   width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-  transition: 0.4s; }
+  height: 100%; }
 
-h3.active, h3:hover {
-  background-color: #ddd; }
+#cboxOverlay {
+  opacity: 1.0;
+  background: #fff; }
 
-.test {
-  background-color: red; }
+#cboxContent {
+  background: none; }
 
-.ExpandItem {
-  padding: 0 18px;
-  background-color: white;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out; }
+#cBoxWrapper {
+  height: 100%;
+  width: 100%; }
 
-.fltrt img {
-  margin: auto 0; }
+#cboxTopLeft, #cboxTopCenter, #cboxTopRight, #cboxMiddleLeft, #cboxMiddleRight {
+  background: #fff; }
 
-.fltrt p {
-  color: red; }
+button#cboxClose {
+  color: #007FA9;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  background: url(../images/close.svg) 36px 16px no-repeat;
+  background-size: 30%;
+  background-position: 36px 16px;
+  text-indent: 0; }
+
+#cboxLoadedContent {
+  margin-bottom: 0px; }
 
 @media screen and (max-width: 750px) {
   body {
