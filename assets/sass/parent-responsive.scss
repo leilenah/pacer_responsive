@@ -17,6 +17,29 @@ $category-height: 50px;
 $button-size: $category-height + 2px;
 $primary-border: 1px solid $parent-blue;
 
+
+
+
+
+
+// temp conetnt
+.dummy-content{
+    text-align: center;
+    margin: 20px auto;
+    padding: 20px;
+    font-size: 15px;
+    height: 400px;
+    width: 200px;
+    line-height: 400px;
+    border: $primary-border;
+    color: $parent-blue;
+    font-family: $parent-primary-font;
+}
+
+
+
+
+
 //-- Desktop styles
 .menu-button{
     display: none;

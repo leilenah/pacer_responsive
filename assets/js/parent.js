@@ -64,7 +64,7 @@
     // menu button functionality
     $body.on('click', '.menu-button', function(e){
         $('#nav').slideToggle(300); // TODO: roll slidetoggle out to buttons
-        $('#nav button').fadeToggle(150);
+        $('#nav button').fadeToggle(250);
     });
 
 

@@ -1,5 +1,17 @@
 /* Custom Breakpoint Mixin */
 @import url(../fonts/font-awesome-4.7.0/css/font-awesome.min.css);
+.dummy-content {
+  text-align: center;
+  margin: 20px auto;
+  padding: 20px;
+  font-size: 15px;
+  height: 400px;
+  width: 200px;
+  line-height: 400px;
+  border: 1px solid #007FA9;
+  color: #007FA9;
+  font-family: Helvetica; }
+
 .menu-button {
   display: none; }
 
