@@ -100,15 +100,15 @@
     }
 
 
-    function injectSubCategories(){
+    function injectTertiaryCategories(){
         var $subCategories = $('.treemenu');
 
         if (!$subCategories.length){ return; }
 
         $subCategories.each(function() {
             var $subCategory = $(this),
-                subCategoryData = $subCategory.data('sub-category'),
-                $secondaryCategory = $('#parent-menu #nav').find('[data-sub-category="' + subCategoryData + '"]');
+                subCategoryData = $subCategory.data('tertiary-category'),
+                $secondaryCategory = $('#parent-menu #nav').find('[data-tertiary-category="' + subCategoryData + '"]');
 
             $subCategory.find('a').wrapInner('<span></span>');
             $secondaryCategory.append($subCategory);
@@ -148,5 +148,5 @@
     addCateoryClasses();
     createDonateCategory();
     injectSocialIcons();
-    injectSubCategories();
+    injectTertiaryCategories();
 }());

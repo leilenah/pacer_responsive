@@ -5,10 +5,7 @@
   margin: 20px auto;
   padding: 20px;
   font-size: 15px;
-  height: 400px;
   width: 200px;
-  line-height: 400px;
-  border: 1px solid #007FA9;
   color: #007FA9;
   font-family: Helvetica; }
 
@@ -190,7 +187,8 @@
             color: #007FA9;
             text-align: center;
             background-size: 40px;
-            background-repeat: no-repeat; }
+            background-repeat: no-repeat;
+            background-position: center; }
             #header #parent-menu #nav .social-list .social-elements .socialButton.facebook {
               background-image: url(../../assets/images/parent/facebook-icon.png); }
             #header #parent-menu #nav .social-list .social-elements .socialButton.youtube {
@@ -199,8 +197,8 @@
               background-image: url(../../assets/images/parent/twitter-icon.png); }
             #header #parent-menu #nav .social-list .social-elements .socialButton.instagram {
               background-image: url(../../assets/images/parent/instagram-icon.png); }
-            #header #parent-menu #nav .social-list .social-elements .socialButton.pinterest {
-              background-image: url(../../assets/images/parent/pinterest-icon.png); }
+            #header #parent-menu #nav .social-list .social-elements .socialButton.youtube {
+              background-image: url(../../assets/images/parent/youtube-icon.png); }
   #leftbar {
     display: none; }
   #parent-footer {
@@ -250,7 +248,8 @@
             color: #007FA9;
             text-align: center;
             background-size: 40px;
-            background-repeat: no-repeat; }
+            background-repeat: no-repeat;
+            background-position: center; }
             #parent-footer .footer-section.primary .social-elements .socialButton:first-child {
               margin-left: 0; }
             #parent-footer .footer-section.primary .social-elements .socialButton:last-child {
@@ -263,8 +262,8 @@
               background-image: url(../../assets/images/parent/twitter-icon.png); }
             #parent-footer .footer-section.primary .social-elements .socialButton.instagram {
               background-image: url(../../assets/images/parent/instagram-icon.png); }
-            #parent-footer .footer-section.primary .social-elements .socialButton.pinterest {
-              background-image: url(../../assets/images/parent/pinterest-icon.png); }
+            #parent-footer .footer-section.primary .social-elements .socialButton.youtube {
+              background-image: url(../../assets/images/parent/youtube-icon.png); }
       #parent-footer .footer-section.secondary .footer-pacer-sites .sites {
         display: none; }
       #parent-footer .footer-section.secondary .footer-pacer-sites a {

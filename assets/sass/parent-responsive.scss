@@ -28,10 +28,7 @@ $primary-border: 1px solid $parent-blue;
     margin: 20px auto;
     padding: 20px;
     font-size: 15px;
-    height: 400px;
     width: 200px;
-    line-height: 400px;
-    border: $primary-border;
     color: $parent-blue;
     font-family: $parent-primary-font;
 }
@@ -135,6 +132,7 @@ $primary-border: 1px solid $parent-blue;
             text-align: center;
             background-size: 40px;
             background-repeat: no-repeat;
+            background-position: center;
 
             @if ($span-full){
                 &:first-child{
@@ -157,8 +155,8 @@ $primary-border: 1px solid $parent-blue;
             &.instagram{
                 background-image: url(../../assets/images/parent/instagram-icon.png);
             }
-            &.pinterest{
-                background-image: url(../../assets/images/parent/pinterest-icon.png);
+            &.youtube{
+                background-image: url(../../assets/images/parent/youtube-icon.png);
             }
         }
     }
