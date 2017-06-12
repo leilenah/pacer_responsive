@@ -8,12 +8,6 @@
 
 
 
-	window.console.log('hey hey hey colorbox');
-
-
-
-
-
 	var
 	// Default settings object.
 	// See http://jacklmoore.com/colorbox for details.

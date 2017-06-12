@@ -55,5 +55,25 @@
 	margin-top:-25px;
 }
 
-
+  #pagecontent p.ExpandHeader {
+    margin-left: 40px;
+    padding-left: 0px ;
+      text-indent: -15px ;
+  }
+  #pagecontent h3 {
+    margin:2.5em .5em 1.5em 5px;
+  }
+  .ExpandItem {
+    color:#006A8C;
+    padding:3px;
+  }
+  #pagecontent .fa {
+    margin-right:10px;
+  }
+  #pagecontent a {
+    text-decoration:underline;
+  }
+  #pagecontent a:hover {
+    color:#EB7500;
+  }
 

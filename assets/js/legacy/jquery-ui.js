@@ -10,14 +10,6 @@
 
 
 
-	window.console.log('hey hey hey jquery ui');
-
-
-
-
-
-
-
 
 	if ( typeof define === "function" && define.amd ) {
 

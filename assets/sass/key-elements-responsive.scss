@@ -4,49 +4,149 @@
 //-- Colors
 $parent-blue: #007FA9;
 
+//-- Fonts
+$parent-primary-font: Helvetica;
+$parent-primary-font-size: 10px;
+
+//LIGHTBOX
 #pagecontent{
   margin: 0;
 }
-#colorbox{
-  top: 0;
+
+.cboxElement img{
+  width: 694px;
+  height: 506px;
 }
-div #colorbox{
-  top: 0px;
+/*#colorbox{
+  top: 0;
   width: 100%;
   height: 100%;
-}
-#cboxOverlay{
-  opacity: 1.0;
-  background: #fff;
+}*/
+div#colorbox{
+  left:0;
+  top: 0;
+  width: 100%;
+  height: 100%;
 }
 #cboxContent{
+  overflow: visible;
+  position: none;
   background: none;
+  float: none;
 }
-#cBoxWrapper{
+div#cBoxWrapper{
   height: 100%;
   width: 100%;
 }
-#cboxTopLeft, #cboxTopCenter, #cboxTopRight, #cboxMiddleLeft, #cboxMiddleRight{
-  background: #fff;
+#cboxTopLeft, #cboxTopCenter, #cboxTopRight{
+  /*background: #fff;*/
+  display: none;
+  float: none;
 }
-button#cboxClose{
+#cboxClose{
   color: #007FA9;
-  position: absolute;
-  top:0;
-  right: 0;
-  width: 100px;
-  height: 100px;
-  background:url(../images/close.svg) 36px 16px no-repeat;
-  background-size: 30%;
-  background-position: 36px 16px;
+  // position: absolute;
+  // top:0;
+  // right: 0;
+  // width: 100px;
+  // height: 100px;
+  // background:url(../images/close.svg) 36px 16px no-repeat;
+  // background-position: 36px 16px;
   text-indent: 0;
 }
 
-#cboxLoadedContent{
-  margin-bottom: 0px;
+div#cboxLoadedContent{
+  margin-bottom: 0;
+/*  width: 100%;
+  height: 100%;*/
+}
+
+img.cboxPhoto{
+  margin: none;
+  width: 100%;
+  height: 100%;
+}
+
+div#cboxTitle{
+  position: relative;
+  float: none;
+  color: black;
+  margin-top: 20px;
+}
+div#cboxOverlay{
+  opacity: 1.0 !important;
+  background: #fff;
+}
+#cboxOverlay.closeOverlay{
+  background:url(../images/close.svg) 36px 16px no-repeat;
+}
+
+//TABBED PANEL
+
+
+
+
+
+//ACCORDION
+
+ol{
+  padding-left: 40px;
+}
+
+ol, li{
+  font-size: 0.9em;
+}
+
+p.ExpandHeader{
+  height: 80px;
+  strong{
+    line-height: 2;
+    padding-left: 60px;
+    font-size: 1.75rem !important;
+    font-weight: bold;
+    color: $parent-blue !important;
+  }
+}
+
+.ExpandHeader{
+  min-height: 40px;
+}
+
+.ExpandItem{
+  color: #000 !important;
+}
+
+#pagecontent p.ExpandHeader {
+  font-family: $parent-primary-font;
+  border: 2px solid $parent-blue;
+  text-indent: 0 !important;
+  padding: 10px 10px 0 0;
+  text-transform: uppercase;
+  margin: 20px 20px 0 20px !important;
+}
+
+.ExpandHeader span.fa{
+  display: none;
+}
+
+.ExpandItem .ItemOpen{
+  padding: none !important;
+}
+
+#pagecontentright li, #pagecontent li{
+  margin-bottom: 0 !important;
 }
 
 
+
+
+//EMBEDDED YOUTUBE
+a .videoPopUp .cboxElement{
+  img{
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
 @include breakpoint($bp-mobile-landscape){
     @include parent-responsive-styles();
 

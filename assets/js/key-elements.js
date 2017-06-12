@@ -1,73 +1,43 @@
 /*jshint loopfunc:true */
+/*jshint -W087 */
+
 (function() {
     'use strict';
 
-    var $ = window.jQuery;
+var $ = window.jQuery,
+  console = window.console;
 
-
-    window.console.log('hey');
-
-
-
-
-//  // Classes and what not
-
-
-// //HOMEPAGE ACCORDION
-
-// $('.question').each(function(){ //wrap h3 in a div for accordion
-//     $(this).nextUntil('.question').wrapAll('<div class="test" />');
-// });
-
-// //JAVASCRIPT ACCORDIONG CODE FROM PACER LINES 14 -83 DOESNT EVEN WORK
-// //requires jQuery ver 1.43 or greater
-// jQuery(document).ready(function() {
-
-// 	jQuery(".ExpandHeader").each(function(index, element) {
-
-// 		//add accessibility aria-roles and tabindex
-// 		jQuery(this).attr("role", "button");
-// 		jQuery(this).attr("tabindex", "0");
-// 	});
-
-// 	jQuery(".ExpandHeader").click(function () {
-// 		jExpandHeader = jQuery(this);
-// 		jReadMore = jQuery(this).nextAll().find('.ReadMore').first();
-// 		jReadMore.hide();
-
-// 		//getting the next element
-// 		jContent = jQuery(this).nextAll('.ExpandItem').first();
-
-// 		//alert(jQuery(this).nextAll('.ExpandItem')[0].tagName);
-// 		//open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
-// 		jContent.slideToggle(700, function () {
-
-// 			//execute this after slideToggle is done
-// 			//change text of header based on visibility of content div
-// 			jExpandHeader.toggleClass('ItemOpen');
-// 			jContent.toggleClass('ItemOpen');
-// 		});
-
-// 	});
-
-// 	jQuery(".ExpandHeader").bind('keypress',function (event){
-// 		if (event.keyCode === 13){
-// 				this.click();
-// 		}
-// 	});
-// });
+// var $cboxOverlay = $('#cboxOverlay');
+//   $cboxOverlay.on('click', function(e){
+//     $cboxOverlay.addClass('closeOverlay');
+//   });
+var $cboxElement = $('#cboxElement');
+var $cboxOverlay = $('#cboxOverlay');
+  $cboxElement.on('click', function(e){
+    $cboxOverlay.addClass('closeOverlay');
+  });
 
 
 
-// // LIGHTBOX
+// $('#cboxOverlay').addClass('closeOverlay');
+// console.log("#cboxOverlay " + $('#cboxOverlay').get(0));
+// console.log($('.closeOverlay'));
 
-// function openModal() { //Used to open and close lightbox img and text when click on view img link
-//   document.getElementByClassName('.fltrt').style.display = "block";
-// }
-
-// function closeModal() {
-//   document.getElementByClassName('.fltrt').style.display = "none";
-// }
+// $('#cboxOverlay').append("<div class='closeIcon'>content</div>");
 
 }());
 
+
+
+// document.getElementById("demo").onclick = function() {myFunction()};
+
+// function myFunction() {
+//     document.getElementById("demo").innerHTML = "YOU CLICKED ME!";
+// }
+
+
+// var $body = $('body');
+//     $body.on('click', '.show-more', function(e){
+//         var $showMoreBtn = $(e.currentTarget),
+//             $showLessBtn = $('.show-less');
+// }

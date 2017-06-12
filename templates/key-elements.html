@@ -1,19 +1,30 @@
 
 <!-- Legacy stylesheet link here -->
-<link rel="stylesheet" type="text/css" href="../assets/css/legacy/pacer-expanding-box.css">
 <link rel="stylesheet" type="text/css" href="../assets/css/legacy/leftnavnoright.css">
+<link rel="stylesheet" type="text/css" href="../assets/css/legacy/font-awesome.css">
 <link rel="stylesheet" type="text/css" href="../assets/css/legacy/colorbox.css">
 <link rel="stylesheet" type="text/css" href="../assets/css/legacy/jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="../assets/css/legacy/bullying.css">
 <link rel="stylesheet" type="text/css" href="../assets/css/legacy/home.css">
+<link rel="stylesheet" type="text/css" href="../assets/css/legacy/pacer-expanding-box.css">
 
 <!-- Stylesheet -->
 <link rel="stylesheet" type="text/css" href="../assets/css/key-elements-responsive.min.css">
 
+
+<!-- FOOTER JavaScript -->
+<!-- Key elements -->
+<script type="text/javascript" src="../assets/js/key-elements.min.js"></script>
+
+
 <!-- HEAD Javascript -->
 <!-- Colorbox -->
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript" src="../assets/js/legacy/pacer-expanding-box.js"></script>
 <script type="text/javascript" src="../assets/js/legacy/jquery-ui.js"></script>
 <script type="text/javascript" src="../assets/js/legacy/jquery-colorbox.js"></script>
+
+
 <script type="text/javascript">
     $(document).ready(function(){
         var $pageTabs = $('#tabs').tabs();
@@ -48,6 +59,77 @@
 </script>
 
 
+<!-- TABS -->
+<script type="text/javascript">
+
+  // ID and SubId to be Orange
+  var currId="unityday";
+  var showTree = "none";
+  var currSubId="none";
+  if (document.getElementById(currId)){
+    document.getElementById(currId).className = "active";
+  }
+  if (document.getElementById(currSubId)){
+    document.getElementById(currSubId).className = "active";
+  }
+  var subTrees = document.getElementsByTagName("ul");
+  for (var i = 0; i < subTrees.length; i++) {
+    if (subTrees[i].className == "submenu") {
+      if (subTrees[i].id != showTree) {
+        subTrees[i].className = "submenuhidden";
+      }
+    }
+  }
+
+
+
+//<![CDATA[
+  $(document).ready(function() {
+    $('.dash').attr('aria-hidden','true');
+    var $pageTabs = $('#tabs').tabs();
+    //When linking to a tab on the page the browser sometimes jumps you to the bottom of the page.  This will start you at the top of the tab if you link directly to a tab on the page.
+    if (window.location.hash) {
+        $('html, body').animate({
+              scrollTop: $($pageTabs).offset().top - 115
+          }, 150);
+    }
+
+    $(".ui-tabs-panel").each(function(i){
+        var totalSize = $(".ui-tabs-panel").size() - 1;
+        if (i != totalSize) {
+            next = i + 1;
+            $(this).append("<a href='#' class='next-tab mover' rel='" + next + "'>Next Tab &#187;</a>");
+        }
+
+        if (i != 0) {
+            prev = i - 1;
+          $(this).append("<a href='#' class='prev-tab mover' rel='" + prev + "'>&#171; Prev Tab</a>");
+        }
+        $(this).append('<br class="clearfloat" />');
+    });
+
+    $('.next-tab, .prev-tab').click(function() {
+       //scroll back to the top
+       $('html, body').animate({
+            scrollTop: $($pageTabs).offset().top - 115
+        }, 150);
+       //delay the changing of the tabs until the scroll is complete so the person sees the heading change
+       setTimeout($.proxy(function() {
+          //alert('timeout - ' + $(this).attr("rel"));
+          $('#tabs').tabs('option', 'active', $(this).attr("rel"));
+          //Re-scroll the window after the content length has changed.
+        $('html, body').animate({
+              scrollTop: $($pageTabs).offset().top - 115
+          }, 150);
+
+       }, this), 300);
+           return false;
+        });
+   });//----------close ready function----------
+//]]>
+</script>
+
+
 
 
 
@@ -67,7 +149,6 @@
     <div id="pagecontent">
         <div id="help-your-child-series">
         <div class="tabbedPanel">
-
         <div id="tabs" class="ui-tabs ui-widget ui-widget-content ui-corner-all">
           <ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all" role="tablist">
             <li class="ui-state-default ui-corner-top ui-tabs-active ui-state-active" role="tab" tabindex="0" aria-controls="tabs-English" aria-labelledby="ui-id-1" aria-selected="true" aria-expanded="true"><a href="#tabs-English" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-1">English Version</a></li>
@@ -198,12 +279,14 @@
         </div><!-- close tab-Hmong -->
         </div><!-- close tabs  -->
         </div><!-- close tab pannel -->
+<br>
+<br>
 
-
+<div style="text-align:center;"><a class="group1 cboxElement" title="Click The Right Arrow To Continue." href="../assets/images/1-FolderView.jpg"><img style="padding:0px; margin:0px;" src="../assets/images/1-FolderView.jpg" width="347" height="253" alt="School Record Keeping Folders"><br><br>
+    (Click to View)</a></div>
 
         </div>
-    </div>
-</div>
+
 <!-- <div id="cboxOverlay" style="display: none;"></div>
 <div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;"></div><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><button type="button" id="cboxPrevious"></button><button type="button" id="cboxNext"></button><button id="cboxSlideshow"></button><div id="cboxLoadingOverlay" style="float: left;"></div><div id="cboxLoadingGraphic" style="float: left;"></div></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none; max-width: none;"></div></div> -->
 
@@ -238,81 +321,303 @@
 <!-- HOMEPAGE ACCORDION -->
 <!-- <h1>__________ ACCORDIAN START __________</h1> -->
 <!-- http://www.pacer.org/parent/surrogate/faq.asp for reference -->
-<!-- <h2>Frequently Asked Questions</h2>
-
-<h3>Responsibilities</h3>
-	<p class="question ExpandHeader">Why can't staff members of the school, county, or the care facility where the child lives be responsible for representing the child on educational matters?</p>
-	<div class="ExpandItem">
-	  <p>There are a number of reasons:</p>
-	  <ul type="disc">
-		  <li>Both the school and agency may have restrictions that conflict with meeting the child's individual needs </li>
-		  <li>Neither the school nor the agency can act as a totally neutral party to advocate without conflict of interest </li>
-	  </ul>
-	</div>
-
-<h3>Disability knowledge</h3>
-	<p class="question ExpandHeader">How much does a surrogate parent need to know about the child's disability and where can this information be found?</p>
-	<div class="ExpandItem">
-	  <p>To be an effective surrogate parent, it is helpful to acquire some information about the child's disability. The child's teacher, many state and national organizations, and the local library may have helpful information. PACER Center has a resource list of disability organizations, see our <a href="/parent/links.asp">Recommended Organizations by Category</a> listing.</p>
-	</div>
-<h1>__________ ACCORDIAN END __________</h1> -->
-
-
-
-
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+<style>
+  #pagecontent p.ExpandHeader {
+    margin-left: 40px;
+    padding-left: 0px ;
+      text-indent: -15px ;
+  }
+  #pagecontent h3 {
+    margin:2.5em .5em 1.5em 5px;
+  }
+  .ExpandItem {
+    color:#006A8C;
+    padding:3px;
+  }
+  #pagecontent .fa {
+    margin-right:10px;
+  }
+  #pagecontent a {
+    text-decoration:underline;
+  }
+  #pagecontent a:hover {
+    color:#EB7500;
+  }
+  </style>
 
 
 
 
 
-<!-- TABBED CONTENT -->
-<!-- <h1>__________ TABBED CONTENT START __________</h1> -->
-<!-- http://www.pacer.org/bullying/resources/students-with-disabilities/ for reference -->
-<!-- <div class="tabbedPanel">
-<div id="tabs">
-<ul>
-  <li><a href="#tab-top10">Top 10 Facts</a></li>
-	<li><a href="#tab-rights">Rights and Policies</a></li>
-</ul>
 
-<div id="tab-top10">
-  <h2>Top 10 facts that parents, educators and students should know</h2>
-  <h3>1. The statistics &ndash; Students with disabilities are much more likely to be bullied than their nondisabled peers.</h3>
-	  <p>Although only 10 U.S. studies have been conducted on the connection between bullying and developmental disabilities, all of these studies found that children <strong>with disabilities were two to three times more likely to be bullied than their nondisabled peers</strong>. (<a href="http://www.amazon.com/Disabilities-Insights-Across-Fields-Around/dp/0313346046" target="_blank"><em>Disabilities: Insights from Across Fields and Around the World<strong>; </strong></em>Marshall, Kendall, Banks &amp; Gover (Eds.), 2009</a> <i class="fa fa-external-link"></i>)</p>
-	  <p>One study shows that 60 percent of students with disabilities report being bullied regularly compared with 25 percent of all students. (Source: British Journal of Learning Support, 2008)</p>
-	  <p>For more information, visit &ldquo;<a href="http://www.pacer.org/bullying/about/media-kit/stats.asp">Bullying Statistics</a>.&rdquo;</p>
-	<h3>2. The impact - Bullying affects a student&rsquo;s ability to learn.</h3>
-	  <p>Many students with disabilities are already addressing challenges in the academic environment. When they are bullied, it can directly impact their education.</p>
-	  <p>Bullying is not a harmless rite of childhood that everyone experiences. Research shows that bullying can negatively impact a child&rsquo;s access to education and lead to:</p>
-	  <ul>
-      <li>school avoidance and higher rates of absenteeism</li>
-      <li>decrease in grades</li>
-      <li>inability to concentrate</li>
-      <li>loss of interest in academic achievement</li>
-      <li>increase in dropout rates</li>
-	  </ul>
-	<h3>3. The definition &ndash; Bullying based on a student&rsquo;s disability may be considered harassment.</h3>
-	  <p>The Office for Civil Rights (OCR) and the Department of Justice (DOJ) have stated that bullying may also be <strong>considered harassment</strong> when it is based on a student&rsquo;s race, color, national origin, sex, <strong>disability</strong>, or religion.</p>
-	  <p>Harassing behaviors may include:</p>
-	  <ul>
-      <li>unwelcome conduct such as verbal abuse, name calling, epithets, or slurs </li>
-      <li>graphic or written statements </li>
-      <li>threats </li>
-      <li>physical assault </li>
-      <li>other conduct that may be physically threatening, harmful, or humiliating </li>
-	  </ul>
+<!-- ACCORDION -->
+
+<p class="ExpandHeader"><strong>Parent Questions: </strong></p>
+<div class="ExpandItem">
+<ol>
+ <li>What does your child like about school? What do you like about your child&rsquo;s school?</li>
+ <li>Do you feel welcome in your child&rsquo;s school? If yes, what does school staff do that shows you that you are welcome? </li>
+ <ol>
+  <li><strong>If no</strong>, what could the school do differently that would make you feel welcome?</li>
+ </ol>
+ <li>Are you satisfied with how often and in what way school staff communicates with you about your child? </li>
+ <li>About school activities? (give examples) </li>
+ <ol>
+  <li><strong>If yes</strong>, what are they doing that is helpful?  </li>
+  <li><strong>If no</strong>, what would you like them to do differently?</li>
+ </ol>
+ <li>What do you do to prepare your child to do well in school? </li>
+ <li>What do you consider to be the parent or family&rsquo;s role in a child&rsquo;s education?</li>
+</ol>
+<div class="resources">
+  <p>Schools talk about the importance of &ldquo;Parent Involvement&rdquo; or &ldquo;Parent Engagement.&rdquo; Schools use these terms to mean several different things. Some of the main ways parents are &ldquo;involved&rdquo;—or participate are by: </p>
+   <ul>
+    <li>Volunteering in the classroom or at school events or activities;  </li>
+    <li>Attending school events such as Orientation, Open House, Family Nights and meetings about your child such as parent-teacher conferences; </li>
+    <li>Working with your child at home on homework, reading to your child, preparing them for school; </li>
+    <li>Being a part of a group that advises the school or helps make decisions such as the school site council. </li>
+   </ul>
 </div>
-<h1>__________ TABBED CONTENT END __________</h1>
- -->
+ <ol start="7">
+ <li>How does the school ask you to be involved? </li>
+ <li>How does this work for your family? </li>
+ <li>What kind of school activities do you like to attend?</li>
+ <li>What would you like to do to help your child in their schooling but don&rsquo;t know how to do? </li>
+ <li>What could the school do to help you be more involved? </li>
+ <li>What kind of things has the school done that helped you to help your child more at home?</li>
+ <li>Is there anything else you would like us to know about what is important to you as a family about your child&rsquo;s education? </li>
+</ol>
+
+
+
+<hr style="margin:40px 0px;" />
+</div>
+
+<p class="ExpandHeader"><strong>Teacher and Support Staff Questions:</strong></p>
+<div class="ExpandItem">
+<ol>
+ <li>Opening question: What do you find rewarding about working with families from diverse cultures?</li>
+ <li>Do you feel respected and valued by your student&rsquo;s families?</li>
+ <li>Are you satisfied with how often and in what ways the family communicates with you about their child? <br />
+   <ul>
+    <li><strong>If yes</strong>, what are they doing that is helpful?</li>
+    <li><strong>If no</strong>, what would you like them to do differently?</li></ul></li>
+ <li>About their level of participation in school activities?<br />
+
+  <ul>
+   <li><strong>If yes</strong>, what are they doing that is helpful?</li>
+   <li><strong>If no</strong>, what would you like them to do differently?</li></ul></li>
+ <li>What do your student&rsquo;s families do that contribute to their child&rsquo;s education?</li>
+ <li>What do you consider to be the parent or family&rsquo;s role in a child&rsquo;s education?</li>
+ <li>How would you like parents to be involved in school or in the classroom?</li>
+ <li>What challenges have you observed regarding participation by families?</li>
+ <li>What outcomes have you seen from this type of involvement?</li>
+ <li>What would you like to do to help parents to be more involved or engaged in their child&rsquo;s schooling?</li>
+ <li>What tools do you need to increase the level of Parent Involvement and Engagement? </li>
+ <li>Is there anything else you would like us to know about what is important to you as an educator about the home-school partnership with families from diverse cultures? </li>
+</ol>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- VIDEOS -->
+<div class="videos">
+<h2 class="greenBar" id="ParentPerspectives">Parent Perspective Videos - Parent Voices on Parent Involvement Series</h2>
+
+<table cellspacing="10">
+<tr><td colspan="2" align="center"><h3>Mar&iacute;a Morra - Hispanic Mother</h3></td>
+<td rowspan="7" align="center" class="videoImg"><img src="/cultural-diversity/images/video-thumbs/MariaMorra.jpg" alt="" width="229" height="294" /></td>
+</tr>
+<tr>
+  <td colspan="2"><p><strong>Videos in this Series</strong></p></td></tr>
+
+<tr>
+<td>
+<p><a class="videoPopUp" href="https://www.youtube.com/watch?v=wCnSozthNO0" target="_blank"><span class="fa fa-youtube-play fa-2x"></span> Video 1: What Does Parent Involvement Mean to You?</a></p></td>
+<td class="videoDuration">0:52 min</td>
+</tr>
+<tr>
+<td>
+<p><a class="videoPopUp" href="https://www.youtube.com/watch?v=PgbaflujDgU" target="_blank"><span class="fa fa-youtube-play fa-2x"></span> Video 2: How Have You Participated in Your Child's Education?</a></p>
+</td>
+<td class="videoDuration">1:22 min</td>
+</tr>
+<tr>
+<td>
+<p><a class="videoPopUp" href="https://www.youtube.com/watch?v=LaQ3NDH92p8" target="_blank"><span class="fa fa-youtube-play fa-2x"></span> Video 3: What Do You Wish You had Known Before Your Child's Education?</a></p>
+</td>
+<td class="videoDuration">1:05 min</td>
+</tr>
+<tr>
+<td>
+<p><a class="videoPopUp" href="https://www.youtube.com/watch?v=MEYAJk72UxY" target="_blank"><span class="fa fa-youtube-play fa-2x"></span> Video 4: What Was a Challenge or Barrier That You Had to Overcome?</a></p>
+</td>
+<td class="videoDuration">1:35 min</td>
+</tr><tr>
+<td>
+<p><a class="videoPopUp" href="https://www.youtube.com/watch?v=8BQ8kr8VXxM" target="_blank"><span class="fa fa-youtube-play fa-2x"></span> Video 5: What ideas do you have to share with other parents?</a></p>
+</td>
+<td class="videoDuration">1:58 min</td>
+</tr>
+
+<tr><td colspan="3"><hr /></td></tr>
+
+<tr><td colspan="2" align="center"><h3>Sai Thao - Hmong Mother</h3></td>
+<td rowspan="6" align="center" class="videoImg"><img src="/cultural-diversity/images/video-thumbs/Sai-Thao.jpg" alt="" width="229" height="294" /></td>
+</tr>
+<tr>
+  <td colspan="2"><p><strong>Videos in this Series</strong></p></td></tr>
+
+<tr>
+<td>
+<p><a class="videoPopUp" href="https://www.youtube.com/watch?v=oQ8f_n9vD24" target="_blank"><span class="fa fa-youtube-play fa-2x"></span> Video 1: What Does School Involvement Mean to You?</a></p></td>
+<td class="videoDuration">1:55 min</td>
+</tr>
+<tr>
+<td>
+<p><a class="videoPopUp" href="https://www.youtube.com/watch?v=EZQmcUhPUHk" target="_blank"><span class="fa fa-youtube-play fa-2x"></span> Video 2: What Do You Know Now That You Wished You Learned Earlier?</a></p>
+</td>
+<td class="videoDuration">2:01 min</td>
+</tr>
+<tr>
+<td>
+<p><a class="videoPopUp" href="https://www.youtube.com/watch?v=DgbMWN0RHVU" target="_blank"><span class="fa fa-youtube-play fa-2x"></span> Video 3: What Was a Barrier That You Had to Overcome?</a></p>
+</td>
+<td class="videoDuration">1:21 min</td>
+</tr>
+<tr>
+<td>
+<p><a class="videoPopUp" href="https://www.youtube.com/watch?v=7mMZnf59n2I" target="_blank"><span class="fa fa-youtube-play fa-2x"></span> Video 4: Do You Have Tips That You Would Share with Parents?</a></p>
+</td>
+<td class="videoDuration">1:25 min</td>
+</tr>
+
+<tr><td colspan="3"><hr /></td></tr>
+
+<tr><td colspan="2" align="center"><h3>Hodan Hassan - Somali Mother</h3></td>
+<td rowspan="7" align="center" class="videoImg"><img src="/cultural-diversity/images/video-thumbs/Hodan.jpg" alt="" width="229" height="294" /></td>
+</tr>
+<tr>
+  <td colspan="2"><p><strong>Videos in this Series</strong></p></td></tr>
+
+<tr>
+<td>
+<p><a class="videoPopUp" href="https://www.youtube.com/watch?v=yej7NW2dQFQ" target="_blank"><span class="fa fa-youtube-play fa-2x"></span> Video 1: What Does School Involvement Mean to You?</a></p></td>
+<td class="videoDuration">0:57 min</td>
+</tr>
+<tr>
+<td>
+<p><a class="videoPopUp" href="https://www.youtube.com/watch?v=daAgk5eu1xc" target="_blank"><span class="fa fa-youtube-play fa-2x"></span> Video 2: How Have You Been Involved in Your Child&rsquo;s  Education?</a></p>
+</td>
+<td class="videoDuration">2:20 min</td>
+</tr>
+<tr>
+<td>
+<p><a class="videoPopUp" href="https://www.youtube.com/watch?v=1m6okzOMjLU" target="_blank"><span class="fa fa-youtube-play fa-2x"></span> Video 3: What Do You Know Now That You Wished You Learned  Earlier?</a></p>
+</td>
+<td class="videoDuration">1:31 min</td>
+</tr>
+<tr>
+<td>
+<p><a class="videoPopUp" href="https://www.youtube.com/watch?v=k58kOFdje7Y" target="_blank"><span class="fa fa-youtube-play fa-2x"></span> Video 4: What Was a Barrier That You Had to Overcome?</a></p>
+</td>
+<td class="videoDuration">1:22 min</td>
+</tr>
+<tr>
+<td>
+<p><a class="videoPopUp" href="https://www.youtube.com/watch?v=ZZWBw_UjSV4" target="_blank"><span class="fa fa-youtube-play fa-2x"></span> Video 5: Do You Have Tips That You Would Share with  Parents?</a></p>
+</td>
+<td class="videoDuration">2:33 min</td>
+</tr>
+
+<tr><td colspan="3"><hr /></td></tr>
+
+
+<tr><td colspan="2" align="center"><h3>James Vue - Hmong Father</h3></td>
+<td rowspan="7" align="center" class="videoImg"><img src="/cultural-diversity/images/video-thumbs/JamesVue.jpg" alt="" width="229" height="294" /></td>
+</tr>
+<tr>
+  <td colspan="2"><p><strong>Videos in this Series</strong></p></td></tr>
+
+<tr>
+<td>
+<p><a class="videoPopUp" href="https://www.youtube.com/watch?v=ykmd7qgMjyQ" target="_blank"><span class="fa fa-youtube-play fa-2x"></span> Video 1: What Does School Involvement Mean to You?</a></p></td>
+<td class="videoDuration">1:43 min</td>
+</tr>
+<tr>
+<td>
+<p><a class="videoPopUp" href="https://www.youtube.com/watch?v=z6TJcoBu8UY" target="_blank"><span class="fa fa-youtube-play fa-2x"></span> Video 2: How Have You Been Involved in Your Child’s Education?</a></p>
+</td>
+<td class="videoDuration">2:57 min</td>
+</tr>
+<tr>
+<td>
+<p><a class="videoPopUp" href="https://www.youtube.com/watch?v=F1ILeC-YSDY" target="_blank"><span class="fa fa-youtube-play fa-2x"></span> Video 3: What Do You Know Now That You Wished You Learned Earlier?</a></p>
+</td>
+<td class="videoDuration">1:10 min</td>
+</tr>
+<tr>
+<td>
+<p><a class="videoPopUp" href="https://www.youtube.com/watch?v=Jr0oy3XJeII" target="_blank"><span class="fa fa-youtube-play fa-2x"></span> Video 4: What Was a Barrier That You Had to Overcome?</a></p>
+</td>
+<td class="videoDuration">1:10 min</td>
+</tr>
+<tr>
+<td>
+<p><a class="videoPopUp" href="https://www.youtube.com/watch?v=Da-ttH2U-nI" target="_blank"><span class="fa fa-youtube-play fa-2x"></span> Video 5: Do You Have Tips That You Would Share with Parents?</a></p>
+</td>
+<td class="videoDuration">1:22 min</td>
+</tr>
+</table>
+
+
+</div><!-- close videos -->
+
+
+
+    </div><!-- close page content -->
+</div> <!-- close main content -->
+
+
+
+
 
 
 <!--
@@ -331,9 +636,7 @@
  -->
 
 
-<!-- FOOTER JavaScript -->
-<!-- Key elementsw -->
-<script type="text/javascript" src="../assets/js/key-elements.min.js"></script>
+
 <!-- Colorbox -->
 <script type="text/javascript">
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
