@@ -79,14 +79,21 @@
     }
 
     function createDonateCategory(){
-        var $donate = $('#parent-header-donate').html('<span>donate</span>');
+        var $donate = $('.header-donate').html('<span>donate</span>');
         addToNav($donate, 'primary-category', true);
     }
 
+    function createNewsletterCategory(){
+        var $newsletter = $('.header-newsletter').html('<span>newsletter</span>');
+        addToNav($newsletter, 'primary-category', true);
+    }
 
-    function injectSocialIcons(){
-        var $icons = $('#header .socialButton').empty(),
-            $footer = $('.footer-section.primary'),
+
+
+    function injectSocialIcons($footer){
+        if (!$footer.length) { return; }
+
+        var $icons = $('.socialButton').empty(),
             $wrappedIcons;
 
         $icons.wrapAll('<div class="social-elements"></div>');
@@ -100,25 +107,29 @@
     }
 
 
-    function injectTertiaryCategories(){
-        var $subCategories = $('.treemenu');
+    function injectTertiaryCategories($tertiaryCategories, $nav){
+        if (!$tertiaryCategories.length){ return; }
 
-        if (!$subCategories.length){ return; }
+        $tertiaryCategories.each(function() {
+            var $tertiaryCategory = $(this),
+                tertiaryCategoryData = $tertiaryCategory.data('tertiary-category'),
+                $secondaryCategory = $nav.find('[data-tertiary-category="' + tertiaryCategoryData + '"]');
 
-        $subCategories.each(function() {
-            var $subCategory = $(this),
-                subCategoryData = $subCategory.data('tertiary-category'),
-                $secondaryCategory = $('#parent-menu #nav').find('[data-tertiary-category="' + subCategoryData + '"]');
-
-            $subCategory.find('a').wrapInner('<span></span>');
-            $secondaryCategory.append($subCategory);
+            $tertiaryCategory.find('a').wrapInner('<span></span>');
+            $secondaryCategory.append($tertiaryCategory);
 
             addShowMoreBtn($secondaryCategory, false, 'secondary-category-btn');
         });
+
+
+
+        console.log('tertiary injected');
     }
 
     function addToNav($content, className, prepend){
-        var $nav = $('#nav'),
+
+        // TODO: add class that can be globally used
+        var $nav = $('.parent-nav').length ? $('.parent-nav') : $('.bullying-nav'),
             $newContent = $content.wrap('<li></li>').parent();
 
         if (className){
@@ -141,12 +152,26 @@
         if (extraClass) {
             $element.find('button').addClass(extraClass);
         }
+
+        console.log('show more button added');
     }
 
 
     // TODO: init
     addCateoryClasses();
+
+    // might combine into one
     createDonateCategory();
-    injectSocialIcons();
-    injectTertiaryCategories();
+    createNewsletterCategory();
+
+
+    //TODO: add class that can be globally used
+    injectSocialIcons($('.footer-section.primary')); // parent
+    injectSocialIcons($('#centerCol-links')); // bullying
+
+
+    // tertiary categories
+    //TODO: add class that can be globally used
+    injectTertiaryCategories($('.treemenu'), $('#nav.parent-nav')); // parent
+    injectTertiaryCategories($('.submenu'), $('.bullying-nav')); // bullying
 }());

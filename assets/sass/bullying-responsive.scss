@@ -1,1 +1,371 @@
 @import 'breakpoint.scss';
+@import '../fonts/font-awesome-4.7.0/css/font-awesome.min.css';
+
+//-- Colors
+$bullying-orange: #e25b25;
+$bullying-white: #fff;
+$bullying-gray: #CDCDCD;
+$bullying-dark-gray: #333333;
+$bullying-red: #D34040;
+
+//-- Fonts
+$bullying-primary-font: Helvetica;
+$bullying-primary-font-size: 10px;
+
+//-- Elements
+$category-height: 50px;
+$button-size: $category-height + 2px;
+$primary-border: 1px solid $bullying-orange;
+
+
+
+//-- Desktop styles
+.menu-icon-logo-wrapper{
+    display: none;
+}
+
+.footer{
+    #leftCol-branding{
+        #footer-logo{
+            width: 281px;
+            height: 36px;
+        }
+        .footer-section.offices{
+            h4, p{
+                color: $bullying-white;
+                margin-bottom: 0;
+            }
+            &:last-of-type{
+                margin-bottom: 15px;
+            }
+        }
+        .footer-message{
+            line-height: 1.5;
+            padding: 10px 15px;
+        }
+    }
+    #rightCol-Sites{
+        padding-top: 18px;
+        ul{ margin-top: 0; }
+    }
+    #copywrite{
+        clear: left;
+    }
+}
+
+
+//-- TODO: might move into helper mixins
+@mixin style-social-icons($span-full){
+    // social icons
+    .social-elements{
+        background-color: $bullying-white;
+        display: flex;
+        flex-wrap: nowrap;
+        .socialButton{
+            width: 40px;
+            height: 40px;
+            padding: 0;
+            display: inline-block;
+            background-color: $bullying-white;
+            margin: 20px auto;
+            color: $bullying-orange;
+            text-align: center;
+            background-size: 40px;
+            background-repeat: no-repeat;
+            background-position: center;
+
+            @if ($span-full){
+                &:first-child{
+                    margin-left: 0;
+                }
+                &:last-child{
+                    margin-right: 0;
+                }
+            }
+
+            &.facebook{
+                background-image: url(../../assets/images/bullying/facebook-icon.png);
+            }
+            &.twitter{
+                background-image: url(../../assets/images/bullying/twitter-icon.png);
+            }
+            &.instagram{
+                background-image: url(../../assets/images/bullying/instagram-icon.png);
+            }
+            &.pinterest{
+                background-image: url(../../assets/images/bullying/youtube-icon.png);
+            }
+        }
+    }
+}
+
+
+
+
+@mixin bullying-responsive-styles{
+    .container{
+        width: 100%;
+        #pacerwrapper, .header { display: none }
+
+        // menu icon and logo
+        .menu-icon-logo-wrapper{
+            display: block;
+            padding: 20px 20px 5px;
+            .menu-button{
+                display: inline-block;
+                width: 30px;
+                height: 33px;
+                padding: 0;
+                background: $bullying-white url(../images/bullying/menu-icon.png) no-repeat top;
+                border: none;
+                outline: none;
+                &:after{
+                    content: 'menu';
+                    display: block;
+                    margin: 25px 1px;
+                    color: $bullying-orange;
+                    font-size: 10px;
+                }
+            }
+            .pacer-logo{
+                display: inline-block;
+                float: right;
+                height: 48px;
+                width: 200px;
+                background: $bullying-white url(../images/bullying/bullying-logo.jpg) no-repeat center;
+            }
+        }
+
+
+        // primary nav
+        #navWrap{
+            padding-top: 0;
+
+            #topnav.bullying-nav{
+                // display: none; // displayed w/ js
+                border: none;
+                width: 100%;
+
+                li{
+                    display: block;
+                    float: none;
+                    width: 100%;
+                    overflow: auto;
+                }
+
+                //-- Primary Category
+                .primary-category{
+                    background: $bullying-white;
+                    // show more button
+                    button{
+                        // display: none; // displayed with js
+                        padding: 0;
+                        margin: 0 -2px 0 0;
+                        position: absolute;
+                        right: 0;
+                        height: $button-size;
+                        width: $button-size;
+                        outline: none;
+                        &.show-more{
+                            border: $primary-border;
+                            background-color: $bullying-white;
+                            color: $bullying-orange;
+                            font-size: 22px;
+                            font-weight: bold;
+                        }
+                        &.show-less{
+                            border: 1px solid $bullying-white;
+                            background-color: $bullying-red;
+                            color: $bullying-white;
+                            font-size: 28px;
+                            font-weight: normal;
+                        }
+                    }
+                    // all links
+                    a{
+                        width: 100%;
+                        height: $category-height;
+                        margin-top: 0;
+                        line-height: $category-height;
+                        padding: 0;
+                        font-family: $bullying-primary-font;
+                        font-size: $bullying-primary-font-size;
+                        font-weight: bold;
+                        text-transform: uppercase;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        span{
+                            margin-left: 20px;
+                        }
+                    }
+                    // primary-category links
+                    > a{
+                        color: $bullying-orange;
+                        border: $primary-border;
+                        border-bottom: none;
+                    }
+
+                    ul{
+                        display: none; // displayed with js
+                        width: 100%;
+                        position: relative;
+                        left: 0;
+                        padding-left: 0;
+                        margin-left: 0;
+                        border: none;
+
+                        //-- Secondary Category
+                        .secondary-category{
+                            color: $bullying-white;
+                            background-color: $bullying-orange;
+                            // secondary-category links
+                            > a{
+                                color: $bullying-white;
+                                background-color: $bullying-orange;
+                                border: 1px solid $bullying-white;
+                                border-bottom: none;
+                                span{
+                                    margin-left: 40px;
+                                }
+                            }
+
+                            //-- Sub Category
+                            &.has-more{
+                                .show-more{
+                                    color: $bullying-white;
+                                    background-color: $bullying-orange;
+                                    border: 1px solid $bullying-white;
+                                }
+                                .submenu{
+                                    display: block;
+                                    margin: 0;
+                                    li{
+                                        width: 100%;
+                                        background-color: $bullying-gray;
+                                        background-image: none;
+                                        a{
+                                            color: $bullying-dark-gray;
+                                            font-size: 10px;
+                                            text-transform: capitalize;
+                                            border: 1px solid $bullying-white;
+                                            border-bottom: none;
+                                            span{
+                                                margin-left: 60px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &:last-of-type{
+                        border-bottom: $primary-border;
+                    }
+
+
+                    // donate & newsletter buttons
+                    .header-donate, .header-newsletter{
+                        background-image: none;
+                        img{ display: none; }
+                    }
+
+                }
+            }
+
+            // social icons
+            .social-list{
+                width: 100%;
+                border: 1px solid $bullying-orange;
+                @include style-social-icons(false);
+            }
+        }
+
+        //-- side bar
+        .sidebar1{
+            display: none;
+        }
+
+
+
+        //-- Footer
+        .footer.bullying{
+            padding: 20px 30px 0 30px;
+            background-color: $bullying-white;
+            color: $bullying-orange;
+            font-family: $bullying-primary-font;
+            #leftCol-branding{
+                width: 100%;
+                padding: 0;
+                #footer-logo{
+                    max-width: 100%;
+                    margin: 0 auto 15px;
+                }
+                .footer-section.offices{
+                    h4, p{
+                        color: $bullying-orange;
+                        padding: 0;
+                        font-size: 15px;
+                        line-height: 20px;
+                    }
+                    &:last-of-type{
+                        margin-top: 15px;
+                        margin-bottom: 0;
+                    }
+                }
+                .footer-message{
+                    margin: 30px auto 0;
+                    padding: 0;
+                    font-size: 15px;
+                }
+                .footer.e-mail{
+                    display: none;
+                }
+            }
+            #centerCol-links{
+                width: 100%;
+                padding: 0;
+                @include style-social-icons(true);
+                ul{
+                    margin-bottom: 20px;
+                    li{
+                        margin-top: 30px;
+                        line-height: 15px;
+                        a{
+                            font-size: 15px;
+                            color: $bullying-orange;
+                        }
+                    }
+                }
+            }
+            #rightCol-Sites{
+                width: 100%;
+                padding: 0;
+                ul li a{
+                    width: 100%;
+                    margin: 20px 0 0;
+                    color: $bullying-white;
+                    background-color: $bullying-orange;
+                    font-size: 13px;
+                    font-weight: normal;
+                    text-align: left;
+                    border: none;
+                    border-radius: 0;
+                }
+            }
+            #copywrite{
+                margin: 0;
+                padding: 20px 0 5px;
+                color: $bullying-orange;
+                text-align: left;
+            }
+        }
+    }
+}
+
+
+
+@include breakpoint($bp-mobile-landscape){
+    @include bullying-responsive-styles();
+}
+

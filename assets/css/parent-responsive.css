@@ -73,31 +73,38 @@
     background-color: #fff; }
     #header #parent-header-table {
       display: none; }
-    #header #parent-menu .menu-icon-logo-wrapper {
+    #header .menu-icon-logo-wrapper {
       padding: 20px 20px 5px; }
-      #header #parent-menu .menu-icon-logo-wrapper .menu-button {
+      #header .menu-icon-logo-wrapper .menu-button {
         display: inline-block;
-        width: 40px;
-        height: 44px;
-        background: #fff url(../images/parent/menu-icon.png) no-repeat center;
+        width: 30px;
+        height: 33px;
+        padding: 0;
+        background: #fff url(../images/parent/menu-icon.png) no-repeat top;
         border: none;
         outline: none; }
-      #header #parent-menu .menu-icon-logo-wrapper .pacer-logo {
+        #header .menu-icon-logo-wrapper .menu-button:after {
+          content: 'menu';
+          display: block;
+          margin: 25px 1px;
+          color: #007FA9;
+          font-size: 10px; }
+      #header .menu-icon-logo-wrapper .pacer-logo {
         display: inline-block;
         float: right;
         height: 48px;
         width: 200px;
         background: #fff url(../images/parent/parent-logo.png) no-repeat center; }
-    #header #parent-menu #nav {
+    #header #nav.parent-nav {
       display: none;
       border: none;
       min-width: 0; }
-      #header #parent-menu #nav li {
+      #header #nav.parent-nav li {
         float: none;
         width: 100%; }
-      #header #parent-menu #nav .primary-category {
+      #header #nav.parent-nav .primary-category {
         background-color: #fff; }
-        #header #parent-menu #nav .primary-category button {
+        #header #nav.parent-nav .primary-category button {
           display: none;
           padding: 0;
           margin: 0 -2px 0 0;
@@ -106,19 +113,19 @@
           height: 52px;
           width: 52px;
           outline: none; }
-          #header #parent-menu #nav .primary-category button.show-more {
+          #header #nav.parent-nav .primary-category button.show-more {
             border: 1px solid #007FA9;
             background-color: #fff;
             color: #007FA9;
             font-size: 22px;
             font-weight: bold; }
-          #header #parent-menu #nav .primary-category button.show-less {
+          #header #nav.parent-nav .primary-category button.show-less {
             border: 1px solid #fff;
             background-color: #D34040;
             color: #fff;
             font-size: 28px;
             font-weight: normal; }
-        #header #parent-menu #nav .primary-category a {
+        #header #nav.parent-nav .primary-category a {
           width: 100%;
           height: 50px;
           line-height: 50px;
@@ -130,54 +137,55 @@
           overflow: hidden;
           white-space: nowrap;
           text-overflow: ellipsis; }
-          #header #parent-menu #nav .primary-category a span {
+          #header #nav.parent-nav .primary-category a span {
             margin-left: 20px; }
-        #header #parent-menu #nav .primary-category > a {
+        #header #nav.parent-nav .primary-category > a {
           color: #007FA9;
           border: 1px solid #007FA9;
           border-bottom: none; }
-        #header #parent-menu #nav .primary-category #parent-header-donate img {
-          display: none; }
-        #header #parent-menu #nav .primary-category ul {
+        #header #nav.parent-nav .primary-category ul {
           display: none;
           width: 100%;
           position: relative;
           left: 0;
           padding-left: 0; }
-          #header #parent-menu #nav .primary-category ul .secondary-category {
+          #header #nav.parent-nav .primary-category ul .secondary-category {
+            color: #fff;
             background-color: #007FA9; }
-            #header #parent-menu #nav .primary-category ul .secondary-category > a {
+            #header #nav.parent-nav .primary-category ul .secondary-category > a {
               color: #fff;
               background-color: #007FA9; }
-              #header #parent-menu #nav .primary-category ul .secondary-category > a span {
+              #header #nav.parent-nav .primary-category ul .secondary-category > a span {
                 margin-left: 40px; }
-            #header #parent-menu #nav .primary-category ul .secondary-category.has-more .show-more {
+            #header #nav.parent-nav .primary-category ul .secondary-category.has-more .show-more {
               color: #fff;
               background-color: #007FA9;
               border: 1px solid #fff; }
-            #header #parent-menu #nav .primary-category ul .secondary-category.has-more .treemenu {
+            #header #nav.parent-nav .primary-category ul .secondary-category.has-more .treemenu {
               display: block; }
-              #header #parent-menu #nav .primary-category ul .secondary-category.has-more .treemenu li {
+              #header #nav.parent-nav .primary-category ul .secondary-category.has-more .treemenu li {
                 width: 100%;
                 background-color: #CDCDCD; }
-                #header #parent-menu #nav .primary-category ul .secondary-category.has-more .treemenu li a {
+                #header #nav.parent-nav .primary-category ul .secondary-category.has-more .treemenu li a {
                   color: #333333;
                   font-size: 10px;
                   text-transform: capitalize; }
-                  #header #parent-menu #nav .primary-category ul .secondary-category.has-more .treemenu li a span {
+                  #header #nav.parent-nav .primary-category ul .secondary-category.has-more .treemenu li a span {
                     margin-left: 60px; }
-        #header #parent-menu #nav .primary-category:last-of-type {
+        #header #nav.parent-nav .primary-category:last-of-type {
           border-bottom: 1px solid #007FA9; }
-      #header #parent-menu #nav .social-list {
+        #header #nav.parent-nav .primary-category .header-donate img {
+          display: none; }
+      #header #nav.parent-nav .social-list {
         width: 100%;
         border: 1px solid #007FA9; }
-        #header #parent-menu #nav .social-list .social-elements {
+        #header #nav.parent-nav .social-list .social-elements {
           background-color: #fff;
           display: -ms-flexbox;
           display: flex;
           -ms-flex-wrap: nowrap;
               flex-wrap: nowrap; }
-          #header #parent-menu #nav .social-list .social-elements .socialButton {
+          #header #nav.parent-nav .social-list .social-elements .socialButton {
             width: 40px;
             height: 40px;
             padding: 0;
@@ -189,15 +197,13 @@
             background-size: 40px;
             background-repeat: no-repeat;
             background-position: center; }
-            #header #parent-menu #nav .social-list .social-elements .socialButton.facebook {
+            #header #nav.parent-nav .social-list .social-elements .socialButton.facebook {
               background-image: url(../../assets/images/parent/facebook-icon.png); }
-            #header #parent-menu #nav .social-list .social-elements .socialButton.youtube {
-              background-image: url(../../assets/images/parent/youtube-icon.png); }
-            #header #parent-menu #nav .social-list .social-elements .socialButton.twitter {
+            #header #nav.parent-nav .social-list .social-elements .socialButton.twitter {
               background-image: url(../../assets/images/parent/twitter-icon.png); }
-            #header #parent-menu #nav .social-list .social-elements .socialButton.instagram {
+            #header #nav.parent-nav .social-list .social-elements .socialButton.instagram {
               background-image: url(../../assets/images/parent/instagram-icon.png); }
-            #header #parent-menu #nav .social-list .social-elements .socialButton.youtube {
+            #header #nav.parent-nav .social-list .social-elements .socialButton.youtube {
               background-image: url(../../assets/images/parent/youtube-icon.png); }
   #leftbar {
     display: none; }
@@ -256,8 +262,6 @@
               margin-right: 0; }
             #parent-footer .footer-section.primary .social-elements .socialButton.facebook {
               background-image: url(../../assets/images/parent/facebook-icon.png); }
-            #parent-footer .footer-section.primary .social-elements .socialButton.youtube {
-              background-image: url(../../assets/images/parent/youtube-icon.png); }
             #parent-footer .footer-section.primary .social-elements .socialButton.twitter {
               background-image: url(../../assets/images/parent/twitter-icon.png); }
             #parent-footer .footer-section.primary .social-elements .socialButton.instagram {

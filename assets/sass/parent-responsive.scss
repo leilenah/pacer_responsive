@@ -115,6 +115,7 @@ $primary-border: 1px solid $parent-blue;
 
 //-- Mixins
 
+//-- TODO: might move into helper mixins
 @mixin style-social-icons($span-full){
     // social icons
     .social-elements{
@@ -145,9 +146,6 @@ $primary-border: 1px solid $parent-blue;
 
             &.facebook{
                 background-image: url(../../assets/images/parent/facebook-icon.png);
-            }
-            &.youtube{
-                background-image: url(../../assets/images/parent/youtube-icon.png);
             }
             &.twitter{
                 background-image: url(../../assets/images/parent/twitter-icon.png);
@@ -186,16 +184,24 @@ $primary-border: 1px solid $parent-blue;
         }
 
         //-- Parent Menu
-        #parent-menu{
+        // #parent-menu{
             .menu-icon-logo-wrapper{
                 padding: 20px 20px 5px;
                 .menu-button{
                     display: inline-block;
-                    width: 40px;
-                    height: 44px;
-                    background: $parent-white url(../images/parent/menu-icon.png) no-repeat center;
+                    width: 30px;
+                    height: 33px;
+                    padding: 0;
+                    background: $parent-white url(../images/parent/menu-icon.png) no-repeat top;
                     border: none;
                     outline: none;
+                    &:after{
+                        content: 'menu';
+                        display: block;
+                        margin: 25px 1px;
+                        color: $parent-blue;
+                        font-size: 10px;
+                    }
                 }
                 .pacer-logo{
                     display: inline-block;
@@ -205,7 +211,7 @@ $primary-border: 1px solid $parent-blue;
                     background: $parent-white url(../images/parent/parent-logo.png) no-repeat center;
                 }
             }
-            #nav{
+            #nav.parent-nav{
                 display: none; // displayed w/ js
                 border: none;
                 min-width: 0;
@@ -266,10 +272,6 @@ $primary-border: 1px solid $parent-blue;
                         border: $primary-border;
                         border-bottom: none;
                     }
-                    // donate button
-                    #parent-header-donate img{
-                        display: none;
-                    }
 
                     ul{
                         display: none; // displayed with js
@@ -280,6 +282,7 @@ $primary-border: 1px solid $parent-blue;
 
                         //-- Secondary Category
                         .secondary-category{
+                            color: $parent-white;
                             background-color: $parent-blue;
                             // secondary-category links
                             > a{
@@ -318,6 +321,11 @@ $primary-border: 1px solid $parent-blue;
                     &:last-of-type{
                         border-bottom: $primary-border;
                     }
+
+                    // donate button
+                    .header-donate img{
+                        display: none;
+                    }
                 }
 
                 // social icons
@@ -327,24 +335,13 @@ $primary-border: 1px solid $parent-blue;
                     @include style-social-icons(false);
                 }
             }
-        }
+        // }
     }
 
     //-- Left bar
     #leftbar{
         display: none;
     }
-
-
-
-
-
-
-
-
-
-
-
 
 
 
