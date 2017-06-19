@@ -12,6 +12,8 @@
 <!-- Re-structure footer into one footer tag -->
 <!-- Add new footer css to home.css -->
 <!-- Remove any .fa external link icons from leftbar / nav -->
+<!-- add contact pacer class & move | inside a tag -->
+<!-- add searchbox and serch submit classes -->
 
 
 
@@ -41,11 +43,11 @@
                         <td style="width: 350px;"><a href="/"><img src="http://www.pacer.org/images/pacerlogo.gif" alt="PACER Center Logo: Champions for Children with Disabilities" width="430" height="104"></a></td>
                         <td><!-- Google CSE Search Box Begins  -->
 
-        <form class="nav" action="http://www.pacer.org/searchresults.asp" id="cse-search-box"><a href="http://www.pacer.org/contactpacer.asp">Contact PACER</a> | <label for="q">Search</label>
+        <form class="nav" action="http://www.pacer.org/searchresults.asp" id="cse-search-box"><a class="contact" href="http://www.pacer.org/contactpacer.asp">Contact PACER | </a><label for="q">Search</label>
                             <input type="hidden" name="cx" value="008159103446416441332:ztnv2wmj0ug">
                             <input type="hidden" name="cof" value="FORID:11">
-                            <input type="text" name="q" id="q" size="25" placeholder="Custom Search" style="background: url(&quot;https://www.google.com/cse/static/images/1x/googlelogo_lightgrey_46x16dp.png&quot;) left center no-repeat rgb(255, 255, 255); text-indent: 48px;">
-                            <input type="submit" name="sa" value="Search">
+                            <input type="text" class="searchBox" name="q" id="q" size="25" placeholder="Custom Search" style="background: url(&quot;https://www.google.com/cse/static/images/1x/googlelogo_lightgrey_46x16dp.png&quot;) left center no-repeat rgb(255, 255, 255); text-indent: 48px;">
+                            <input type="submit" class="search-submit" name="sa" value="Search">
                         <input name="siteurl" type="hidden" value="www.pacer.org/"><input name="ref" type="hidden" value=""><input name="ss" type="hidden" value=""></form>
                         <script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
         <!-- Google CSE Search Box Ends -->

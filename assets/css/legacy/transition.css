@@ -93,7 +93,7 @@ a:hover, a:active, a:focus {
 .header {
 	position:relative;
 	background: #218000;
-	background-image:url(/transition/images/header-bg.png);
+	background-image:url(http://www.pacer.org/transition/images/header-bg.png);
 	background-repeat:repeat-y;
 	min-height:104px;
 }
@@ -172,7 +172,7 @@ a:hover, a:active, a:focus {
 a#donatebutton{
 	width:89px;
 	height:35px;
-	background-image:url(/transition/images/button-sprite-donate.png);
+	background-image:url(http://www.pacer.org/transition/images/button-sprite-donate.png);
 	background-position:0px center;
 }
 a#donatebutton:hover{
@@ -181,7 +181,7 @@ a#donatebutton:hover{
 a#newsletterbutton{
 	width:89px;
 	height:35px;
-	background-image:url(/bullying/images/button-bully-newsletter.png);
+	background-image:url(http://www.pacer.org/bullying/images/button-bully-newsletter.png);
 	background-position:0px center;
 }
 a#newsletterbutton:hover{

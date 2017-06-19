@@ -63,10 +63,23 @@
 
     // menu button functionality
     $body.on('click', '.menu-button', function(e){
-        $('#nav').slideToggle(300); // TODO: roll slidetoggle out to buttons
-        $('#nav button').fadeToggle(250);
+        $('#nav, #navWrap').slideToggle(300); // TODO: roll slidetoggle out to buttons
+        $('#nav button, #navWrap button').fadeToggle(250);
     });
 
+
+    // quaternary category
+    $body.on('click', '.quaternary-show-more', function(e){
+        var $showMoreBtn = $(e.currentTarget);
+        $showMoreBtn.removeClass('quaternary-show-more').addClass('quaternary-show-less').html('-');
+        $showMoreBtn.parent().find('ul').slideDown(150);
+    });
+
+    $body.on('click', '.quaternary-show-less', function(e){
+        var $showMoreBtn = $(e.currentTarget);
+        $showMoreBtn.removeClass('quaternary-show-less').addClass('quaternary-show-more').html('+');
+        $showMoreBtn.parent().find('ul').slideUp(150);
+    });
 
     //-- Methods
 
@@ -110,6 +123,7 @@
     function injectTertiaryCategories($tertiaryCategories, $nav){
         if (!$tertiaryCategories.length){ return; }
 
+
         $tertiaryCategories.each(function() {
             var $tertiaryCategory = $(this),
                 tertiaryCategoryData = $tertiaryCategory.data('tertiary-category'),
@@ -120,10 +134,6 @@
 
             addShowMoreBtn($secondaryCategory, false, 'secondary-category-btn');
         });
-
-
-
-        console.log('tertiary injected');
     }
 
     function addToNav($content, className, prepend){
@@ -152,9 +162,37 @@
         if (extraClass) {
             $element.find('button').addClass(extraClass);
         }
-
-        console.log('show more button added');
     }
+
+    function injectQuaternaryNav(){
+        // TODO: inject after search bar
+        var $quaternaryCategories = $('.quaternary-category');
+
+        $quaternaryCategories.each(function() {
+            var $quaternaryCategory = $(this),
+                $wrappedCategory = $quaternaryCategory.wrap('<div class="quaternary-category-wrapper"></div>');
+
+            $wrappedCategory.find('a').first().after('<button class="quaternary-show-more">+</button><div class="divider"></div>');
+            $wrappedCategory.find('a').wrapInner('<span></span>');
+            $('.search-wrapper').after($wrappedCategory.parent());
+        });
+
+
+    }
+
+    function injectSearchForm(){
+        var $searchForm = $('#cse-search-box'),
+            $searchSubmit = $('.search-submit');
+
+        // TODO: figure out how to target broadly...perhaps make global classes
+        $('#navWrap, #header').after($searchForm);
+        $searchForm.wrap('<div class="search-wrapper"></div>');
+        $searchSubmit.val('');
+
+    }
+
+
+
 
 
     // TODO: init
@@ -169,9 +207,14 @@
     injectSocialIcons($('.footer-section.primary')); // parent
     injectSocialIcons($('#centerCol-links')); // bullying
 
+    injectSearchForm();
 
     // tertiary categories
     //TODO: add class that can be globally used
     injectTertiaryCategories($('.treemenu'), $('#nav.parent-nav')); // parent
-    injectTertiaryCategories($('.submenu'), $('.bullying-nav')); // bullying
+    injectQuaternaryNav(); // TODO: wrap all a text in spans
+    injectTertiaryCategories($('.submenu.tertiary'), $('.bullying-nav')); // bullying
+
+
+
 }());

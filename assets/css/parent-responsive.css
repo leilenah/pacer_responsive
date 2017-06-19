@@ -74,7 +74,7 @@
     #header #parent-header-table {
       display: none; }
     #header .menu-icon-logo-wrapper {
-      padding: 20px 20px 5px; }
+      padding: 20px 20px 15px; }
       #header .menu-icon-logo-wrapper .menu-button {
         display: inline-block;
         width: 30px;
@@ -207,6 +207,31 @@
               background-image: url(../../assets/images/parent/youtube-icon.png); }
   #leftbar {
     display: none; }
+  .search-wrapper {
+    background-color: #007FA9;
+    border: 1px solid #fff; }
+    .search-wrapper #cse-search-box {
+      float: none;
+      padding: 0;
+      line-height: 0; }
+      .search-wrapper #cse-search-box .contact, .search-wrapper #cse-search-box label {
+        display: none; }
+      .search-wrapper #cse-search-box .searchBox {
+        height: 30px;
+        width: calc(100% - 75px);
+        margin: 10px;
+        padding: 0;
+        vertical-align: top;
+        border: 1px solid #fff; }
+      .search-wrapper #cse-search-box .search-submit {
+        height: 50px;
+        width: 48px;
+        margin-left: -2px;
+        padding: 0;
+        background: #007FA9 url(../../assets/images/parent/search-icon.png) no-repeat center;
+        background-size: 18px;
+        border: none;
+        border-left: 1px solid #fff; }
   #parent-footer {
     padding: 20px 30px 0 30px; }
     #parent-footer .footer-section {
