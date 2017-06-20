@@ -1,4 +1,5 @@
-@import url('/fonts/font-awesome-4.2.0/css/font-awesome.min.css');
+@import url('../../fonts/font-awesome-4.7.0/css/font-awesome.min.css');
+
 
 /* COLOR CODES
 -headings: #F15C32 (orange)
@@ -226,6 +227,16 @@ a#newsletterbutton:hover{
 	color:#FC0;
 }
 
+
+#cse-search-box {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+#cse-search-box label {
+  left: -9999em;
+  position: absolute;
+}
 /* ---------------------------------------------------
    ---------------- Breadcrumb -----------------------
    ---------------------------------------------------*/
@@ -279,7 +290,7 @@ position:relative;
 	background:url(http://www.pacer.org/transition/images/nav_up.jpg) repeat-y right top;
     }
 #topnav li.hassub{
-	background:#3e5593 url(http://www.pacer.org/transition/images/nav_up.jpg) repeat-y right;
+	background:#3e5593 url('/transition/images/nav_up_arrow.jpg') repeat-y right;
 }
 #topnav ul {
     position:absolute;
@@ -339,7 +350,7 @@ position:relative;
     }
 #topnav li.hassub:hover{
 	/*Top Level Hover Background w/ hassub*/
-	background:#9797af url('/transition/images/nav_over_arrow.jpg') repeat-y right;
+	background:#9797af url(http://www.pacer.org/transition/images/nav_over.jpg) repeat-y right;
 }
 
 
