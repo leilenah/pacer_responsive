@@ -8,31 +8,36 @@ $parent-blue: #007FA9;
 $parent-primary-font: Helvetica;
 $parent-primary-font-size: 10px;
 
+
 //LIGHTBOX
 #pagecontent{
   margin: 0;
 }
 
 .cboxElement img{
-  width: 694px;
-  height: 506px;
+  width: 100%;
+  height: auto;
 }
 
 div#colorbox{
-  left:0 !important;
+  // position: fixed !important;
+  // left:0 !important;
   top: 0 !important;
-  width: 100%;
+  width: 100% !important;
+  min-width: 900px !important;
   height: 100%;
 }
 #cboxContent{
+  position: fixed !important;
   overflow: visible !important;
   width: 100% !important;
-  height: 100% !important;
+  // height: 100% !important;
   background: none;
   float: none !important;
+  height: 620px !important; //change
 }
 div#cBoxWrapper{
-  position: fixed;
+  position: fixed !important;
   height: 100% !important;
   width: 100% !important;
 }
@@ -51,11 +56,11 @@ div#cBoxWrapper{
 #cboxClose{
   color: #007FA9;
   // position: absolute;
-  top: 30px;
-  right: 30px;
+  top: 30px !important;
+  right: 30px !important;
   width: 100px;
   height: 100px;
-  background:url(../images/close.svg) no-repeat;
+  background:url(../images/svg/close.svg) no-repeat;
   text-indent: 0;
   &:hover{
     background-position: 0 !important;
@@ -63,7 +68,10 @@ div#cBoxWrapper{
 }
 
 div#cboxLoadedContent{
-  // margin: 0 auto !important;
+  width: 100% !important;
+  height: auto !important;
+  padding: 0 !important;
+  margin: 0 !important;
 
 }
 
@@ -83,11 +91,6 @@ div#cboxOverlay{
   opacity: 1.0 !important;
   background: #fff;
 }
-#cboxOverlay.closeOverlay{
-  background:url(../images/close.svg) no-repeat;
-}
-
-//TABBED PANEL
 
 
 
@@ -166,12 +169,85 @@ div.ExpandItem{
 
 
 //EMBEDDED YOUTUBE
+
+#pagecontent{
+  margin: .5em 0 0 0;
+}
+
 a.videoPopUp.cboxElement{
   img{
     // width: 100% !important;
-    // height: 100% !important;
+    // height: 30% !important;
   }
 }
+
+iframe{
+  min-height: 500px;
+  min-width: 920px;
+}
+
+
+
+// TABBED PANEL
+.ui-widget{
+  font-family: $parent-primary-font !important;
+}
+
+.ui-widget-header{
+  background: none !important;
+  border: none !important;
+}
+.ui-widget-content{
+  border: none !important;
+}
+
+.ui-corner-all, .ui-corner-top, .ui-corner-right, .ui-corner-tr{
+  border-radius: 0 !important;
+}
+
+.ui-tabs .ui-tabs-nav li{
+  // position: absolute !important;
+  float: none !important;
+  display: block !important;
+  height: 6% !important;
+  &:after{
+    // content: 'Show More';
+    content: 'SHOW MORE 'url(../images/svg/accordion-closed.svg);
+    position: absolute;
+    background-color: white;
+    color: #666;
+    right: 40px;
+    height: 100%;
+    width: 15%;
+    bottom: 0;
+    text-align: center;
+    font-size: 1em !important;
+  }
+  a{
+    color: white !important;
+    text-decoration: none !important;
+    font-size: 1rem !important;
+  }
+}
+
+.ui-tabs .ui-widget .ui-widget-content .ui-corner-all{
+  position: relative !important;
+}
+
+.ui-tabs .ui-tabs-nav{
+  padding: 0 !important;
+  .ui-tabs-anchor{
+    display: inline-block !important;
+    margin-left: 40px !important;
+    float: none !important;
+  }
+}
+
+.ui-widget-content .ui-widget-header .ui-state-active{
+    background: grey !important;
+    // height: 60px !important;
+  }
+
 @include breakpoint($bp-mobile-landscape){
     @include parent-responsive-styles();
 
