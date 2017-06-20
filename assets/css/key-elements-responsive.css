@@ -328,36 +328,177 @@
         color: #007FA9;
         text-align: left; } }
 
-h3 {
-  background-color: #eee;
-  color: #444;
-  cursor: pointer;
-  padding: 18px;
+#pagecontent {
+  margin: 0; }
+
+.cboxElement img {
   width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-  transition: 0.4s; }
+  height: auto; }
 
-h3.active, h3:hover {
-  background-color: #ddd; }
+div#colorbox {
+  top: 0 !important;
+  width: 100% !important;
+  min-width: 900px !important;
+  height: 100%; }
 
-.test {
-  background-color: red; }
+#cboxContent {
+  position: fixed !important;
+  overflow: visible !important;
+  width: 100% !important;
+  background: none;
+  float: none !important;
+  height: 620px !important; }
+
+div#cBoxWrapper {
+  position: fixed !important;
+  height: 100% !important;
+  width: 100% !important; }
+
+#cboxTopLeft, #cboxTopCenter, #cboxTopRight {
+  /*background: #fff;*/
+  display: none;
+  float: none; }
+
+#cboxMiddleLeft {
+  height: 0 !important;
+  float: none !important;
+  width: 0 !important; }
+
+#cboxClose {
+  color: #007FA9;
+  top: 30px !important;
+  right: 30px !important;
+  width: 100px;
+  height: 100px;
+  background: url(../images/svg/close.svg) no-repeat;
+  text-indent: 0; }
+  #cboxClose:hover {
+    background-position: 0 !important; }
+
+div#cboxLoadedContent {
+  width: 100% !important;
+  height: auto !important;
+  padding: 0 !important;
+  margin: 0 !important; }
+
+img.cboxPhoto {
+  margin: none;
+  width: 100% !important;
+  height: 100% !important; }
+
+div#cboxTitle {
+  position: relative;
+  float: none;
+  color: black;
+  margin-top: 20px; }
+
+div#cboxOverlay {
+  opacity: 1.0 !important;
+  background: #fff; }
+
+ol {
+  padding-left: 40px; }
+
+ol, li {
+  font-size: 0.9em; }
+
+p.ExpandHeader {
+  height: 80px; }
+  p.ExpandHeader strong {
+    line-height: 2;
+    padding-left: 60px;
+    font-size: 1.75rem !important;
+    font-weight: bold;
+    color: #007FA9 !important; }
+
+.ExpandHeader {
+  min-height: 40px; }
 
 .ExpandItem {
-  padding: 0 18px;
-  background-color: white;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out; }
+  color: #000 !important; }
 
-.fltrt img {
-  margin: auto 0; }
+#pagecontent p.ExpandHeader {
+  font-family: Helvetica;
+  border: 2px solid #007FA9;
+  text-indent: 0 !important;
+  padding: 10px 10px 0 0;
+  text-transform: uppercase;
+  margin: 20px 20px 0 20px !important; }
 
-.fltrt p {
-  color: red; }
+.ExpandHeader span.fa {
+  display: none; }
+
+.ExpandItem .ItemOpen {
+  padding: none !important; }
+
+#pagecontentright li, #pagecontent li {
+  margin-bottom: 0 !important; }
+
+p.question.ExpandHeader.ItemOpen {
+  font-family: Helvetica;
+  border: 1px solid #007FA9;
+  padding: 10px;
+  font-size: 10px; }
+
+div.ExpandItem .ItemOpen p {
+  margin-left: 20px; }
+
+.question.ExpandHeader {
+  border: 1px solid #007FA9;
+  color: #007FA9; }
+
+#pagecontent {
+  margin: .5em 0 0 0; }
+
+iframe {
+  min-height: 500px;
+  min-width: 920px; }
+
+.ui-widget {
+  font-family: Helvetica !important; }
+
+.ui-widget-header {
+  background: none !important;
+  border: none !important; }
+
+.ui-widget-content {
+  border: none !important; }
+
+.ui-corner-all, .ui-corner-top, .ui-corner-right, .ui-corner-tr {
+  border-radius: 0 !important; }
+
+.ui-tabs .ui-tabs-nav li {
+  float: none !important;
+  display: block !important;
+  height: 6% !important; }
+  .ui-tabs .ui-tabs-nav li:after {
+    content: "SHOW MORE " url(../images/svg/accordion-closed.svg);
+    position: absolute;
+    background-color: white;
+    color: #666;
+    right: 40px;
+    height: 100%;
+    width: 15%;
+    bottom: 0;
+    text-align: center;
+    font-size: 1em !important; }
+  .ui-tabs .ui-tabs-nav li a {
+    color: white !important;
+    text-decoration: none !important;
+    font-size: 1rem !important; }
+
+.ui-tabs .ui-widget .ui-widget-content .ui-corner-all {
+  position: relative !important; }
+
+.ui-tabs .ui-tabs-nav {
+  padding: 0 !important; }
+  .ui-tabs .ui-tabs-nav .ui-tabs-anchor {
+    display: inline-block !important;
+    margin-left: 40px !important;
+    float: none !important; }
+
+.ui-widget-content .ui-widget-header .ui-state-active {
+  background: grey !important; }
 
 @media screen and (max-width: 750px) {
   body {
