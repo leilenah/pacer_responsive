@@ -93,7 +93,7 @@ a:hover, a:active, a:focus {
 .header {
 	position:relative;
 	background: #218000;
-	background-image:url(/transition/images/header-bg.png);
+	background-image:url(http://www.pacer.org/transition/images/header-bg.png);
 	background-repeat:repeat-y;
 	min-height:104px;
 }
@@ -172,7 +172,7 @@ a:hover, a:active, a:focus {
 a#donatebutton{
 	width:89px;
 	height:35px;
-	background-image:url(/transition/images/button-sprite-donate.png);
+	background-image:url(http://www.pacer.org/transition/images/button-sprite-donate.png);
 	background-position:0px center;
 }
 a#donatebutton:hover{
@@ -181,7 +181,7 @@ a#donatebutton:hover{
 a#newsletterbutton{
 	width:89px;
 	height:35px;
-	background-image:url(/bullying/images/button-bully-newsletter.png);
+	background-image:url(http://www.pacer.org/bullying/images/button-bully-newsletter.png);
 	background-position:0px center;
 }
 a#newsletterbutton:hover{
@@ -203,7 +203,7 @@ a#newsletterbutton:hover{
 }
 .toptab {
 	float:left;
-	background:url('/transition/images/nav_up.jpg');
+	background:url(http://www.pacer.org/transition/images/nav_up.jpg);
 	background-color:#039;
 	font-size:.8em;
 	margin-right:5px;
@@ -276,10 +276,10 @@ position:relative;
 #topnav li {
     float:left;
     padding:0;
-	background:url('/transition/images/nav_up.jpg') repeat-y right top;
+	background:url(http://www.pacer.org/transition/images/nav_up.jpg) repeat-y right top;
     }
 #topnav li.hassub{
-	background:#3e5593 url('/transition/images/nav_up_arrow.jpg') repeat-y right;
+	background:#3e5593 url(http://www.pacer.org/transition/images/nav_up.jpg) repeat-y right;
 }
 #topnav ul {
     position:absolute;
@@ -313,7 +313,7 @@ position:relative;
 #topnav li li:hover {
 	/*Sub Level Hover Background*/
 	background:green;
-	background:#9797af url('/transition/images/nav_over.jpg') repeat-y right;
+	background:#9797af url(http://www.pacer.org/transition/images/nav_over.jpg) repeat-y right;
     }
 #topnav li ul li:hover a, #topnav li ul li li:hover a, #topnav li ul li li li:hover a, #topnav li ul li li li:hover a {
 	/*Sub Level Hover Text*/
@@ -335,7 +335,7 @@ position:relative;
     }
 #topnav li:hover, #topnav li.sfhover {
 	/*Top Level Hover Background*/
-	background:#9797af url('/transition/images/nav_over.jpg') repeat-y right;
+	background:#9797af url(http://www.pacer.org/transition/images/nav_over.jpg) repeat-y right;
     }
 #topnav li.hassub:hover{
 	/*Top Level Hover Background w/ hassub*/
@@ -418,11 +418,11 @@ position:relative;
 	padding: 5px 5px 5px 10px;
 	display: block;
 	text-decoration: none;
-	background: #3e5593 url('/transition/images/nav_up.jpg') repeat-y right;
+	background: #3e5593 url(http://www.pacer.org/transition/images/nav_up.jpg) repeat-y right;
 	color:#FFF;
 }
 .sidebar1 ul.nav a:hover, ul.nav a:active, ul.nav a:focus {
-	background: #9797af url('/transition/images/nav_over.jpg') repeat-y right;
+	background: #9797af url(http://www.pacer.org/transition/images/nav_over.jpg) repeat-y right;
 	background-size:cover;
 	color: #000;
 }
@@ -443,7 +443,7 @@ position:relative;
 	color:#fff;
 }
 .sidebar1 ul.nav ul.submenu a:hover, .sidebar1 ul.nav ul.submenu a:active{
-	background: #3e5593 url('/transition/images/nav_over.jpg') repeat-y right;
+	background: #3e5593 url(http://www.pacer.org/transition/images/nav_over.jpg) repeat-y right;
 	color:#000;
 }
 .sidebar1 ul.nav ul.submenu li.active a{
@@ -578,7 +578,7 @@ END Floating SubNav Code
 	font-size:.8em;
 	line-height:2.0;
 	background: #d73d23;
-	background-image: url(/transition/images/header-bg.png);
+	background-image: url(http://www.pacer.org/transition/images/header-bg.png);
 	padding-bottom:20px;
 }
 .footer .fa-file-pdf-o {
@@ -604,7 +604,7 @@ END Floating SubNav Code
 	font-size:1.1em;
 }
 #footerNav {
-	background-image:url(/transition/images/npcteLogo-watermark.png);
+	background-image:url(http://www.pacer.org/transition/images/npcteLogo-watermark.png);
 	background-position:top 56px right 20px;
 	background-size:150px 150px;
 	background-repeat:no-repeat;
@@ -720,7 +720,7 @@ ul.space  li {
 	background:#eee;
 }
 .watermark{
-	background:url(/transition/images/npcteLogo-watermark.png) no-repeat right bottom;
+	background:url(http://www.pacer.org/transition/images/npcteLogo-watermark.png) no-repeat right bottom;
 }
 .addthis_sharing_toolbox {
 	float:right;
