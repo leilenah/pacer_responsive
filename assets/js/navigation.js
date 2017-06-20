@@ -102,7 +102,7 @@
     }
 
 
-
+    // TODO: don't have this depend on footer, what
     function injectSocialIcons($footer){
         if (!$footer.length) { return; }
 
@@ -137,10 +137,17 @@
     }
 
     function addToNav($content, className, prepend){
-
         // TODO: add class that can be globally used
-        var $nav = $('.parent-nav').length ? $('.parent-nav') : $('.bullying-nav'),
-            $newContent = $content.wrap('<li></li>').parent();
+        var $newContent = $content.wrap('<li></li>').parent(),
+            $nav;
+
+        if ($('.parent-nav').length){
+            $nav = $('.parent-nav');
+        } else if ($('.bullying-nav').length){
+            $nav = $('.bullying-nav');
+        } else if ($('.transition-nav').length){
+            $nav = $('.transition-nav');
+        }
 
         if (className){
             $newContent.addClass(className);
@@ -206,6 +213,8 @@
     //TODO: add class that can be globally used
     injectSocialIcons($('.footer-section.primary')); // parent
     injectSocialIcons($('#centerCol-links')); // bullying
+    injectSocialIcons($('.footer')); // transition
+
 
     injectSearchForm();
 

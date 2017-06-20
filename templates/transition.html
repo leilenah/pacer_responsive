@@ -1,4 +1,5 @@
 <!-- Pacer TODO's -->
+<!-- same steps as bullying for header and search -->
 
 
 <!-- Viewport Meta Tag -->
@@ -32,14 +33,20 @@
                 <input type="hidden" name="cx" value="008159103446416441332:lzmgy5qqvao">
                 <input type="hidden" name="cof" value="FORID:11">
                 <input class="searchBox" type="text" name="q" id="q">
-                <input type="submit" name="sa" value="Search">
+                <input type="submit" class="search-submit" name="sa" value="Search">
                 </form>
 
                 <div id="imagerow">
-                    <a class="topicon" href="https://www.youtube.com/user/pacercenter" target="_blank"><img src="http://www.pacer.org/images/youtubeicon_medium.gif" width="35" height="35" alt="You Tube"></a>
-                    <a class="topicon" href="https://www.facebook.com/npcte" target="_blank"><img src="http://www.pacer.org/images/facebookicon_medium.gif" width="35" height="35" alt="Facebook"></a>
-                    <a class="topbutton" id="donatebutton" href="https://pacer.ejoinme.org/MyPages/DonateToTheNationalParentCenterOnTransitionAndEmployment/tabid/683627/Default.aspx" target="_blank"><span>Donate</span></a>
-                    <a class="topbutton" id="newsletterbutton" href="/transition/news/optIn-inspiring-possibilities.asp"><span>Newsletter</span></a>
+
+                    <!-- Social icons -->
+                    <a class="topicon socialButton youtube" href="https://www.youtube.com/user/pacercenter" target="_blank"><img src="http://www.pacer.org/images/youtubeicon_medium.gif" width="35" height="35" alt="You Tube"></a>
+                    <a class="topicon socialButton facebook" href="https://www.facebook.com/npcte" target="_blank"><img src="http://www.pacer.org/images/facebookicon_medium.gif" width="35" height="35" alt="Facebook"></a>
+
+                    <!-- Donate -->
+                    <a class="topbutton header-donate" id="donatebutton" href="https://pacer.ejoinme.org/MyPages/DonateToTheNationalParentCenterOnTransitionAndEmployment/tabid/683627/Default.aspx" target="_blank"><span>Donate</span></a>
+
+                    <!-- Newsletter -->
+                    <a class="topbutton header-newsletter" id="newsletterbutton" href="/transition/news/optIn-inspiring-possibilities.asp"><span>Newsletter</span></a>
                 </div>
           </div>
 
@@ -47,50 +54,69 @@
 
 
 
+        <!-- Menu Icon and Logo -->
+        <div class="menu-icon-logo-wrapper">
+            <button class="menu-button"></button>
+            <a href="http://www.pacer.org/bullying/" class="pacer-logo"></a>
+        </div>
 
 
 
 
       <!-- Nav -->
       <div id="navWrap">
-        <ul id="topnav" class="nav-menu">
-        <li id="home"><a href="/transition/"><span class="fa fa-home"></span> Home</a></li>
-        <li id="videos" class="hassubnav"><a href="/transition/video/">Videos</a>
-          <ul id="videos-sub">
-              <li><a href="/transition/video/">Featured Videos</a></li>
-              <li><a href="/transition/video/listing.asp">See All Videos</a></li>
-              <li><a href="/transition/video/serieslisting.asp">Video Series</a></li>
-              <li><a href="/transition/video/series.asp?se=1">Voices of Experience Series</a></li>
-              <li><a href="/transition/video/topiclisting.asp">See All Topics</a></li>
-          </ul>
-        </li>
+        <ul id="topnav" class="nav-menu transition-nav">
+            <li id="home" class="primary-category"><a href="/transition/"><span class="fa fa-home"></span><span>Home</span></a></li>
+            <li id="videos" class="primary-category hassubnav"><a href="/transition/video/"><span>Videos</span></a>
+              <ul id="videos-sub">
+                  <li><a href="/transition/video/"><span>Featured Videos</span></a></li>
+                  <li><a href="/transition/video/listing.asp"><span>See All Videos</span></a></li>
+                  <li><a href="/transition/video/serieslisting.asp"><span>Video Series</span></a></li>
+                  <li><a href="/transition/video/series.asp?se=1"><span>Voices of Experience Series</span></a></li>
+                  <li><a href="/transition/video/topiclisting.asp"><span>See All Topics</span></a></li>
+              </ul>
+            </li>
 
-        <li id="learning" class="hassubnav threecol"><a href="/transition/learning-center/">Learning Center</a>
-          <ul id="learning-sub">
-            <li><a href="/transition/learning-center/planning/">Middle &amp; High School Transition Planning</a></li>
-            <li><a href="/transition/learning-center/postsecondary/">Postsecondary Education</a></li>
-            <li><a href="/transition/learning-center/employment/">Employment</a></li>
-            <li><a href="/transition/learning-center/benefits/">Benefit Programs &amp; Supports</a></li>
-            <li><a href="/transition/learning-center/independent-community-living/">Independent &amp; Community Living</a></li>
-            <li><a href="/transition/learning-center/laws/">Laws &amp; Rights</a></li>
-            <li><a href="/transition/learning-center/health/">Health &amp; Transition</a></li>
-          </ul>
-        </li>
-        <li id="stories"><a href="/transition/stories/">Stories</a></li>
-        <li id="library"><a href="/transition/resource-library/">Resource Library</a>
-        </li>
-      </ul>
-        </div>
+            <li id="learning" class="primary-category hassubnav threecol"><a href="/transition/learning-center/"><span>Learning Center</span></a>
+              <ul id="learning-sub">
+                <li><a href="/transition/learning-center/planning/"><span>Middle &amp; High School Transition Plannin</span>g</a></li>
+                <li><a href="/transition/learning-center/postsecondary/"><span>Postsecondary Education</span></a></li>
+                <li><a href="/transition/learning-center/employment/"><span>Employment</span></a></li>
+                <li><a href="/transition/learning-center/benefits/"><span>Benefit Programs &amp; Supports</span></a></li>
+                <li><a href="/transition/learning-center/independent-community-living/"><span>Independent &amp; Community Living</span></a></li>
+                <li><a href="/transition/learning-center/laws/"><span>Laws &amp; Rights</span></a></li>
+                <li><a href="/transition/learning-center/health/"><span>Health &amp; Transition</span></a></li>
+              </ul>
+            </li>
+            <li id="stories" class="primary-category"><a href="/transition/stories/"><span>Stories</span></a></li>
+            <li id="library" class="primary-category"><a href="/transition/resource-library/"><span>Resource Library</span></a>
+            </li>
+        </ul>
+    </div>
 
 
 
+    <!-- Side bar -->
+    <div class="sidebar1">
+        <ul class="nav">
+            <li id="featured" class="active"><a href="/transition/video/">Featured Videos</a></li>
+            <li id="listing"><a href="/transition/video/listing.asp">See All Videos</a></li>
+            <li id="series"><a href="/transition/video/serieslisting.asp">Video Series</a></li>
+            <li id="series1"><a href="/transition/video/series.asp?se=1">Voices of Experience Series</a></li>
+            <li id="inspiration"><a href="/transition/video/topic.asp?se=Inspiration"><span class="fa fa-tag"></span> Inspiration</a></li>
+            <li id="employment"><a href="/transition/video/topic.asp?se=Employment"><span class="fa fa-tag"></span> Employment</a></li>
+            <li id="postsecondaryeducation" style="font-size:.9em;"><a href="/transition/video/topic.asp?se=Postsecondary%20Education"><span class="fa fa-tag"></span> Postsecondary Education</a></li>
+            <li id="independentliving"><a href="/transition/video/topic.asp?se=Independent%20Living"><span class="fa fa-tag"></span> Independent Living</a></li>
+            <li id="alltopics"><a href="/transition/video/topiclisting.asp"><span class="fa fa-tags"></span> See All Topics</a></li>
+        </ul>
+    </div>
 
 
 
 
 
       <!-- Footer -->
-    <div class="footer">
+    <div class="footer transition">
 
             <div id="footerNav">
         <table id="footerTable"><tbody><tr>

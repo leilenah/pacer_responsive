@@ -3,32 +3,10 @@
 .menu-icon-logo-wrapper {
   display: none; }
 
-.footer #leftCol-branding #footer-logo {
-  width: 281px;
-  height: 36px; }
-
-.footer #leftCol-branding .footer-section.offices h4, .footer #leftCol-branding .footer-section.offices p {
-  color: #fff;
-  margin-bottom: 0; }
-
-.footer #leftCol-branding .footer-section.offices:last-of-type {
-  margin-bottom: 15px; }
-
-.footer #leftCol-branding .footer-message {
-  line-height: 1.5;
-  padding: 10px 15px; }
-
-.footer #rightCol-Sites {
-  padding-top: 18px; }
-  .footer #rightCol-Sites ul {
-    margin-top: 0; }
-
-.footer #copywrite {
-  clear: left; }
-
 @media screen and (max-width: 750px) {
   .container {
-    width: 100%; }
+    width: 100%;
+    margin: 0; }
     .container #pacerwrapper, .container .header {
       display: none; }
     .container .menu-icon-logo-wrapper {
@@ -53,7 +31,8 @@
         float: right;
         height: 38px;
         width: 200px;
-        background: #fff url(../images/transition/transition-logo.jpg) no-repeat center; }
+        background: #fff url(../images/transition/transition-logo.png) no-repeat center;
+        background-size: 200px 38px; }
     .container #navWrap {
       display: none;
       height: auto;
@@ -67,6 +46,8 @@
           float: none;
           width: 100%;
           overflow: auto; }
+          .container #navWrap #topnav.transition-nav li span.fa {
+            display: none; }
         .container #navWrap #topnav.transition-nav .primary-category {
           background: #fff; }
           .container #navWrap #topnav.transition-nav .primary-category button {
@@ -175,11 +156,7 @@
             background-position: center; }
             .container #navWrap .social-list .social-elements .socialButton.facebook {
               background-image: url(../../assets/images/transition/facebook-icon.png); }
-            .container #navWrap .social-list .social-elements .socialButton.twitter {
-              background-image: url(../../assets/images/transition/twitter-icon.png); }
-            .container #navWrap .social-list .social-elements .socialButton.instagram {
-              background-image: url(../../assets/images/transition/instagram-icon.png); }
-            .container #navWrap .social-list .social-elements .socialButton.pinterest {
+            .container #navWrap .social-list .social-elements .socialButton.youtube {
               background-image: url(../../assets/images/transition/youtube-icon.png); }
     .container .sidebar1 {
       display: none; }
@@ -261,86 +238,58 @@
             .container .quaternary-category-wrapper .quaternary-category ul li a span, .container .quaternary-category-wrapper .quaternary-category .submenu li a span {
               padding-left: 15px; }
     .container .footer.transition {
-      padding: 20px 30px 0 30px;
-      background-color: #fff;
-      color: #63ac18;
-      font-family: Helvetica; }
-      .container .footer.transition #leftCol-branding {
-        width: 100%;
-        padding: 0; }
-        .container .footer.transition #leftCol-branding #footer-logo {
-          max-width: 100%;
-          margin: 0 auto 15px; }
-        .container .footer.transition #leftCol-branding .footer-section.offices h4, .container .footer.transition #leftCol-branding .footer-section.offices p {
-          color: #63ac18;
-          padding: 0;
-          font-size: 15px;
-          line-height: 20px; }
-        .container .footer.transition #leftCol-branding .footer-section.offices:last-of-type {
-          margin-top: 15px;
-          margin-bottom: 0; }
-        .container .footer.transition #leftCol-branding .footer-message {
-          margin: 30px auto 0;
-          padding: 0;
-          font-size: 15px; }
-        .container .footer.transition #leftCol-branding .footer.e-mail {
-          display: none; }
-      .container .footer.transition #centerCol-links {
-        width: 100%;
-        padding: 0; }
-        .container .footer.transition #centerCol-links .social-elements {
-          background-color: #fff;
-          display: -ms-flexbox;
-          display: flex;
-          -ms-flex-wrap: nowrap;
-              flex-wrap: nowrap; }
-          .container .footer.transition #centerCol-links .social-elements .socialButton {
-            width: 40px;
-            height: 40px;
+      padding: 20px 30px 0;
+      background-image: none;
+      background-color: #fff; }
+      .container .footer.transition #footerNav {
+        background-image: none;
+        background-color: #fff; }
+        .container .footer.transition #footerNav #footerTable {
+          margin: 0; }
+          .container .footer.transition #footerNav #footerTable tbody tr td {
+            display: block;
             padding: 0;
-            display: inline-block;
-            background-color: #fff;
-            margin: 20px auto;
-            color: #63ac18;
-            text-align: center;
-            background-size: 40px;
-            background-repeat: no-repeat;
-            background-position: center; }
-            .container .footer.transition #centerCol-links .social-elements .socialButton:first-child {
-              margin-left: 0; }
-            .container .footer.transition #centerCol-links .social-elements .socialButton:last-child {
-              margin-right: 0; }
-            .container .footer.transition #centerCol-links .social-elements .socialButton.facebook {
-              background-image: url(../../assets/images/transition/facebook-icon.png); }
-            .container .footer.transition #centerCol-links .social-elements .socialButton.twitter {
-              background-image: url(../../assets/images/transition/twitter-icon.png); }
-            .container .footer.transition #centerCol-links .social-elements .socialButton.instagram {
-              background-image: url(../../assets/images/transition/instagram-icon.png); }
-            .container .footer.transition #centerCol-links .social-elements .socialButton.pinterest {
-              background-image: url(../../assets/images/transition/youtube-icon.png); }
-        .container .footer.transition #centerCol-links ul {
-          margin-bottom: 20px; }
-          .container .footer.transition #centerCol-links ul li {
-            margin-top: 30px;
-            line-height: 15px; }
-            .container .footer.transition #centerCol-links ul li a {
-              font-size: 15px;
-              color: #63ac18; }
-      .container .footer.transition #rightCol-Sites {
+            color: #63ac18; }
+            .container .footer.transition #footerNav #footerTable tbody tr td h2 {
+              margin-bottom: 30px;
+              color: #262673;
+              text-align: center;
+              font-size: 18px; }
+            .container .footer.transition #footerNav #footerTable tbody tr td h3 {
+              border-bottom: none; }
+              .container .footer.transition #footerNav #footerTable tbody tr td h3 a {
+                font-size: 15px;
+                line-height: 15px;
+                font-weight: bold; }
+            .container .footer.transition #footerNav #footerTable tbody tr td ul {
+              margin: 0 0 30px 30px; }
+              .container .footer.transition #footerNav #footerTable tbody tr td ul li {
+                margin-bottom: 15px; }
+                .container .footer.transition #footerNav #footerTable tbody tr td ul li a {
+                  font-size: 15px;
+                  font-weight: normal; }
+            .container .footer.transition #footerNav #footerTable tbody tr td a {
+              color: #63ac18;
+              font-family: Helvetica; }
+            .container .footer.transition #footerNav #footerTable tbody tr td #footerQuestion {
+              display: none; }
+      .container .footer.transition #footer-bottomright, .container .footer.transition #copywrite {
+        display: block;
+        position: relative;
         width: 100%;
-        padding: 0; }
-        .container .footer.transition #rightCol-Sites ul li a {
-          width: 100%;
-          margin: 20px 0 0;
-          color: #fff;
-          background-color: #63ac18;
-          font-size: 13px;
-          font-weight: normal;
-          text-align: left;
-          border: none;
-          border-radius: 0; }
-      .container .footer.transition #copywrite {
-        margin: 0;
-        padding: 20px 0 5px;
+        right: auto;
+        bottom: auto;
         color: #63ac18;
-        text-align: left; } }
+        text-align: left;
+        font-family: Helvetica; }
+      .container .footer.transition #footer-bottomright a {
+        display: block;
+        margin-bottom: 30px;
+        padding-left: 0;
+        font-size: 15px;
+        line-height: 15px;
+        color: #63ac18; }
+      .container .footer.transition #copywrite {
+        font-size: 10px;
+        padding-bottom: 5px;
+        color: #262673; } }
