@@ -280,7 +280,6 @@
         right: auto;
         bottom: auto;
         color: #63ac18;
-        text-align: left;
         font-family: Helvetica; }
       .container .footer.transition #footer-bottomright a {
         display: block;
@@ -288,8 +287,10 @@
         padding-left: 0;
         font-size: 15px;
         line-height: 15px;
-        color: #63ac18; }
+        color: #63ac18;
+        text-align: left; }
       .container .footer.transition #copywrite {
         font-size: 10px;
         padding-bottom: 5px;
-        color: #262673; } }
+        color: #262673;
+        text-align: right; } }

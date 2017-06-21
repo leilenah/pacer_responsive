@@ -425,7 +425,6 @@ $primary-border: 1px solid $transition-green;
                 right: auto;
                 bottom: auto;
                 color: $transition-green;
-                text-align: left;
                 font-family: $transition-primary-font;
             }
             #footer-bottomright a{
@@ -435,11 +434,13 @@ $primary-border: 1px solid $transition-green;
                 font-size: 15px;
                 line-height: 15px;
                 color: $transition-green;
+                text-align: left;
             }
             #copywrite{
                 font-size: 10px;
                 padding-bottom: 5px;
                 color: $transition-purple;
+                text-align: right;
             }
         }
     }

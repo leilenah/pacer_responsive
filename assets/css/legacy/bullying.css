@@ -835,7 +835,7 @@ a.btn:hover, a.btn:active {
   margin: 20px;
 }
 .ui-widget-content a.mover {
-    background: #cccccc url("/js/jquery-ui-1.11.4.custom/images/ui-bg_highlight-soft_75_cccccc_1x100.png") repeat-x scroll 50% 50%;
+    background: #cccccc url(http://www.pacer.org/js/jquery-ui-1.11.4.custom/images/ui-bg_highlight-soft_75_cccccc_1x100.png) repeat-x scroll 50% 50%;
     border: 1px solid #2a2950;
     border-radius: 5px;
     box-shadow: 2px 2px 2px #ccc;
