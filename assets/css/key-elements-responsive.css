@@ -329,176 +329,180 @@
         text-align: left; } }
 
 #pagecontent {
-  margin: 0; }
+  margin: 0 !important; }
+
+#pagecontent p {
+  padding: 4px !important; }
+
+#cboxOverlay {
+  opacity: 1.0 !important;
+  background: #fff; }
 
 .cboxElement img {
   width: 100%;
   height: auto; }
 
-div#colorbox {
-  top: 0 !important;
+img.cboxPhoto {
+  margin: none;
+  width: 100% !important;
+  height: auto !important; }
+
+#colorbox {
   width: 100% !important;
   min-width: 900px !important;
   height: 100%; }
 
 #cboxContent {
-  position: fixed !important;
   overflow: visible !important;
   width: 100% !important;
   background: none;
   float: none !important;
-  height: 620px !important; }
+  height: auto !important; }
 
-div#cBoxWrapper {
+#cBoxWrapper {
+  top: 25%;
   position: fixed !important;
-  height: 100% !important;
-  width: 100% !important; }
+  max-width: 400px; }
+  #cBoxWrapper iframe {
+    max-height: 200px; }
 
-#cboxTopLeft, #cboxTopCenter, #cboxTopRight {
-  /*background: #fff;*/
+#cboxTopLeft, #cboxTopCenter, #cboxTopRight, #cboxMiddleLeft {
   display: none;
   float: none; }
 
-#cboxMiddleLeft {
-  height: 0 !important;
-  float: none !important;
-  width: 0 !important; }
-
 #cboxClose {
   color: #007FA9;
-  top: 30px !important;
-  right: 30px !important;
-  width: 100px;
-  height: 100px;
+  position: fixed;
+  top: 20px !important;
+  right: 20px !important;
+  width: 50px;
+  height: 120px;
   background: url(../images/svg/close.svg) no-repeat;
   text-indent: 0; }
   #cboxClose:hover {
-    background-position: 0 !important; }
+    background-position: inherit !important; }
 
-div#cboxLoadedContent {
+#cboxLoadedContent {
   width: 100% !important;
   height: auto !important;
   padding: 0 !important;
   margin: 0 !important; }
 
-img.cboxPhoto {
-  margin: none;
-  width: 100% !important;
-  height: 100% !important; }
-
-div#cboxTitle {
+#cboxTitle {
+  text-align: center;
   position: relative;
   float: none;
-  color: black;
+  color: #000;
   margin-top: 20px; }
 
-div#cboxOverlay {
-  opacity: 1.0 !important;
-  background: #fff; }
+h2#ParentPerspectives.greenBar {
+  margin-left: 0 !important;
+  margin-right: 0 !important; }
 
-ol {
-  padding-left: 40px; }
-
-ol, li {
-  font-size: 0.9em; }
-
-p.ExpandHeader {
-  height: 80px; }
-  p.ExpandHeader strong {
-    line-height: 2;
-    padding-left: 60px;
-    font-size: 1.75rem !important;
-    font-weight: bold;
-    color: #007FA9 !important; }
-
-.ExpandHeader {
-  min-height: 40px; }
+#pagecontent .greenBar {
+  background: #246C00;
+  color: #fff;
+  padding: 20px 5px;
+  margin-top: 40px;
+  margin-left: 0 !important;
+  margin-right: 0 !important; }
 
 .ExpandItem {
   color: #000 !important; }
 
-#pagecontent p.ExpandHeader {
+p.ExpandHeader {
+  min-height: 40px;
+  text-align: center;
   font-family: Helvetica;
+  font-size: 1em;
   border: 2px solid #007FA9;
-  text-indent: 0 !important;
   padding: 10px 10px 0 0;
   text-transform: uppercase;
-  margin: 20px 20px 0 20px !important; }
+  margin: 20px 20px 20px 20px !important;
+  text-indent: 0 !important; }
+  p.ExpandHeader strong {
+    font-weight: bold;
+    color: #007FA9 !important; }
+  p.ExpandHeader .ItemOpen {
+    font-family: Helvetica;
+    border: 1px solid #007FA9;
+    padding: 10px;
+    font-size: 10px; }
+
+ol {
+  color: #000;
+  padding: 0 30px 0 30px; }
+  ol li {
+    font-size: 0.9em; }
 
 .ExpandHeader span.fa {
   display: none; }
 
-.ExpandItem .ItemOpen {
-  padding: none !important; }
+p {
+  padding: 0; }
 
-#pagecontentright li, #pagecontent li {
-  margin-bottom: 0 !important; }
-
-p.question.ExpandHeader.ItemOpen {
-  font-family: Helvetica;
-  border: 1px solid #007FA9;
-  padding: 10px;
-  font-size: 10px; }
-
-div.ExpandItem .ItemOpen p {
-  margin-left: 20px; }
-
-.question.ExpandHeader {
-  border: 1px solid #007FA9;
-  color: #007FA9; }
+p iframe {
+  padding: 0;
+  width: 100% !important;
+  height: auto !important; }
 
 #pagecontent {
-  margin: .5em 0 0 0; }
+  margin: 0 !important; }
 
-iframe {
-  min-height: 500px;
-  min-width: 920px; }
+#pagecontent h2, #pagecontent h3 {
+  margin-top: 40px;
+  text-transform: none; }
 
-.ui-widget {
-  font-family: Helvetica !important; }
+#iepChart {
+  position: relative;
+  /*overflow:hidden;*/
+  /*margin:0px auto;*/
+  /*width:728px;*/
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 20px; }
 
-.ui-widget-header {
-  background: none !important;
-  border: none !important; }
+.chartBox {
+  width: 120px;
+  float: left;
+  padding: 5px;
+  margin: 10px; }
 
-.ui-widget-content {
-  border: none !important; }
+.leftChartBox {
+  background: #D7F5FF; }
 
-.ui-corner-all, .ui-corner-top, .ui-corner-right, .ui-corner-tr {
-  border-radius: 0 !important; }
+.leftChartBox, .rightChartBox {
+  border: 2px solid #006A8C;
+  border-radius: 8px;
+  box-shadow: 5px 5px 10px -3px gray; }
 
-.ui-tabs .ui-tabs-nav li {
-  float: none !important;
-  display: block !important;
-  height: 6% !important; }
-  .ui-tabs .ui-tabs-nav li:after {
-    content: "SHOW MORE " url(../images/svg/accordion-closed.svg);
-    position: absolute;
-    background-color: white;
-    color: #666;
-    right: 40px;
-    height: 100%;
-    width: 15%;
-    bottom: 0;
-    text-align: center;
-    font-size: 1em !important; }
-  .ui-tabs .ui-tabs-nav li a {
-    color: white !important;
-    text-decoration: none !important;
-    font-size: 1rem !important; }
+.downChartArrow, .leftChartBox {
+  clear: left; }
 
-.ui-tabs .ui-widget .ui-widget-content .ui-corner-all {
-  position: relative !important; }
+.downChartArrow {
+  /*width:280px;*/
+  float: left;
+  height: 50px;
+  background: url(../images/legacy/downarrow-sml.png) no-repeat center;
+  border: none; }
 
-.ui-tabs .ui-tabs-nav {
-  padding: 0 !important; }
-  .ui-tabs .ui-tabs-nav .ui-tabs-anchor {
-    display: inline-block !important;
-    margin-left: 40px !important;
-    float: none !important; }
+.centerChartBox {
+  background: url(../images/legacy/rightarrow-sml.png) no-repeat center; }
 
-.ui-widget-content .ui-widget-header .ui-state-active {
-  background: grey !important; }
+.centerChartBox {
+  width: 50px;
+  height: 20px;
+  border: none;
+  float: left;
+  margin-top: 48px; }
+
+#iepChart a.info {
+  text-align: right;
+  text-decoration: underline;
+  padding: 5px;
+  display: block; }
+
+#iepChart a.info:hover {
+  color: #006A8C; }
 
 @media screen and (max-width: 750px) {
   body {
