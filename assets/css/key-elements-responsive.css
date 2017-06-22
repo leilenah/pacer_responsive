@@ -397,6 +397,11 @@
       font-size: 0.8em; }
     #info1 .resources, #info2 .resources, #info3 .resources, #info4 .resources, #info5 .resources, #info6 .resources, #info7 .resources, #info8 .resources {
       font-size: 0.8em; }
+  hr {
+    width: 170%; }
+  img.fltrt {
+    margin: 0 auto !important;
+    margin-bottom: 10px; }
   .videoPopUp #colorbox {
     width: 100% !important;
     min-width: 900px !important;
@@ -411,10 +416,16 @@
     margin-top: 40px;
     margin-left: 0 !important;
     margin-right: 0 !important; }
+  td.videoImg {
+    width: 40%; }
+    td.videoImg img {
+      width: 90%;
+      height: auto;
+      margin-right: 50px; }
   .ExpandItem {
     color: #000 !important; }
   p.ExpandHeader {
-    min-height: 40px;
+    min-height: 30px;
     text-align: center;
     font-family: Helvetica;
     font-size: 1em;
@@ -447,7 +458,6 @@
   #pagecontent {
     margin: 0 !important; }
   #pagecontent h2, #pagecontent h3 {
-    margin-top: 40px;
     text-transform: none; }
   #iepChart {
     position: relative;
@@ -457,7 +467,7 @@
     border-bottom: 1px solid #ccc;
     margin-bottom: 20px; }
   .chartBox {
-    width: 120px;
+    width: 110px;
     float: left;
     padding: 5px;
     margin: 10px; }
