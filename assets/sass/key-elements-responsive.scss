@@ -9,14 +9,15 @@ $parent-primary-font: Helvetica;
 $parent-primary-font-size: 10px;
 
 @mixin key-elements-responsive-styles(){
-  //Overall styling
-  #pagecontent{
-    margin: 0 !important;
-  }
 
-  #pagecontent p{
-    padding: 4px !important;
-  }
+  //Overall styling
+  // #pagecontent{
+  //   margin: 0 !important;
+  // }
+
+  // #pagecontent p{
+  //   padding: 4px !important;
+  // }
 
 
 
@@ -116,10 +117,6 @@ $parent-primary-font-size: 10px;
 
 
   //LIGHTBOX VIDEO POP-UPS
-  hr{
-    width: 170%;
-  }
-
   img.fltrt{
     // width: 100%;
     margin: 0 auto !important;

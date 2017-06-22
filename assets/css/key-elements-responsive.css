@@ -329,10 +329,6 @@
         text-align: left; } }
 
 @media screen and (max-width: 750px) {
-  #pagecontent {
-    margin: 0 !important; }
-  #pagecontent p {
-    padding: 4px !important; }
   #cboxOverlay {
     opacity: 1.0 !important;
     background: #fff; }
@@ -397,8 +393,6 @@
       font-size: 0.8em; }
     #info1 .resources, #info2 .resources, #info3 .resources, #info4 .resources, #info5 .resources, #info6 .resources, #info7 .resources, #info8 .resources {
       font-size: 0.8em; }
-  hr {
-    width: 170%; }
   img.fltrt {
     margin: 0 auto !important;
     margin-bottom: 10px; }
