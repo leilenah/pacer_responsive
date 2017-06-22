@@ -44,6 +44,8 @@ $parent-primary-font-size: 10px;
   }
 
   #cboxContent{
+    width: 100% !important;
+    margin: 0 auto; //CHECK
     overflow: visible !important;
     width: 100% !important;
     background: none;
@@ -52,9 +54,13 @@ $parent-primary-font-size: 10px;
   }
 
   #cBoxWrapper{
-    top: 25%;
+    width: 100% !important;
+    margin: 0 auto; //CHECK
+    top: 10%; //CHECK
+    // top: 25%;
     position: fixed !important;
-    max-width: 400px;
+    max-height: 100%;
+    max-width: 100%;
     iframe{
       max-height: 200px;
     }
@@ -79,10 +85,12 @@ $parent-primary-font-size: 10px;
   }
 
   #cboxLoadedContent{
+    position: fixed !important;
     width: 100% !important;
     height: auto !important;
     padding: 0 !important;
-    margin: 0 !important;
+    bottom: 0px;
+    top: 14%;
 
   }
 
@@ -93,6 +101,17 @@ $parent-primary-font-size: 10px;
     color: #000;
     margin-top: 20px;
   }
+
+// LIGHTBOX SUBPAGES
+#info1, #info2, #info3, #info4, #info5, #info6, #info7, #info8{
+  padding: 10px;
+  p{
+    font-size: 0.8em;
+  }
+  .resources{
+    font-size: 0.8em;
+  }
+}
 
 
 

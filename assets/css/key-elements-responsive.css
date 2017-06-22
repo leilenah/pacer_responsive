@@ -348,15 +348,20 @@
     min-width: 900px !important;
     height: 100%; }
   #cboxContent {
+    width: 100% !important;
+    margin: 0 auto;
     overflow: visible !important;
     width: 100% !important;
     background: none;
     float: none !important;
     height: auto !important; }
   #cBoxWrapper {
-    top: 25%;
+    width: 100% !important;
+    margin: 0 auto;
+    top: 10%;
     position: fixed !important;
-    max-width: 400px; }
+    max-height: 100%;
+    max-width: 100%; }
     #cBoxWrapper iframe {
       max-height: 200px; }
   #cboxTopLeft, #cboxTopCenter, #cboxTopRight, #cboxMiddleLeft {
@@ -374,16 +379,24 @@
     #cboxClose:hover {
       background-position: inherit !important; }
   #cboxLoadedContent {
+    position: fixed !important;
     width: 100% !important;
     height: auto !important;
     padding: 0 !important;
-    margin: 0 !important; }
+    bottom: 0px;
+    top: 14%; }
   #cboxTitle {
     text-align: center;
     position: relative;
     float: none;
     color: #000;
     margin-top: 20px; }
+  #info1, #info2, #info3, #info4, #info5, #info6, #info7, #info8 {
+    padding: 10px; }
+    #info1 p, #info2 p, #info3 p, #info4 p, #info5 p, #info6 p, #info7 p, #info8 p {
+      font-size: 0.8em; }
+    #info1 .resources, #info2 .resources, #info3 .resources, #info4 .resources, #info5 .resources, #info6 .resources, #info7 .resources, #info8 .resources {
+      font-size: 0.8em; }
   .videoPopUp #colorbox {
     width: 100% !important;
     min-width: 900px !important;
