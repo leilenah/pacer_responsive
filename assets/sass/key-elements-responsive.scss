@@ -8,233 +8,239 @@ $parent-blue: #007FA9;
 $parent-primary-font: Helvetica;
 $parent-primary-font-size: 10px;
 
-
-//Overall styling
-#pagecontent{
-  margin: 0 !important;
-}
-
-#pagecontent p{
-  padding: 4px !important;
-}
-
-
-
-
-//LIGHTBOX
-#cboxOverlay{
-  opacity: 1.0 !important;
-  background: #fff;
-}
-
-.cboxElement img{
-  width: 100%;
-  height: auto;
-}
-
-img.cboxPhoto{
-  margin: none;
-  width: 100% !important;
-  height: auto !important;
-}
-
-#colorbox{
-  width: 100% !important;
-  min-width: 900px !important;
-  height: 100%;
-}
-
-#cboxContent{
-  overflow: visible !important;
-  width: 100% !important;
-  background: none;
-  float: none !important;
-  height: auto !important;
-}
-
-#cBoxWrapper{
-  top: 25%;
-  position: fixed !important;
-  max-width: 400px;
-  iframe{
-    max-height: 200px;
+@mixin key-elements-responsive-styles(){
+  //Overall styling
+  #pagecontent{
+    margin: 0 !important;
   }
-}
-#cboxTopLeft, #cboxTopCenter, #cboxTopRight, #cboxMiddleLeft{
-  display: none;
-  float: none;
-}
 
-#cboxClose{
-  color: $parent-blue;
-  position: fixed;
-  top: 20px !important;
-  right: 20px !important;
-  width: 50px;
-  height: 120px;
-  background:url(../images/svg/close.svg) no-repeat;
-  text-indent: 0;
-  &:hover{
-    background-position: inherit !important;
+  #pagecontent p{
+    padding: 4px !important;
   }
-}
-
-#cboxLoadedContent{
-  width: 100% !important;
-  height: auto !important;
-  padding: 0 !important;
-  margin: 0 !important;
-
-}
-
-#cboxTitle{
-  text-align: center;
-  position: relative;
-  float: none;
-  color: #000;
-  margin-top: 20px;
-}
 
 
 
-//LIGHTBOX VIDEO POP-UPS
-h2#ParentPerspectives.greenBar{
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-}
-
-#pagecontent .greenBar {
-    background:#246C00;
-    color:#fff;
-    padding:20px 5px;
-    margin-top:40px;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-}
-
-
-
-
-//ACCORDION
-.ExpandItem{
-  color: #000 !important;
-}
-
-p.ExpandHeader {
-  min-height: 40px;
-  text-align: center;
-  font-family: $parent-primary-font;
-  font-size: 1em;
-  border: 2px solid $parent-blue;
-  padding: 10px 10px 0 0;
-  text-transform: uppercase;
-  margin: 20px 20px 20px 20px !important;
-  text-indent: 0 !important;
-  strong{
-    font-weight: bold;
-    color: $parent-blue !important;
+  //LIGHTBOX
+  #cboxOverlay{
+    opacity: 1.0 !important;
+    background: #fff;
   }
-  .ItemOpen{
+
+  .cboxElement img{
+    width: 100%;
+    height: auto;
+  }
+
+  img.cboxPhoto{
+    margin: none;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  #colorbox{
+    width: 100% !important;
+    min-width: 900px !important;
+    height: 100%;
+  }
+
+  #cboxContent{
+    overflow: visible !important;
+    width: 100% !important;
+    background: none;
+    float: none !important;
+    height: auto !important;
+  }
+
+  #cBoxWrapper{
+    top: 25%;
+    position: fixed !important;
+    max-width: 400px;
+    iframe{
+      max-height: 200px;
+    }
+  }
+  #cboxTopLeft, #cboxTopCenter, #cboxTopRight, #cboxMiddleLeft{
+    display: none;
+    float: none;
+  }
+
+  #cboxClose{
+    color: $parent-blue;
+    position: fixed;
+    top: 20px !important;
+    right: 20px !important;
+    width: 50px;
+    height: 120px;
+    background:url(../images/svg/close.svg) no-repeat;
+    text-indent: 0;
+    &:hover{
+      background-position: inherit !important;
+    }
+  }
+
+  #cboxLoadedContent{
+    width: 100% !important;
+    height: auto !important;
+    padding: 0 !important;
+    margin: 0 !important;
+
+  }
+
+  #cboxTitle{
+    text-align: center;
+    position: relative;
+    float: none;
+    color: #000;
+    margin-top: 20px;
+  }
+
+
+
+  //LIGHTBOX VIDEO POP-UPS
+
+  .videoPopUp #colorbox{
+    width: 100% !important;
+    min-width: 900px !important;
+    height: 100%;
+  }
+
+  h2#ParentPerspectives.greenBar{
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  #pagecontent .greenBar {
+      background:#246C00;
+      color:#fff;
+      padding:20px 5px;
+      margin-top:40px;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+
+
+
+  //ACCORDION
+  .ExpandItem{
+    color: #000 !important;
+  }
+
+  p.ExpandHeader {
+    min-height: 40px;
+    text-align: center;
     font-family: $parent-primary-font;
-    border: 1px solid $parent-blue;
-    padding: 10px;
-    font-size: $parent-primary-font-size;
+    font-size: 1em;
+    border: 2px solid $parent-blue;
+    padding: 10px 10px 0 0;
+    text-transform: uppercase;
+    margin: 20px 20px 20px 20px !important;
+    text-indent: 0 !important;
+    strong{
+      font-weight: bold;
+      color: $parent-blue !important;
+    }
+    .ItemOpen{
+      font-family: $parent-primary-font;
+      border: 1px solid $parent-blue;
+      padding: 10px;
+      font-size: $parent-primary-font-size;
+    }
+  }
+
+  ol{
+    color: #000;
+    padding: 0 30px 0 30px;
+    li{
+      font-size: 0.9em;
+    }
+  }
+
+  // Deletes the plus/minus icon
+  .ExpandHeader span.fa{
+    display: none;
+  }
+
+
+
+
+  //EMBEDDED YOUTUBE
+  p{
+    padding: 0;
+  }
+  p iframe{
+    padding: 0;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+
+
+
+
+
+  // Understanding-Spec-Ed Example page
+  #pagecontent{
+    margin: 0 !important;
+  }
+  #pagecontent h2, #pagecontent h3 {
+    margin-top:40px;
+    text-transform:none;
+  }
+  #iepChart {
+    position:relative;
+    /*overflow:hidden;*/
+    /*margin:0px auto;*/
+    /*width:728px;*/
+    border-bottom:1px solid #ccc;
+    margin-bottom:20px;
+  }
+  .chartBox {
+    width:120px;
+    float:left;
+    padding:5px;
+    margin:10px;
+  }
+  .leftChartBox {
+    background:#D7F5FF;
+  }
+  .leftChartBox, .rightChartBox {
+    border:2px solid #006A8C;
+    border-radius:8px;
+    box-shadow: 5px 5px 10px -3px rgba(128,128,128,1);
+  }
+  .downChartArrow, .leftChartBox{
+    clear:left;
+  }
+  .downChartArrow {
+    /*width:280px;*/
+    float:left;
+    height:50px;
+    background: url(../images/legacy/downarrow-sml.png) no-repeat center;
+    border:none;
+  }
+  .centerChartBox {
+    background: url(../images/legacy/rightarrow-sml.png) no-repeat center;
+  }
+  .centerChartBox {
+    width:50px;
+    height:20px;
+    border:none;
+    float:left;
+    margin-top:48px;
+  }
+  #iepChart a.info {
+    text-align:right;
+    text-decoration:underline;
+    padding:5px;
+    display:block;
+  }
+  #iepChart a.info:hover {
+    color:#006A8C;
   }
 }
-
-ol{
-  color: #000;
-  padding: 0 30px 0 30px;
-  li{
-    font-size: 0.9em;
-  }
-}
-
-// Deletes the plus/minus icon
-.ExpandHeader span.fa{
-  display: none;
-}
-
-
-
-
-//EMBEDDED YOUTUBE
-p{
-  padding: 0;
-}
-p iframe{
-  padding: 0;
-  width: 100% !important;
-  height: auto !important;
-}
-
-
-
-
-
-
-// Understanding-Spec-Ed Example page
-#pagecontent{
-  margin: 0 !important;
-}
-#pagecontent h2, #pagecontent h3 {
-  margin-top:40px;
-  text-transform:none;
-}
-#iepChart {
-  position:relative;
-  /*overflow:hidden;*/
-  /*margin:0px auto;*/
-  /*width:728px;*/
-  border-bottom:1px solid #ccc;
-  margin-bottom:20px;
-}
-.chartBox {
-  width:120px;
-  float:left;
-  padding:5px;
-  margin:10px;
-}
-.leftChartBox {
-  background:#D7F5FF;
-}
-.leftChartBox, .rightChartBox {
-  border:2px solid #006A8C;
-  border-radius:8px;
-  box-shadow: 5px 5px 10px -3px rgba(128,128,128,1);
-}
-.downChartArrow, .leftChartBox{
-  clear:left;
-}
-.downChartArrow {
-  /*width:280px;*/
-  float:left;
-  height:50px;
-  background: url(../images/legacy/downarrow-sml.png) no-repeat center;
-  border:none;
-}
-.centerChartBox {
-  background: url(../images/legacy/rightarrow-sml.png) no-repeat center;
-}
-.centerChartBox {
-  width:50px;
-  height:20px;
-  border:none;
-  float:left;
-  margin-top:48px;
-}
-#iepChart a.info {
-  text-align:right;
-  text-decoration:underline;
-  padding:5px;
-  display:block;
-}
-#iepChart a.info:hover {
-  color:#006A8C;
-}
-
 
 @include breakpoint($bp-mobile-landscape){
-    @include parent-responsive-styles();
+    @include key-elements-responsive-styles();
 
 }
