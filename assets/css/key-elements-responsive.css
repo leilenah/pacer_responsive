@@ -387,11 +387,11 @@
     float: none;
     color: #000;
     margin-top: 20px; }
-  #info1, #info2, #info3, #info4, #info5, #info6, #info7, #info8 {
+  #info1, #info2, #info3, #info4, #info5, #info6, #info7, #info8, #info9, #info10 {
     padding: 10px; }
-    #info1 p, #info2 p, #info3 p, #info4 p, #info5 p, #info6 p, #info7 p, #info8 p {
+    #info1 p, #info2 p, #info3 p, #info4 p, #info5 p, #info6 p, #info7 p, #info8 p, #info9 p, #info10 p {
       font-size: 0.8em; }
-    #info1 .resources, #info2 .resources, #info3 .resources, #info4 .resources, #info5 .resources, #info6 .resources, #info7 .resources, #info8 .resources {
+    #info1 .resources, #info2 .resources, #info3 .resources, #info4 .resources, #info5 .resources, #info6 .resources, #info7 .resources, #info8 .resources, #info9 .resources, #info10 .resources {
       font-size: 0.8em; }
   img.fltrt {
     margin: 0 auto !important;
