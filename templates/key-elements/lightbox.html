@@ -1,0 +1,107 @@
+<!-- Viewport Meta Tag -->
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<!-- <meta name="viewport" content="width=device-width"> -->
+
+<!-- Fonts -->
+<link rel="stylesheet" type="text/css" href="../assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+
+<!-- Legacy stylesheet link here -->
+<link rel="stylesheet" type="text/css" href="../../assets/css/legacy/colorbox.css">
+<link rel="stylesheet" type="text/css" href="../../assets/css/legacy/jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="../../assets/css/legacy/bullying.css">
+<link rel="stylesheet" type="text/css" href="../../assets/css/legacy/home.css">
+<link rel="stylesheet" type="text/css" href="../../assets/css/legacy/pacer-expanding-box.css">
+
+<!-- Stylesheet -->
+<link rel="stylesheet" type="text/css" href="../../assets/css/key-elements-responsive.min.css">
+
+
+<!-- FOOTER JavaScript -->
+<!-- Key elements -->
+<script type="text/javascript" src="../assets/js/key-elements.min.js"></script>
+
+
+<!-- HEAD Javascript -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript" src="../../assets/js/legacy/pacer-expanding-box.js"></script>
+<script type="text/javascript" src="../../assets/js/legacy/jquery-easing-1.3.js"></script>
+<script type="text/javascript" src="../../assets/js/legacy/jquery-ui.js"></script>
+<script type="text/javascript" src="../../assets/js/legacy/jquery-colorbox.js"></script>
+
+
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        var $pageTabs = $('#tabs').tabs();
+
+        //Change Any Links that contain the v= version into the embed version that colorbox expects
+        //Note: You lose all extra query string items in the current version of this function
+        $(".videoPopUp").each(function(){
+            if (/\?v=/i.test(this.href)) {
+                var vars = [], hash;
+                var q = this.href.split('?')[1];
+                if(q != undefined){
+                    q = q.split('&');
+                    for(var i = 0; i < q.length; i++){
+                        hash = q[i].split('=');
+                        vars.push(hash[1]);
+                        vars[hash[0]] = hash[1];
+                    }
+                }
+                this.href = 'http://www.youtube.com/embed/' + vars['v'] + '?rel=0&amp;wmode=transparent&amp;autoplay=1';
+            }
+        });
+        //Initialize Colorbox
+        $(".videoPopUp").colorbox({iframe:true, innerWidth:960, innerHeight:585});
+    });
+</script>
+<script type="text/javascript">
+   $(document).ready(function(){
+     $(".group1").colorbox({rel:'group1'});
+     $(".group2").colorbox({rel:'group2'});
+     $(".group3").colorbox({rel:'group3'});
+  });
+
+</script>
+
+<body>
+
+	<div id="maincontent">
+	  <div id="pagecontent">
+
+			<p><center>LIGHTBOX VIEWER: IMAGE</center></p>
+			<div style="text-align:center;"><a class="group1 cboxElement" title="Click The Right Arrow To Continue." href="../../assets/images/key-elements/1-FolderView.jpg"><img style="padding:0px; margin:0px;" src="../../assets/images/key-elements/1-FolderView.jpg" width="347" height="253" alt="School Record Keeping Folders"><br><br>(Click to View)</a></div>
+
+			<br>
+			<br>
+
+			<p><center>LIGHTBOX VIEWER: VIDEO</center></p>
+			<p align="center"><a class="videoPopUp cboxElement" href="http://www.youtube.com/embed/1a9D7ghryUI?rel=0&amp;amp;wmode=transparent&amp;amp;autoplay=1"><img src="../../assets/images/key-elements/intro-video-pic.jpg" width="600" height="338" alt=""></a></p>
+
+		</div>
+	</div>
+
+<!-- <div id="cboxOverlay" style="display: none;"></div>
+<div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;"></div><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><button type="button" id="cboxPrevious"></button><button type="button" id="cboxNext"></button><button id="cboxSlideshow"></button><div id="cboxLoadingOverlay" style="float: left;"></div><div id="cboxLoadingGraphic" style="float: left;"></div></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none; max-width: none;"></div></div> -->
+
+<!-- <h1>__________ COLORBOX END __________</h1> -->
+
+
+
+</body>
+
+
+
+<!-- Colorbox -->
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2136885-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<script>/* <![CDATA[ */(function(d,s,a,i,j,r,l,m,t){try{l=d.getElementsByTagName('a');t=d.createElement('textarea');for(i=0;l.length-i;i++){try{a=l[i].href;s=a.indexOf('/cdn-cgi/l/email-protection');m=a.length;if(a&&s>-1&&m>28){j=28+s;s='';if(j<m){r='0x'+a.substr(j,2)|0;for(j+=2;j<m&&a.charAt(j)!='X';j+=2)s+='%'+('0'+('0x'+a.substr(j,2)^r).toString(16)).slice(-2);j++;s=decodeURIComponent(s)+a.substr(j,m-j)}t.innerHTML=s.replace(/</g,'&lt;').replace(/\>/g,'&gt;');l[i].href='mailto:'+t.value}}catch(e){}}}catch(e){}})(document);/* ]]> */</script>

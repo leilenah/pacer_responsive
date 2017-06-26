@@ -8,247 +8,273 @@ $parent-blue: #007FA9;
 $parent-primary-font: Helvetica;
 $parent-primary-font-size: 10px;
 
+@mixin key-elements-responsive-styles(){
 
-//LIGHTBOX
-#pagecontent{
-  margin: 0;
-}
+  //Overall styling
+  // #pagecontent{
+  //   margin: 0 !important;
+  // }
 
-.cboxElement img{
-  width: 100%;
-  height: auto;
-}
+  // #pagecontent p{
+  //   padding: 4px !important;
+  // }
 
-div#colorbox{
-  // position: fixed !important;
-  // left:0 !important;
-  top: 0 !important;
-  width: 100% !important;
-  min-width: 900px !important;
-  height: 100%;
-}
-#cboxContent{
-  position: fixed !important;
-  overflow: visible !important;
-  width: 100% !important;
-  // height: 100% !important;
-  background: none;
-  float: none !important;
-  height: 620px !important; //change
-}
-div#cBoxWrapper{
-  position: fixed !important;
-  height: 100% !important;
-  width: 100% !important;
-}
-#cboxTopLeft, #cboxTopCenter, #cboxTopRight{
-  /*background: #fff;*/
-  display: none;
-  float: none;
-}
 
-#cboxMiddleLeft{
-  height: 0 !important;
-  float: none !important;
-  width: 0 !important;
-}
 
-#cboxClose{
-  color: #007FA9;
-  // position: absolute;
-  top: 30px !important;
-  right: 30px !important;
-  width: 100px;
-  height: 100px;
-  background:url(../images/svg/close.svg) no-repeat;
-  text-indent: 0;
-  &:hover{
-    background-position: 0 !important;
+  //LIGHTBOX
+  #cboxOverlay{
+    opacity: 1.0 !important;
+    background: #fff;
   }
-}
 
-div#cboxLoadedContent{
-  width: 100% !important;
-  height: auto !important;
-  padding: 0 !important;
-  margin: 0 !important;
-
-}
-
-img.cboxPhoto{
-  margin: none;
-  width: 100% !important;
-  height: 100% !important;
-}
-
-div#cboxTitle{
-  position: relative;
-  float: none;
-  color: black;
-  margin-top: 20px;
-}
-div#cboxOverlay{
-  opacity: 1.0 !important;
-  background: #fff;
-}
-
-
-
-
-
-//ACCORDION
-
-ol{
-  padding-left: 40px;
-}
-
-ol, li{
-  font-size: 0.9em;
-}
-
-p.ExpandHeader{
-  height: 80px;
-  strong{
-    line-height: 2;
-    padding-left: 60px;
-    font-size: 1.75rem !important;
-    font-weight: bold;
-    color: $parent-blue !important;
+  .cboxElement img{
+    width: 100%;
+    height: auto;
   }
-}
 
-.ExpandHeader{
-  min-height: 40px;
-}
+  img.cboxPhoto{
+    margin: none;
+    width: 100% !important;
+    height: auto !important;
+  }
 
-.ExpandItem{
-  color: #000 !important;
-}
+  #colorbox{
+    width: 100% !important;
+    min-width: 900px !important;
+    height: 100%;
+  }
 
-#pagecontent p.ExpandHeader {
-  font-family: $parent-primary-font;
-  border: 2px solid $parent-blue;
-  text-indent: 0 !important;
-  padding: 10px 10px 0 0;
-  text-transform: uppercase;
-  margin: 20px 20px 0 20px !important;
-}
+  #cboxContent{
+    width: 100% !important;
+    margin: 0 auto; //CHECK
+    overflow: visible !important;
+    width: 100% !important;
+    background: none;
+    float: none !important;
+    height: auto !important;
+  }
 
-.ExpandHeader span.fa{
-  display: none;
-}
-
-.ExpandItem .ItemOpen{
-  padding: none !important;
-}
-
-#pagecontentright li, #pagecontent li{
-  margin-bottom: 0 !important;
-}
-
-p.question.ExpandHeader.ItemOpen {
-  font-family: $parent-primary-font;
-  border: 1px solid $parent-blue;
-  padding: 10px;
-  font-size: $parent-primary-font-size;
-}
-
-div.ExpandItem{
-  .ItemOpen{
-    p{
-      margin-left: 20px;
+  #cBoxWrapper{
+    width: 100% !important;
+    margin: 0 auto; //CHECK
+    top: 10%; //CHECK
+    // top: 25%;
+    position: fixed !important;
+    max-height: 100%;
+    max-width: 100%;
+    iframe{
+      max-height: 200px;
     }
   }
-}
-
-.question.ExpandHeader{
-  border: 1px solid $parent-blue;
-  color: $parent-blue;
-}
-
-
-
-//EMBEDDED YOUTUBE
-
-#pagecontent{
-  margin: .5em 0 0 0;
-}
-
-a.videoPopUp.cboxElement{
-  img{
-    // width: 100% !important;
-    // height: 30% !important;
+  #cboxTopLeft, #cboxTopCenter, #cboxTopRight, #cboxMiddleLeft{
+    display: none;
+    float: none;
   }
-}
 
-iframe{
-  min-height: 500px;
-  min-width: 920px;
-}
+  #cboxClose{
+    color: $parent-blue;
+    position: fixed;
+    top: 20px !important;
+    right: 20px !important;
+    width: 50px;
+    height: 120px;
+    background:url(../images/svg/close.svg) no-repeat;
+    text-indent: 0;
+    &:hover{
+      background-position: inherit !important;
+    }
+  }
 
+  #cboxLoadedContent{
+    position: fixed !important;
+    width: 100% !important;
+    height: auto !important;
+    padding: 0 !important;
+    bottom: 0px;
+    top: 14%;
 
+  }
 
-// TABBED PANEL
-.ui-widget{
-  font-family: $parent-primary-font !important;
-}
-
-.ui-widget-header{
-  background: none !important;
-  border: none !important;
-}
-.ui-widget-content{
-  border: none !important;
-}
-
-.ui-corner-all, .ui-corner-top, .ui-corner-right, .ui-corner-tr{
-  border-radius: 0 !important;
-}
-
-.ui-tabs .ui-tabs-nav li{
-  // position: absolute !important;
-  float: none !important;
-  display: block !important;
-  height: 6% !important;
-  &:after{
-    // content: 'Show More';
-    content: 'SHOW MORE 'url(../images/svg/accordion-closed.svg);
-    position: absolute;
-    background-color: white;
-    color: #666;
-    right: 40px;
-    height: 100%;
-    width: 15%;
-    bottom: 0;
+  #cboxTitle{
     text-align: center;
-    font-size: 1em !important;
+    position: relative;
+    float: none;
+    color: #000;
+    margin-top: 20px;
   }
-  a{
-    color: white !important;
-    text-decoration: none !important;
-    font-size: 1rem !important;
+
+// LIGHTBOX SUBPAGES
+#info1, #info2, #info3, #info4, #info5, #info6, #info7, #info8, #info9, #info10{
+  padding: 10px;
+  p{
+    font-size: 0.8em;
+  }
+  .resources{
+    font-size: 0.8em;
   }
 }
 
-.ui-tabs .ui-widget .ui-widget-content .ui-corner-all{
-  position: relative !important;
-}
 
-.ui-tabs .ui-tabs-nav{
-  padding: 0 !important;
-  .ui-tabs-anchor{
-    display: inline-block !important;
-    margin-left: 40px !important;
-    float: none !important;
+
+  //LIGHTBOX VIDEO POP-UPS
+  img.fltrt{
+    // width: 100%;
+    margin: 0 auto !important;
+    margin-bottom: 10px;
+  }
+
+  .videoPopUp #colorbox{
+    width: 100% !important;
+    min-width: 900px !important;
+    height: 100%;
+  }
+
+  h2#ParentPerspectives.greenBar{
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  #pagecontent .greenBar {
+      background:#246C00;
+      color:#fff;
+      padding:20px 5px;
+      margin-top:40px;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  td.videoImg{
+    width: 40%;
+    img{
+      width: 90%;
+      height: auto;
+      margin-right: 50px;
+    }
+  }
+
+
+
+
+  //ACCORDION
+  .ExpandItem{
+    color: #000 !important;
+  }
+
+  p.ExpandHeader {
+    min-height: 30px;
+    text-align: center;
+    font-family: $parent-primary-font;
+    font-size: 1em;
+    border: 2px solid $parent-blue;
+    padding: 10px 10px 0 0;
+    text-transform: uppercase;
+    margin: 20px 20px 20px 20px !important;
+    text-indent: 0 !important;
+    strong{
+      font-weight: bold;
+      color: $parent-blue !important;
+    }
+    .ItemOpen{
+      font-family: $parent-primary-font;
+      border: 1px solid $parent-blue;
+      padding: 10px;
+      font-size: $parent-primary-font-size;
+    }
+  }
+
+  ol{
+    color: #000;
+    padding: 0 30px 0 30px;
+    li{
+      font-size: 0.9em;
+    }
+  }
+
+  // Deletes the plus/minus icon
+  .ExpandHeader span.fa{
+    display: none;
+  }
+
+
+
+
+  //EMBEDDED YOUTUBE
+  p{
+    padding: 0;
+  }
+  p iframe{
+    padding: 0;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+
+
+
+
+
+  // Understanding-Spec-Ed Example page
+  #pagecontent{
+    margin: 0 !important;
+  }
+  #pagecontent h2, #pagecontent h3 {
+    // margin-top:40px;
+    text-transform:none;
+  }
+  #iepChart {
+    position:relative;
+    /*overflow:hidden;*/
+    /*margin:0px auto;*/
+    /*width:728px;*/
+    border-bottom:1px solid #ccc;
+    margin-bottom:20px;
+  }
+  .chartBox {
+    width: 110px;
+    float: left;
+    padding:5px;
+    margin:10px;
+  }
+  .leftChartBox {
+    background:#D7F5FF;
+  }
+  .leftChartBox, .rightChartBox {
+    border:2px solid #006A8C;
+    border-radius:8px;
+    box-shadow: 5px 5px 10px -3px rgba(128,128,128,1);
+  }
+  .downChartArrow, .leftChartBox{
+    clear:left;
+  }
+  .downChartArrow {
+    /*width:280px;*/
+    float:left;
+    height:50px;
+    background: url(../images/legacy/downarrow-sml.png) no-repeat center;
+    border:none;
+  }
+  .centerChartBox {
+    background: url(../images/legacy/rightarrow-sml.png) no-repeat center;
+  }
+  .centerChartBox {
+    width:50px;
+    height:20px;
+    border:none;
+    float:left;
+    margin-top:48px;
+  }
+  #iepChart a.info {
+    text-align:right;
+    text-decoration:underline;
+    padding:5px;
+    display:block;
+  }
+  #iepChart a.info:hover {
+    color:#006A8C;
   }
 }
-
-.ui-widget-content .ui-widget-header .ui-state-active{
-    background: grey !important;
-    // height: 60px !important;
-  }
 
 @include breakpoint($bp-mobile-landscape){
-    @include parent-responsive-styles();
+    @include key-elements-responsive-styles();
 
 }
