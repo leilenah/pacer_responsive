@@ -3,6 +3,7 @@
 
 //-- Colors
 $bullying-orange: #e25b25;
+$bullying-purple: #373564;
 $bullying-white: #fff;
 $bullying-gray: #CDCDCD;
 $bullying-dark-gray: #333333;
@@ -95,6 +96,9 @@ $primary-border: 1px solid $bullying-orange;
                 background-image: url(../../assets/images/bullying/instagram-icon.png);
             }
             &.pinterest{
+                background-image: url(../../assets/images/bullying/youtube-icon.png);
+            }
+            &.youtube{
                 background-image: url(../../assets/images/bullying/youtube-icon.png);
             }
         }
@@ -398,8 +402,6 @@ $primary-border: 1px solid $bullying-orange;
         //-- Footer
         .footer.bullying{
             padding: 20px 30px 0 30px;
-            background-color: $bullying-white;
-            color: $bullying-orange;
             font-family: $bullying-primary-font;
             #leftCol-branding{
                 width: 100%;
@@ -410,7 +412,6 @@ $primary-border: 1px solid $bullying-orange;
                 }
                 .footer-section.offices{
                     h4, p{
-                        color: $bullying-orange;
                         padding: 0;
                         font-size: 15px;
                         line-height: 20px;
@@ -432,7 +433,46 @@ $primary-border: 1px solid $bullying-orange;
             #centerCol-links{
                 width: 100%;
                 padding: 0;
-                @include style-social-icons(true);
+                // social icons
+                .social-elements{
+                    // background-color: $bullying-white;
+                    display: flex;
+                    flex-wrap: nowrap;
+                    .socialButton{
+                        width: 40px;
+                        height: 40px;
+                        padding: 0;
+                        display: inline-block;
+                        background-color: $bullying-purple;
+                        margin: 20px auto;
+                        color: $bullying-orange;
+                        text-align: center;
+                        background-size: 40px;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        &:first-child{
+                            margin-left: 0;
+                        }
+                        &:last-child{
+                            margin-right: 0;
+                        }
+                        &.facebook{
+                            background-image: url(../../assets/images/icons-general/facebook-icon-white.png);
+                        }
+                        &.twitter{
+                            background-image: url(../../assets/images/icons-general/twitter-icon-white.png);
+                        }
+                        &.instagram{
+                            background-image: url(../../assets/images/icons-general/instagram-icon-white.png);
+                        }
+                        &.pinterest{
+                            background-image: url(../../assets/images/icons-general/pinterest-icon-white.png);
+                        }
+                        &.youtube{
+                            background-image: url(../../assets/images/icons-general/youtube-icon-white.png);
+                        }
+                    }
+                }
                 ul{
                     margin-bottom: 20px;
                     li{
@@ -440,7 +480,6 @@ $primary-border: 1px solid $bullying-orange;
                         line-height: 15px;
                         a{
                             font-size: 15px;
-                            color: $bullying-orange;
                         }
                     }
                 }
@@ -452,7 +491,7 @@ $primary-border: 1px solid $bullying-orange;
                     width: 100%;
                     margin: 20px 0 0;
                     color: $bullying-white;
-                    background-color: $bullying-orange;
+                    // background-color: $bullying-orange;
                     font-size: 13px;
                     font-weight: normal;
                     text-align: left;
@@ -463,7 +502,6 @@ $primary-border: 1px solid $bullying-orange;
             #copywrite{
                 margin: 0;
                 padding: 20px 0 5px;
-                color: $bullying-orange;
                 text-align: left;
             }
         }

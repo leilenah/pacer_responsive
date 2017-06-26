@@ -103,10 +103,9 @@
 
 
     // TODO: don't have this depend on footer, what
-    function injectSocialIcons($footer){
-        if (!$footer.length) { return; }
-
-        var $icons = $('.socialButton').empty(),
+    function injectSocialIcons(){
+        var $footer = $('.has-footer-social'),
+            $icons = $('.socialButton').empty(),
             $wrappedIcons;
 
         $icons.wrapAll('<div class="social-elements"></div>');
@@ -139,15 +138,7 @@
     function addToNav($content, className, prepend){
         // TODO: add class that can be globally used
         var $newContent = $content.wrap('<li></li>').parent(),
-            $nav;
-
-        if ($('.parent-nav').length){
-            $nav = $('.parent-nav');
-        } else if ($('.bullying-nav').length){
-            $nav = $('.bullying-nav');
-        } else if ($('.transition-nav').length){
-            $nav = $('.transition-nav');
-        }
+            $nav = $('.global-nav');
 
         if (className){
             $newContent.addClass(className);
@@ -210,10 +201,8 @@
     createNewsletterCategory();
 
 
-    //TODO: add class that can be globally used
-    injectSocialIcons($('.footer-section.primary')); // parent
-    injectSocialIcons($('#centerCol-links')); // bullying
-    injectSocialIcons($('.footer')); // transition
+
+    injectSocialIcons();
 
 
     injectSearchForm();
