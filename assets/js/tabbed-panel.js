@@ -17,9 +17,9 @@
      */
 
     function initialize(){
-        var $tabbedPanels = $('.tabbed-panels');
+        var $tabbedPanels = $('.tabbedPanel');
 
-        if (tabbedPanels.length) {
+        if ($tabbedPanels.length) {
             // Bind all the things
             bindClickEvents();
             // Inject bar above tabbed panel
