@@ -1,5 +1,5 @@
 /**
- * Pacer Mobile -- Navigation
+ * Pacer Mobile -- Global Navigation
  *
  * This script is a helper for Pacer's global navigation system
  * across mobile devices.
@@ -32,8 +32,6 @@
         injectSearchForm();
         // Inject the third level navigation
         injectThirdLevelNav();
-        // Inject the fourth level navigation
-        injectFourthLevelNav();
     }
 
     /**
@@ -63,18 +61,6 @@
         $body.on('click', '.menu-button', function(e){
             $('#nav, #navWrap').slideToggle(300);
             $('#nav button, #navWrap button').fadeToggle(250);
-        });
-
-        // Bind fourth-level show more button clicks
-        $body.on('click', '.fourth-level-show-more', function(e){
-            $(e.currentTarget).removeClass('fourth-level-show-more').addClass('fourth-level-show-less');
-            $(e.currentTarget).parent().find('ul').slideDown(150);
-        });
-
-        // Bind fourth-level show less button clicks
-        $body.on('click', '.fourth-level-show-less', function(e){
-            $(e.currentTarget).removeClass('fourth-level-show-less').addClass('fourth-level-show-more');
-            $(e.currentTarget).parent().find('ul').slideUp(150);
         });
     }
 
@@ -172,22 +158,6 @@
 
         if (extraClass) {
             $element.find('button').addClass(extraClass);
-        }
-    }
-
-    function injectFourthLevelNav(){
-        var $quaternaryCategories = $('.fourth-level-nav'),
-            $searchWrapper = $('.search-wrapper');
-
-        if ($quaternaryCategories.length && $searchWrapper.length){
-            $quaternaryCategories.each(function() {
-                var $quaternaryCategory = $(this),
-                    $wrappedCategory = $quaternaryCategory.wrap('<div class="fourth-level-nav-wrapper"></div>');
-
-                $wrappedCategory.find('a').first().after('<button class="fourth-level-show-more"></button><div class="divider"></div>');
-                $wrappedCategory.find('a').wrapInner('<span></span>');
-                $searchWrapper.after($wrappedCategory.parent());
-            });
         }
     }
 

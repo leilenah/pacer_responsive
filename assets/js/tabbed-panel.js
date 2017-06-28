@@ -24,8 +24,8 @@
             bindClickEvents();
             // Inject bar above tabbed panel
             injectTabbedPanelBar($tabbedPanels);
-            // Set active tabs
-            setActiveTabs($tabbedPanels);
+            // Set active tab text
+            setActiveTabText($tabbedPanels);
         }
     }
 
@@ -60,15 +60,8 @@
         $('.mover').click(function(e){
             var $moverBtn = $(e.currentTarget),
                 $currentTab = $moverBtn.closest('.ui-tabs-panel'),
-                $newTab;
-
-            if ($moverBtn.hasClass('next-tab')){
-                $newTab = $currentTab.next();
-            } else {
-                $newTab = $currentTab.prev();
-            }
-
-            var $activeTab = $newTab.closest('.tabbedPanel').find('.active-tab-text'),
+                $newTab = $moverBtn.hasClass('next-tab') ? $currentTab.next() : $currentTab.prev(),
+                $activeTab =  $newTab.closest('.tabbedPanel').find('.active-tab-text'),
                 $activeTabText = $newTab.find('h2').html();
 
             $activeTab.html($activeTabText);
@@ -84,7 +77,7 @@
         $('.tabbedPanel-bar').html('<div class="active-tab-text"></div><button class="tabbedPanel-showMore"><div class="arrow up"></div></button>');
     }
 
-    function setActiveTabs($tabbedPanels){
+    function setActiveTabText($tabbedPanels){
         $tabbedPanels.each(function(){
             var $tabbedPanel = $(this),
                 $activeTab = $tabbedPanel.find('.active-tab-text'),
@@ -94,6 +87,6 @@
         });
     }
 
-    // Let's get this party started.
+    // Let's get this party jumpin'.
     initialize();
 }());
