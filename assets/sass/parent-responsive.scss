@@ -240,6 +240,12 @@ $primary-border: 1px solid $parent-blue;
                                         text-transform: capitalize;
                                         span{
                                             margin-left: 60px;
+                                            &.fa-external-link{
+                                                top: 0;
+                                                color: $parent-dark-gray;
+                                                font-size: 10px;
+                                                margin-left: 0;
+                                            }
                                         }
                                     }
                                 }

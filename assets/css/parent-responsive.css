@@ -163,6 +163,11 @@
                   text-transform: capitalize; }
                   #header #nav.parent-nav .first-level-nav ul .second-level-nav.has-more .treemenu li a span {
                     margin-left: 60px; }
+                    #header #nav.parent-nav .first-level-nav ul .second-level-nav.has-more .treemenu li a span.fa-external-link {
+                      top: 0;
+                      color: #333333;
+                      font-size: 10px;
+                      margin-left: 0; }
         #header #nav.parent-nav .first-level-nav:last-of-type {
           border-bottom: 1px solid #007FA9; }
         #header #nav.parent-nav .first-level-nav .header-donate img {
