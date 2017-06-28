@@ -1,14 +1,4 @@
 /* Custom Breakpoint Mixin */
-@import url(../fonts/font-awesome-4.7.0/css/font-awesome.min.css);
-.dummy-content {
-  text-align: center;
-  margin: 20px auto;
-  padding: 20px;
-  font-size: 15px;
-  width: 200px;
-  color: #007FA9;
-  font-family: Helvetica; }
-
 .menu-button {
   display: none; }
 
@@ -103,9 +93,9 @@
       #header #nav.parent-nav li {
         float: none;
         width: 100%; }
-      #header #nav.parent-nav .primary-category {
+      #header #nav.parent-nav .first-level-nav {
         background-color: #fff; }
-        #header #nav.parent-nav .primary-category button {
+        #header #nav.parent-nav .first-level-nav button {
           display: none;
           padding: 0;
           margin: 0 -2px 0 0;
@@ -114,19 +104,19 @@
           height: 52px;
           width: 52px;
           outline: none; }
-          #header #nav.parent-nav .primary-category button.show-more {
+          #header #nav.parent-nav .first-level-nav button.show-more {
             border: 1px solid #007FA9;
             background-color: #fff;
             color: #007FA9;
             font-size: 22px;
             font-weight: bold; }
-          #header #nav.parent-nav .primary-category button.show-less {
+          #header #nav.parent-nav .first-level-nav button.show-less {
             border: 1px solid #fff;
             background-color: #D34040;
             color: #fff;
             font-size: 28px;
             font-weight: normal; }
-        #header #nav.parent-nav .primary-category a {
+        #header #nav.parent-nav .first-level-nav a {
           width: 100%;
           height: 50px;
           line-height: 50px;
@@ -138,44 +128,44 @@
           overflow: hidden;
           white-space: nowrap;
           text-overflow: ellipsis; }
-          #header #nav.parent-nav .primary-category a span {
+          #header #nav.parent-nav .first-level-nav a span {
             margin-left: 20px; }
-        #header #nav.parent-nav .primary-category > a {
+        #header #nav.parent-nav .first-level-nav > a {
           color: #007FA9;
           border: 1px solid #007FA9;
           border-bottom: none; }
-        #header #nav.parent-nav .primary-category ul {
+        #header #nav.parent-nav .first-level-nav ul {
           display: none;
           width: 100%;
           position: relative;
           left: 0;
           padding-left: 0; }
-          #header #nav.parent-nav .primary-category ul .secondary-category {
+          #header #nav.parent-nav .first-level-nav ul .second-level-nav {
             color: #fff;
             background-color: #007FA9; }
-            #header #nav.parent-nav .primary-category ul .secondary-category > a {
+            #header #nav.parent-nav .first-level-nav ul .second-level-nav > a {
               color: #fff;
               background-color: #007FA9; }
-              #header #nav.parent-nav .primary-category ul .secondary-category > a span {
+              #header #nav.parent-nav .first-level-nav ul .second-level-nav > a span {
                 margin-left: 40px; }
-            #header #nav.parent-nav .primary-category ul .secondary-category.has-more .show-more {
+            #header #nav.parent-nav .first-level-nav ul .second-level-nav.has-more .show-more {
               color: #fff;
               background-color: #007FA9;
               border: 1px solid #fff; }
-            #header #nav.parent-nav .primary-category ul .secondary-category.has-more .treemenu {
+            #header #nav.parent-nav .first-level-nav ul .second-level-nav.has-more .treemenu {
               display: block; }
-              #header #nav.parent-nav .primary-category ul .secondary-category.has-more .treemenu li {
+              #header #nav.parent-nav .first-level-nav ul .second-level-nav.has-more .treemenu li {
                 width: 100%;
                 background-color: #CDCDCD; }
-                #header #nav.parent-nav .primary-category ul .secondary-category.has-more .treemenu li a {
+                #header #nav.parent-nav .first-level-nav ul .second-level-nav.has-more .treemenu li a {
                   color: #333333;
                   font-size: 10px;
                   text-transform: capitalize; }
-                  #header #nav.parent-nav .primary-category ul .secondary-category.has-more .treemenu li a span {
+                  #header #nav.parent-nav .first-level-nav ul .second-level-nav.has-more .treemenu li a span {
                     margin-left: 60px; }
-        #header #nav.parent-nav .primary-category:last-of-type {
+        #header #nav.parent-nav .first-level-nav:last-of-type {
           border-bottom: 1px solid #007FA9; }
-        #header #nav.parent-nav .primary-category .header-donate img {
+        #header #nav.parent-nav .first-level-nav .header-donate img {
           display: none; }
       #header #nav.parent-nav .social-list {
         width: 100%;
@@ -206,6 +196,8 @@
               background-image: url(../../assets/images/parent/instagram-icon.png); }
             #header #nav.parent-nav .social-list .social-elements .socialButton.youtube {
               background-image: url(../../assets/images/parent/youtube-icon.png); }
+            #header #nav.parent-nav .social-list .social-elements .socialButton.pinterest {
+              background-image: url(../../assets/images/parent/pinterest-icon.png); }
   #leftbar {
     display: none; }
   .search-wrapper {
@@ -294,6 +286,8 @@
               background-image: url(../../assets/images/parent/instagram-icon.png); }
             #parent-footer .footer-section.primary .social-elements .socialButton.youtube {
               background-image: url(../../assets/images/parent/youtube-icon.png); }
+            #parent-footer .footer-section.primary .social-elements .socialButton.pinterest {
+              background-image: url(../../assets/images/parent/pinterest-icon.png); }
       #parent-footer .footer-section.secondary .footer-pacer-sites .sites {
         display: none; }
       #parent-footer .footer-section.secondary .footer-pacer-sites a {

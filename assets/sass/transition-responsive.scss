@@ -1,5 +1,4 @@
 @import 'breakpoint.scss';
-@import '../fonts/font-awesome-4.7.0/css/font-awesome.min.css';
 
 //-- Colors
 $transition-green: #009933;
@@ -20,56 +19,10 @@ $category-height: 50px;
 $button-size: $category-height + 2px;
 $primary-border: 1px solid $transition-green;
 
-
-
-//-- Desktop styles
+//-- Desktop | Menu icon and logo
 .menu-icon-logo-wrapper{
     display: none;
 }
-
-
-
-//-- TODO: might move into helper mixins -- or maybe back into main styles because this might confuse people
-@mixin style-social-icons($span-full){
-    // social icons
-    .social-elements{
-        background-color: $transition-white;
-        display: flex;
-        flex-wrap: nowrap;
-        .socialButton{
-            width: 40px;
-            height: 40px;
-            padding: 0;
-            display: inline-block;
-            background-color: $transition-white;
-            margin: 20px auto;
-            color: $transition-green;
-            text-align: center;
-            background-size: 40px;
-            background-repeat: no-repeat;
-            background-position: center;
-
-            @if ($span-full){
-                &:first-child{
-                    margin-left: 0;
-                }
-                &:last-child{
-                    margin-right: 0;
-                }
-            }
-
-            &.facebook{
-                background-image: url(../../assets/images/transition/facebook-icon.png);
-            }
-            &.youtube{
-                background-image: url(../../assets/images/transition/youtube-icon.png);
-            }
-        }
-    }
-}
-
-
-
 
 @mixin transition-responsive-styles{
     .container{
@@ -77,7 +30,7 @@ $primary-border: 1px solid $transition-green;
         margin: 0;
         #pacerwrapper, .header { display: none }
 
-        // menu icon and logo
+        //-- Menu icon and logo
         .menu-icon-logo-wrapper{
             display: block;
             padding: 20px 20px 15px;
@@ -100,25 +53,22 @@ $primary-border: 1px solid $transition-green;
             .pacer-logo{
                 display: inline-block;
                 float: right;
-                height: 38px; // TODO: may need to adjust
+                height: 38px;
                 width: 200px;
                 background: $transition-white url(../images/transition/transition-logo.png) no-repeat center;
                 background-size: 200px 38px;
             }
         }
 
-
-        // primary nav
+        //-- Transition nav
         #navWrap{
             display: none; // displayed w/ js
             height: auto;
             padding-top: 0;
-
             #topnav.transition-nav{
                 float: none;
                 border: none;
                 width: 100%;
-
                 li{
                     display: block;
                     float: none;
@@ -129,10 +79,10 @@ $primary-border: 1px solid $transition-green;
                     }
                 }
 
-                //-- Primary Category
-                .primary-category{
+                //-- First Level Category
+                .first-level-nav{
                     background: $transition-white;
-                    // show more button
+                    //-- Show more button
                     button{
                         display: none; // displayed with js
                         padding: 0;
@@ -157,7 +107,7 @@ $primary-border: 1px solid $transition-green;
                             font-weight: normal;
                         }
                     }
-                    // all links
+                    //-- All links
                     a{
                         width: 100%;
                         height: $category-height;
@@ -175,13 +125,12 @@ $primary-border: 1px solid $transition-green;
                             margin-left: 20px;
                         }
                     }
-                    // primary-category links
+                    //-- First-level-nav links
                     > a{
                         color: $transition-green;
                         border: $primary-border;
                         border-bottom: none;
                     }
-
                     ul{
                         display: none; // displayed with js
                         width: 100%;
@@ -192,10 +141,10 @@ $primary-border: 1px solid $transition-green;
                         border: none;
 
                         //-- Secondary Category
-                        .secondary-category{
+                        .second-level-nav{
                             color: $transition-white;
                             background-color: $transition-green;
-                            // secondary-category links
+                            //-- Second-level-nav links
                             > a{
                                 color: $transition-white;
                                 background-color: $transition-green;
@@ -239,8 +188,7 @@ $primary-border: 1px solid $transition-green;
                         border-bottom: $primary-border;
                     }
 
-
-                    // donate & newsletter buttons
+                    //-- Donate & Newsletter buttons
                     .header-donate, .header-newsletter{
                         background-image: none;
                         img{ display: none; }
@@ -249,20 +197,50 @@ $primary-border: 1px solid $transition-green;
                 }
             }
 
-            // social icons
+            //-- Social icons
             .social-list{
                 width: 100%;
                 border: 1px solid $transition-green;
-                @include style-social-icons(false);
+                .social-elements{
+                    background-color: $transition-white;
+                    display: flex;
+                    flex-wrap: nowrap;
+                    .socialButton{
+                        width: 40px;
+                        height: 40px;
+                        padding: 0;
+                        display: inline-block;
+                        background-color: $transition-white;
+                        margin: 20px auto;
+                        color: $transition-green;
+                        text-align: center;
+                        background-size: 40px;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        &.facebook{
+                            background-image: url(../../assets/images/transition/facebook-icon.png);
+                        }
+                        &.youtube{
+                            background-image: url(../../assets/images/transition/youtube-icon.png);
+                        }
+                        &.pinterest{
+                            background-image: url(../../assets/images/transition/pinterest-icon.png);
+                        }
+                        &.instagram{
+                            background-image: url(../../assets/images/transition/instagram-icon.png);
+                        }
+                        &.twitter{
+                            background-image: url(../../assets/images/transition/twitter-icon.png);
+                        }
+                    }
+                }
             }
         }
 
-        //-- side bar
+        //-- Side Bar
         .sidebar1{
             display: none;
         }
-
-
 
         //-- Search
         .search-wrapper{
@@ -291,11 +269,9 @@ $primary-border: 1px solid $transition-green;
             }
         }
 
-
-
         //-- 4th level nav
-        .quaternary-category-wrapper{
-            .quaternary-category{
+        .fourth-level-nav-wrapper{
+            .fourth-level-nav{
                 display: block;
                 font-family: $transition-primary-font;
                 a{
@@ -364,8 +340,6 @@ $primary-border: 1px solid $transition-green;
             }
         }
 
-
-
         //-- Footer
         .footer.transition{
             padding: 20px 30px 0;
@@ -400,6 +374,7 @@ $primary-border: 1px solid $transition-green;
                                             font-weight: normal;
                                         }
                                         .fa-external-link{
+                                            font-size: 14px;
                                             color: $transition-white;
                                         }
                                     }
@@ -474,8 +449,7 @@ $primary-border: 1px solid $transition-green;
     }
 }
 
-
-
+//-- Mobile Breakpoint
 @include breakpoint($bp-mobile-landscape){
     @include transition-responsive-styles();
 }

@@ -1,5 +1,4 @@
 /* Custom Breakpoint Mixin */
-@import url(../fonts/font-awesome-4.7.0/css/font-awesome.min.css);
 @media screen and (max-width: 750px) {
   .container {
     width: 100%; }
@@ -39,10 +38,10 @@
             margin: 0 auto;
             border-left: 6px solid transparent;
             border-right: 6px solid transparent; }
-            .container .tabbedPanel .tabbedPanel-bar .tabbedPanel-showMore .arrow.up {
+            .container .tabbedPanel .tabbedPanel-bar .tabbedPanel-showMore .arrow.down {
               border-top: none;
               border-bottom: 6px solid #666666; }
-            .container .tabbedPanel .tabbedPanel-bar .tabbedPanel-showMore .arrow.down {
+            .container .tabbedPanel .tabbedPanel-bar .tabbedPanel-showMore .arrow.up {
               border-bottom: none;
               border-top: 6px solid #666666; }
       .container .tabbedPanel #tabs {

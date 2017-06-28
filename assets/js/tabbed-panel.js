@@ -1,68 +1,90 @@
+/**
+ * Pacer Mobile -- Tabbed Panel
+ */
+
 (function() {
     'use strict';
 
     var $ = window.jQuery,
-        console = window.console,
         userAgent = window.navigator.userAgent.toLowerCase(),
         isMobileBrowser = userAgent.indexOf('mobile') > -1;
 
+    // If this is not a mobile browser -- goodbye
     if (!isMobileBrowser) { return; }
 
-    //-- Events
-    var $body = $('body');
+    /**
+     * I N I T
+     */
 
-    $body.on('click', '.tabbedPanel-showMore', function(e){
-        var $tabbedPanelBtn = $(e.currentTarget),
-            $tabs = $tabbedPanelBtn.closest('.tabbedPanel').find('.ui-tabs-nav'),
-            $arrow = $tabbedPanelBtn.find('.arrow');
+    function initialize(){
+        var $tabbedPanels = $('.tabbed-panels');
 
-        $tabs.slideToggle(300);
-        $arrow.toggleClass('up');
-        $arrow.toggleClass('down');
-    });
-
-
-    $body.on('click', '.ui-tabs-anchor', function(e){
-        var $tabAnchor = $(e.currentTarget),
-            $activeTab = $tabAnchor.closest('.tabbedPanel').find('.active-tab-text'),
-            $activeTabText = $tabAnchor.html();
-
-        // TODO: move to function
-        $activeTab.html($activeTabText);
-    });
-
-    $('.mover').click(function(e){
-        var $moverBtn = $(e.currentTarget),
-            $currentTab = $moverBtn.closest('.ui-tabs-panel'),
-            $newTab;
-
-        if ($moverBtn.hasClass('next-tab')){
-            $newTab = $currentTab.next();
-            console.log('next tab');
-        } else {
-            $newTab = $currentTab.prev();
-            console.log('prev tab');
+        if (tabbedPanels.length) {
+            // Bind all the things
+            bindClickEvents();
+            // Inject bar above tabbed panel
+            injectTabbedPanelBar($tabbedPanels);
+            // Set active tabs
+            setActiveTabs($tabbedPanels);
         }
+    }
 
-        var $activeTab = $newTab.closest('.tabbedPanel').find('.active-tab-text'),
-            $activeTabText = $newTab.find('h2').html();
+    /**
+     * E V E N T S
+     */
 
-        // TODO: move to function
-        $activeTab.html($activeTabText);
-    });
+    function bindClickEvents(){
+        var $body = $('body');
 
+        // Bind show more clicks
+        $body.on('click', '.tabbedPanel-showMore', function(e){
+            var $tabbedPanelBtn = $(e.currentTarget),
+                $tabs = $tabbedPanelBtn.closest('.tabbedPanel').find('.ui-tabs-nav'),
+                $arrow = $tabbedPanelBtn.find('.arrow');
 
+            $tabs.slideToggle(300);
+            $arrow.toggleClass('up');
+            $arrow.toggleClass('down');
+        });
 
-    function injectTabbedPanelBar(){
-        var $tabbedPanels = $('.tabbedPanel');
+        // Bind anchor clicks
+        $body.on('click', '.ui-tabs-anchor', function(e){
+            var $tabAnchor = $(e.currentTarget),
+                $activeTab = $tabAnchor.closest('.tabbedPanel').find('.active-tab-text'),
+                $activeTabText = $tabAnchor.html();
 
+            $activeTab.html($activeTabText);
+        });
+
+        // Bind prev & next button clicks
+        $('.mover').click(function(e){
+            var $moverBtn = $(e.currentTarget),
+                $currentTab = $moverBtn.closest('.ui-tabs-panel'),
+                $newTab;
+
+            if ($moverBtn.hasClass('next-tab')){
+                $newTab = $currentTab.next();
+            } else {
+                $newTab = $currentTab.prev();
+            }
+
+            var $activeTab = $newTab.closest('.tabbedPanel').find('.active-tab-text'),
+                $activeTabText = $newTab.find('h2').html();
+
+            $activeTab.html($activeTabText);
+        });
+    }
+
+    /**
+     * M E T H O D S
+     */
+
+    function injectTabbedPanelBar($tabbedPanels){
         $tabbedPanels.prepend('<div class="tabbedPanel-bar"></div>');
         $('.tabbedPanel-bar').html('<div class="active-tab-text"></div><button class="tabbedPanel-showMore"><div class="arrow up"></div></button>');
     }
 
-    function setActiveTabs(){
-        var $tabbedPanels = $('.tabbedPanel');
-
+    function setActiveTabs($tabbedPanels){
         $tabbedPanels.each(function(){
             var $tabbedPanel = $(this),
                 $activeTab = $tabbedPanel.find('.active-tab-text'),
@@ -72,7 +94,6 @@
         });
     }
 
-
-    injectTabbedPanelBar();
-    setActiveTabs();
+    // Let's get this party started.
+    initialize();
 }());

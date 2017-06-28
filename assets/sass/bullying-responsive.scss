@@ -1,5 +1,4 @@
 @import 'breakpoint.scss';
-@import '../fonts/font-awesome-4.7.0/css/font-awesome.min.css';
 
 //-- Colors
 $bullying-orange: #e25b25;
@@ -20,13 +19,12 @@ $category-height: 50px;
 $button-size: $category-height + 2px;
 $primary-border: 1px solid $bullying-orange;
 
-
-
-//-- Desktop styles
+//-- Desktop | Menu Icon & Logo
 .menu-icon-logo-wrapper{
     display: none;
 }
 
+//-- Desktop | Footer
 .footer{
     #leftCol-branding{
         #footer-logo{
@@ -56,64 +54,13 @@ $primary-border: 1px solid $bullying-orange;
     }
 }
 
-
-//-- TODO: might move into helper mixins -- or maybe back into main styles because this might confuse people
-@mixin style-social-icons($span-full){
-    // social icons
-    .social-elements{
-        background-color: $bullying-white;
-        display: flex;
-        flex-wrap: nowrap;
-        .socialButton{
-            width: 40px;
-            height: 40px;
-            padding: 0;
-            display: inline-block;
-            background-color: $bullying-white;
-            margin: 20px auto;
-            color: $bullying-orange;
-            text-align: center;
-            background-size: 40px;
-            background-repeat: no-repeat;
-            background-position: center;
-
-            @if ($span-full){
-                &:first-child{
-                    margin-left: 0;
-                }
-                &:last-child{
-                    margin-right: 0;
-                }
-            }
-
-            &.facebook{
-                background-image: url(../../assets/images/bullying/facebook-icon.png);
-            }
-            &.twitter{
-                background-image: url(../../assets/images/bullying/twitter-icon.png);
-            }
-            &.instagram{
-                background-image: url(../../assets/images/bullying/instagram-icon.png);
-            }
-            &.pinterest{
-                background-image: url(../../assets/images/bullying/youtube-icon.png);
-            }
-            &.youtube{
-                background-image: url(../../assets/images/bullying/youtube-icon.png);
-            }
-        }
-    }
-}
-
-
-
-
+//-- Responsive | Bullying Styles
 @mixin bullying-responsive-styles{
     .container{
         width: 100%;
         #pacerwrapper, .header { display: none }
 
-        // menu icon and logo
+        //-- Menu icon and logo
         .menu-icon-logo-wrapper{
             display: block;
             padding: 20px 20px 15px;
@@ -136,15 +83,14 @@ $primary-border: 1px solid $bullying-orange;
             .pacer-logo{
                 display: inline-block;
                 float: right;
-                height: 38px; // TODO: may need to adjust
+                height: 38px;
                 width: 200px;
                 background: $bullying-white url(../images/bullying/bullying-logo.jpg) no-repeat center;
                 background-size: 200px 38px;
             }
         }
 
-
-        // primary nav
+        //-- Primary nav
         #navWrap{
             display: none; // displayed w/ js
             height: auto;
@@ -163,9 +109,9 @@ $primary-border: 1px solid $bullying-orange;
                 }
 
                 //-- Primary Category
-                .primary-category{
+                .first-level-nav{
                     background: $bullying-white;
-                    // show more button
+                    //-- Show more button
                     button{
                         display: none; // displayed with js
                         padding: 0;
@@ -190,7 +136,7 @@ $primary-border: 1px solid $bullying-orange;
                             font-weight: normal;
                         }
                     }
-                    // all links
+                    //-- All links
                     a{
                         width: 100%;
                         height: $category-height;
@@ -208,7 +154,7 @@ $primary-border: 1px solid $bullying-orange;
                             margin-left: 20px;
                         }
                     }
-                    // primary-category links
+                    //-- First level nav links
                     > a{
                         color: $bullying-orange;
                         border: $primary-border;
@@ -224,11 +170,11 @@ $primary-border: 1px solid $bullying-orange;
                         margin-left: 0;
                         border: none;
 
-                        //-- Secondary Category
-                        .secondary-category{
+                        //-- Second level nav
+                        .second-level-nav{
                             color: $bullying-white;
                             background-color: $bullying-orange;
-                            // secondary-category links
+                            //-- Second-level-nav links
                             > a{
                                 color: $bullying-white;
                                 background-color: $bullying-orange;
@@ -272,8 +218,7 @@ $primary-border: 1px solid $bullying-orange;
                         border-bottom: $primary-border;
                     }
 
-
-                    // donate & newsletter buttons
+                    //-- Donate & Newsletter buttons
                     .header-donate, .header-newsletter{
                         background-image: none;
                         img{ display: none; }
@@ -282,11 +227,43 @@ $primary-border: 1px solid $bullying-orange;
                 }
             }
 
-            // social icons
+            //-- Social icons
             .social-list{
                 width: 100%;
                 border: 1px solid $bullying-orange;
-                @include style-social-icons(false);
+                .social-elements{
+                    background-color: $bullying-white;
+                    display: flex;
+                    flex-wrap: nowrap;
+                    .socialButton{
+                        width: 40px;
+                        height: 40px;
+                        padding: 0;
+                        display: inline-block;
+                        background-color: $bullying-white;
+                        margin: 20px auto;
+                        color: $bullying-orange;
+                        text-align: center;
+                        background-size: 40px;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        &.facebook{
+                            background-image: url(../../assets/images/bullying/facebook-icon.png);
+                        }
+                        &.twitter{
+                            background-image: url(../../assets/images/bullying/twitter-icon.png);
+                        }
+                        &.instagram{
+                            background-image: url(../../assets/images/bullying/instagram-icon.png);
+                        }
+                        &.pinterest{
+                            background-image: url(../../assets/images/bullying/youtube-icon.png);
+                        }
+                        &.youtube{
+                            background-image: url(../../assets/images/bullying/youtube-icon.png);
+                        }
+                    }
+                }
             }
         }
 
@@ -294,8 +271,6 @@ $primary-border: 1px solid $bullying-orange;
         .sidebar1{
             display: none;
         }
-
-
 
         //-- Search
         .search-wrapper{
@@ -323,81 +298,6 @@ $primary-border: 1px solid $bullying-orange;
                 }
             }
         }
-
-
-
-        //-- 4th level nav
-        .quaternary-category-wrapper{
-            .quaternary-category{
-                display: block;
-                font-family: $bullying-primary-font;
-                a{
-                    color: $bullying-medium-gray;
-                    text-decoration: none;
-                }
-                > a{
-                    display: inline-block;
-                    width: 75%;
-                    margin-left: 5%;
-                    margin-right: 5%;
-                    margin-top: 20px;
-                    margin-bottom: 10px;
-                    vertical-align: top;
-                    text-transform: uppercase;
-                    font-size: 15px;
-                }
-                button{
-                    display: inline-block;
-                    height: 48px;
-                    width: 15%;
-                    margin: 0 0 10px;
-                    padding: 0;
-                    font-weight: 800;
-                    text-align: left;
-                    border: none;
-                    outline: none;
-                    background-color: $bullying-white;
-                    &.quaternary-show-more{
-                        font-size: 45px;
-                        color: $bullying-blue;
-                    }
-                    &.quaternary-show-less{
-                        font-size: 50px;
-                        color: $bullying-red;
-                    }
-                }
-                .divider{
-                    height: 5px;
-                    width: 100%;
-                    background-color: $bullying-medium-gray;
-                }
-                ul, .submenu{
-                    display: none; // displayed with js
-                    margin-left: 5%;
-                    li{
-                        display: block;
-                        a{
-                            display: block;
-                            height: 40px;
-                            width: 240px;
-                            font-size: 12px;
-                            line-height: 40px;
-                            border: 1px solid $bullying-medium-gray;
-                            border-top: none;
-                            text-transform: capitalize;
-                            overflow: hidden;
-                            white-space: nowrap;
-                            text-overflow: ellipsis;
-                            span{
-                                padding-left: 15px;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-
 
         //-- Footer
         .footer.bullying{
@@ -435,7 +335,6 @@ $primary-border: 1px solid $bullying-orange;
                 padding: 0;
                 // social icons
                 .social-elements{
-                    // background-color: $bullying-white;
                     display: flex;
                     flex-wrap: nowrap;
                     .socialButton{
@@ -491,12 +390,14 @@ $primary-border: 1px solid $bullying-orange;
                     width: 100%;
                     margin: 20px 0 0;
                     color: $bullying-white;
-                    // background-color: $bullying-orange;
                     font-size: 13px;
                     font-weight: normal;
                     text-align: left;
                     border: none;
                     border-radius: 0;
+                    .fa-external-link{
+                        font-size: 14px;
+                    }
                 }
             }
             #copywrite{
@@ -508,9 +409,7 @@ $primary-border: 1px solid $bullying-orange;
     }
 }
 
-
-
+//-- Mobile Breakpoint
 @include breakpoint($bp-mobile-landscape){
     @include bullying-responsive-styles();
 }
-

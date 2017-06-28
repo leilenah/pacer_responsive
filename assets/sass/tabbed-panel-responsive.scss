@@ -1,14 +1,14 @@
 @import 'breakpoint.scss';
-@import '../fonts/font-awesome-4.7.0/css/font-awesome.min.css';
 
+//-- Colors
 $tabbed-white: #fff;
 $tabbed-medium-gray: #666666;
 
+//-- Fonts
 $tabbed-primary-font: Helvetica;
 
-//-- Tabbed Panels
+//-- Responsive | Tabbed Panels
 @mixin tabbed-panel-responsive-styles{
-
     .container{
         width: 100%;
         .tabbedPanel{
@@ -44,11 +44,11 @@ $tabbed-primary-font: Helvetica;
                         margin: 0 auto;
                         border-left: 6px solid transparent;
                         border-right: 6px solid transparent;
-                        &.up{
+                        &.down{
                             border-top: none;
                             border-bottom: 6px solid $tabbed-medium-gray;
                         }
-                        &.down{
+                        &.up{
                             border-bottom: none;
                             border-top: 6px solid $tabbed-medium-gray;
                         }
@@ -87,7 +87,7 @@ $tabbed-primary-font: Helvetica;
                     }
                 }
                 .ui-tabs-panel{
-                    // prev & next buttons
+                    //-- Prev & next buttons
                     .mover{
                         background: none;
                         background-color: $tabbed-white;
@@ -98,7 +98,7 @@ $tabbed-primary-font: Helvetica;
                         font-size: 12px;
                         box-shadow: none;
                     }
-                    // example content styles
+                    //-- Example content styles
                     p.centered{
                         margin-left: 0;
                         margin-right: 0;
@@ -114,11 +114,9 @@ $tabbed-primary-font: Helvetica;
             }
         }
     }
-
 }
 
-
-
+//-- Mobile Breakpoint
 @include breakpoint($bp-mobile-landscape){
     @include tabbed-panel-responsive-styles();
 }

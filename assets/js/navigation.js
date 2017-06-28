@@ -1,142 +1,155 @@
+/**
+ * Pacer Mobile -- Navigation
+ *
+ * This script is a helper for Pacer's global navigation system
+ * across mobile devices.
+ */
+
 (function() {
     'use strict';
 
     var $ = window.jQuery,
-        console = window.console,
         userAgent = window.navigator.userAgent.toLowerCase(),
         isMobileBrowser = userAgent.indexOf('mobile') > -1;
 
+    // If this is not a mobile browser -- goodbye
     if (!isMobileBrowser) { return; }
 
+    /**
+     * I N I T
+     */
 
+    function initialize(){
+        // Bind all the things
+        bindClickEvents();
+        // Add navigation level classes
+        addNavClasses();
+        // Create donate and newsletter categories
+        addDonateAndNewsletter();
+        // Inject social icons into nav and footer
+        injectSocialIcons();
+        // Inject the search form
+        injectSearchForm();
+        // Inject the third level navigation
+        injectThirdLevelNav();
+        // Inject the fourth level navigation
+        injectFourthLevelNav();
+    }
 
+    /**
+     * E V E N T S
+     */
 
+    function bindClickEvents(){
+        var $body = $('body');
 
-    //-- Events
-    // TODO: Refactor / bind
+        // Bind first-level category button clicks
+        $body.on('click', '.first-level-nav-btn', function(e){
+            if ($(e.currentTarget).hasClass('show-more')){
+                var $showLessBtn = $('.show-less.first-level-nav-btn');
+                if ($showLessBtn.length) {
+                    handleShowAction($showLessBtn);
+                }
+            }
+            handleShowAction($(e.currentTarget));
+        });
 
-    var $body = $('body');
+        // Bind second-level category button clicks
+        $body.on('click', '.second-level-nav-btn', function(e){
+            handleShowAction($(e.currentTarget));
+        });
 
-    // show more event -- primary category
-    $body.on('click', '.show-more.primary-category-btn', function(e){
-        var $showMoreBtn = $(e.currentTarget),
-            $showLessBtn = $('.show-less.primary-category-btn');
+        // Bind menu button clicks
+        $body.on('click', '.menu-button', function(e){
+            $('#nav, #navWrap').slideToggle(300);
+            $('#nav button, #navWrap button').fadeToggle(250);
+        });
 
-        // NOTE: move functionality into closeItem function
-        if ($showLessBtn.length && $showLessBtn) {
-            $showLessBtn.siblings('ul').slideUp(150);
-            $showLessBtn.removeClass('show-less').addClass('show-more').html('+');
+        // Bind fourth-level show more button clicks
+        $body.on('click', '.fourth-level-show-more', function(e){
+            $(e.currentTarget).removeClass('fourth-level-show-more').addClass('fourth-level-show-less');
+            $(e.currentTarget).parent().find('ul').slideDown(150);
+        });
+
+        // Bind fourth-level show less button clicks
+        $body.on('click', '.fourth-level-show-less', function(e){
+            $(e.currentTarget).removeClass('fourth-level-show-less').addClass('fourth-level-show-more');
+            $(e.currentTarget).parent().find('ul').slideUp(150);
+        });
+    }
+
+    /**
+     * M E T H O D S
+     */
+
+    function handleShowAction($navBtn){
+        if ($navBtn.hasClass('show-more')) {
+            $navBtn.siblings('ul').slideDown(150);
+            $navBtn.removeClass('show-more').addClass('show-less').html('-');
+        } else {
+            $navBtn.siblings('ul').slideUp(150);
+            $navBtn.removeClass('show-less').addClass('show-more').html('+');
         }
-
-        // NOTE: move functionality into closeItem function
-        $showMoreBtn.siblings('ul').slideDown(150);
-        $showMoreBtn.removeClass('show-more').addClass('show-less').html('-');
-    });
-
-    // show less event -- primary category
-    $body.on('click', '.show-less.primary-category-btn', function(e){
-        var $showLessBtn = $(e.currentTarget);
-
-        // NOTE: move functionality into closeItem function
-        $showLessBtn.siblings('ul').slideUp(150);
-        $showLessBtn.removeClass('show-less').addClass('show-more').html('+');
-    });
-
-    // show less event -- secondary category
-    $body.on('click', '.show-less.secondary-category-btn', function(e){
-        var $showLessBtn = $(e.currentTarget);
-
-        // NOTE: move functionality into closeItem function
-        $showLessBtn.siblings('ul').slideUp(150);
-        $showLessBtn.removeClass('show-less').addClass('show-more').html('+');
-    });
-
-    // show less event -- secondary category
-    $body.on('click', '.show-more.secondary-category-btn', function(e){
-        var $showMoreBtn = $(e.currentTarget);
-
-        // NOTE: move functionality into closeItem function
-        $showMoreBtn.siblings('ul').slideDown(150);
-        $showMoreBtn.removeClass('show-more').addClass('show-less').html('-');
-    });
-
-
-    // menu button functionality
-    $body.on('click', '.menu-button', function(e){
-        $('#nav, #navWrap').slideToggle(300); // TODO: roll slidetoggle out to buttons
-        $('#nav button, #navWrap button').fadeToggle(250);
-    });
-
-
-    // quaternary category
-    $body.on('click', '.quaternary-show-more', function(e){
-        var $showMoreBtn = $(e.currentTarget);
-        $showMoreBtn.removeClass('quaternary-show-more').addClass('quaternary-show-less').html('-');
-        $showMoreBtn.parent().find('ul').slideDown(150);
-    });
-
-    $body.on('click', '.quaternary-show-less', function(e){
-        var $showMoreBtn = $(e.currentTarget);
-        $showMoreBtn.removeClass('quaternary-show-less').addClass('quaternary-show-more').html('+');
-        $showMoreBtn.parent().find('ul').slideUp(150);
-    });
-
-    //-- Methods
-
-    function addCateoryClasses(){
-        var $primaryCategory = $('.primary-category'),
-            $primaryWithSecondary = $primaryCategory.has('ul');
-
-        $('.primary-category ul li').addClass('secondary-category');
-        addShowMoreBtn($primaryWithSecondary, true, 'primary-category-btn');
     }
 
-    function createDonateCategory(){
-        var $donate = $('.header-donate').html('<span>donate</span>');
-        addToNav($donate, 'primary-category', true);
+    function addNavClasses(){
+        var $primaryCategory = $('.first-level-nav'),
+            $primaryWithSecondary = $primaryCategory.length && $primaryCategory.has('ul');
+
+        if ($primaryWithSecondary.length){
+            $('.first-level-nav ul li').addClass('second-level-nav');
+            addShowMoreBtn($primaryWithSecondary, true, 'first-level-nav-btn');
+        }
     }
 
-    function createNewsletterCategory(){
-        var $newsletter = $('.header-newsletter').html('<span>newsletter</span>');
-        addToNav($newsletter, 'primary-category', true);
+    function addDonateAndNewsletter(){
+        var $donate = $('.header-donate'),
+            $newsletter = $('.header-newsletter');
+
+        if ($donate.length){
+            addToNav($donate.html('<span>donate</span>'), 'first-level-nav', true);
+        }
+        if ($newsletter.length){
+            addToNav($newsletter.html('<span>newsletter</span>'), 'first-level-nav', true);
+        }
     }
 
-
-    // TODO: don't have this depend on footer, what
     function injectSocialIcons(){
         var $footer = $('.has-footer-social'),
             $icons = $('.socialButton').empty(),
             $wrappedIcons;
 
-        $icons.wrapAll('<div class="social-elements"></div>');
-        $wrappedIcons = $icons.parent();
+        if ($footer.length && $icons.length){
+            $icons.wrapAll('<div class="social-elements"></div>');
+            $wrappedIcons = $icons.parent();
 
-        // add to nav
-        addToNav($wrappedIcons, 'social-list');
+            // Add to nav
+            addToNav($wrappedIcons, 'social-list');
 
-        // add to footer
-        $footer.append($wrappedIcons.clone());
+            // Add to footer
+            $footer.append($wrappedIcons.clone());
+        }
     }
 
+    function injectThirdLevelNav(){
+        var $tertiaryCategories = $('.third-level-nav'),
+            $nav = $('.global-nav');
 
-    function injectTertiaryCategories($tertiaryCategories, $nav){
-        if (!$tertiaryCategories.length){ return; }
+        if ($tertiaryCategories.length && $nav.length){
+             $tertiaryCategories.each(function() {
+                var $tertiaryCategory = $(this),
+                    tertiaryCategoryData = $tertiaryCategory.data('third-level-nav'),
+                    $secondaryCategory = $nav.find('[data-third-level-nav="' + tertiaryCategoryData + '"]');
 
+                $tertiaryCategory.find('a').wrapInner('<span></span>');
+                $secondaryCategory.append($tertiaryCategory);
 
-        $tertiaryCategories.each(function() {
-            var $tertiaryCategory = $(this),
-                tertiaryCategoryData = $tertiaryCategory.data('tertiary-category'),
-                $secondaryCategory = $nav.find('[data-tertiary-category="' + tertiaryCategoryData + '"]');
-
-            $tertiaryCategory.find('a').wrapInner('<span></span>');
-            $secondaryCategory.append($tertiaryCategory);
-
-            addShowMoreBtn($secondaryCategory, false, 'secondary-category-btn');
-        });
+                addShowMoreBtn($secondaryCategory, false, 'second-level-nav-btn');
+            });
+        }
     }
 
     function addToNav($content, className, prepend){
-        // TODO: add class that can be globally used
         var $newContent = $content.wrap('<li></li>').parent(),
             $nav = $('.global-nav');
 
@@ -162,57 +175,35 @@
         }
     }
 
-    function injectQuaternaryNav(){
-        // TODO: inject after search bar
-        var $quaternaryCategories = $('.quaternary-category');
+    function injectFourthLevelNav(){
+        var $quaternaryCategories = $('.fourth-level-nav'),
+            $searchWrapper = $('.search-wrapper');
 
-        $quaternaryCategories.each(function() {
-            var $quaternaryCategory = $(this),
-                $wrappedCategory = $quaternaryCategory.wrap('<div class="quaternary-category-wrapper"></div>');
+        if ($quaternaryCategories.length && $searchWrapper.length){
+            $quaternaryCategories.each(function() {
+                var $quaternaryCategory = $(this),
+                    $wrappedCategory = $quaternaryCategory.wrap('<div class="fourth-level-nav-wrapper"></div>');
 
-            $wrappedCategory.find('a').first().after('<button class="quaternary-show-more">+</button><div class="divider"></div>');
-            $wrappedCategory.find('a').wrapInner('<span></span>');
-            $('.search-wrapper').after($wrappedCategory.parent());
-        });
-
-
+                $wrappedCategory.find('a').first().after('<button class="fourth-level-show-more"></button><div class="divider"></div>');
+                $wrappedCategory.find('a').wrapInner('<span></span>');
+                $searchWrapper.after($wrappedCategory.parent());
+            });
+        }
     }
 
     function injectSearchForm(){
-        var $searchForm = $('#cse-search-box'),
-            $searchSubmit = $('.search-submit');
+        var $hasSearch = $('.has-search');
 
-        // TODO: figure out how to target broadly...perhaps make global classes
-        $('#navWrap, #header').after($searchForm);
-        $searchForm.wrap('<div class="search-wrapper"></div>');
-        $searchSubmit.val('');
+        if ($hasSearch.length){
+            var $searchForm = $('#cse-search-box'),
+                $searchSubmit = $('.search-submit');
 
+            $hasSearch.after($searchForm);
+            $searchForm.wrap('<div class="search-wrapper"></div>');
+            $searchSubmit.val('');
+        }
     }
 
-
-
-
-
-    // TODO: init
-    addCateoryClasses();
-
-    // might combine into one
-    createDonateCategory();
-    createNewsletterCategory();
-
-
-
-    injectSocialIcons();
-
-
-    injectSearchForm();
-
-    // tertiary categories
-    //TODO: add class that can be globally used
-    injectTertiaryCategories($('.treemenu'), $('#nav.parent-nav')); // parent
-    injectQuaternaryNav(); // TODO: wrap all a text in spans
-    injectTertiaryCategories($('.submenu.tertiary'), $('.bullying-nav')); // bullying
-
-
-
+    // Let's get this party started.
+    initialize();
 }());
